@@ -1,0 +1,106 @@
+//NOMENCLATURE PROJECT TD:
+
+Voici comment on va nommer les assets
+[Prefix]_[AssetName]_[Family numbering][Variation letter]_[Suffix]
+On ajoute le Prefix en fonction du type d'objet
+Puis on ajoute le nom de l'objet
+Puis le family Numbering et la Variation Letter. (Cf catégorie FamilyNumbering et Variation Letter)
+
+
+//NAME:
+Le nom est en un seul mot
+Pas d'espace !!!:
+● ex: RoofTiles_Material
+
+
+//FAMILY NUMBERING:
+
+Si vous avez plusieurs assets de même catégorie (par exemple des pistolets), mais qu'ils ont des
+mesh différents, vous changer le Family Numbering. 
+● SM_Pistol_01a
+● SM_Pistol_02a
+Ici il y a deux pistolets avec des mesh différents
+
+Si, pour reprendre l'exemple, vous avec deux pistolets avec le même mesh, alors il faut juste augmenter la
+variation letter.
+● M_Pistol_01a
+● M_Pistol_01b
+Ici il y a deux pistolets avec des materials différents ou autre
+
+
+//DOSSIER PAR OBJECT:
+Chaque élément à son propre dossier
+Content/Environments/Props/BigTree_01/...
+.../SM_BigTree_01
+.../T_BigTree_01_C
+.../T_BigTree_01_M
+.../T_BigTree_01_R
+.../T_BigTree_01_N
+.../M_BigTree_01
+
+
+//PREFIXE:
+M_ :  3D files. Static Meshes, Weapons, Foliage, Props with just a few joints for function.
+SK_:  3D files that contain humanoid or animal skeleton joint rigs
+T_ :  Texture
+M_ :  Material
+MI_ : Material Instance
+MF_:  Material Function
+MPC_: Material Parameter Collection
+J_:   Joints / Bones
+SH_:  Shader
+P_:   Particle System
+A_:   Animation (clip) / Animation Sequence
+AC_:  Unity Animation Controller
+ABP_: Animation Blueprint
+PP_:  Post Process
+MT_:  Morph Target
+SN_:  Sounds
+SNC_: Sounds Cue
+UP_:	Unity Prefabs + nom de l'object principal. Ex, UP_SM_BigTree_01a
+SC_:  Game Scene
+SCR_: Script ( ajouter _MANAGER_ si c'est un Manager)
+DT_:  Data Base (un truc de GD)
+
+//SUFFIXE:
+_C Color map (diffuse or albedo)
+_T Transparency / Opacity mask
+_M Metallic mask
+_R Roughness mask
+_S Smoothness (Inverted roughness map)
+_N Normal map
+_A Ambient Occlusion mask
+_E Emissive map
+_H Height mask
+_D Displacement map (Often a blurred height map re reduce artifacts)
+_U Subsurface mask
+
+
+//POUR LE RANGEMENT DES DOSSIERS
+Par exemple, mettez les materiaux avec son static mesh associé, mais si il n'en a pas
+mettez le dans un dossier material.
+
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠛⠛⠻⢿⣿⣷⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠋⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠈⢻⣿⣿⡄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣸⣿⡏⠀⠀⠀⣠⣶⣾⣿⣿⣿⠿⠿⠿⢿⣿⣿⣿⣄⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠁⠀⠀⢰⣿⣿⣯⠁⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣷⡄⠀
+⠀⠀⣀⣤⣴⣶⣶⣿⡟⠀⠀⠀⢸⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⠀
+⠀⢰⣿⡟⠋⠉⣹⣿⡇⠀⠀⠀⠘⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣶⣶⣶⣿⣿⣿⠀
+⠀⢸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀
+⠀⣸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠉⠻⠿⣿⣿⣿⣿⡿⠿⠿⠛⢻⣿⡇⠀⠀
+⠀⣿⣿⠁⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠀
+⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀
+⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀
+⠀⢿⣿⡆⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀
+⠀⠸⣿⣧⡀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠃⠀⠀
+⠀⠀⠛⢿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⣰⣿⣿⣷⣶⣶⣶⣶⠶⠀⢠⣿⣿⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⣽⣿⡏⠁⠀⠀⢸⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⢹⣿⡆⠀⠀⠀⣸⣿⠇⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢿⣿⣦⣄⣀⣠⣴⣿⣿⠁⠀⠈⠻⣿⣿⣿⣿⡿⠏⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+
