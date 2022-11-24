@@ -4,6 +4,7 @@
 
 	public class WeaponController : MonoBehaviour
 	{
+
 		[SerializeField]
 		private AWeapon _weapon = null;
 

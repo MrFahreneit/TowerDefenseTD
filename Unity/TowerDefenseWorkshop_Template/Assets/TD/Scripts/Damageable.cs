@@ -16,6 +16,11 @@
 		[SerializeField]
 		private ParticleSystem _deathParticle = null;
 
+		[SerializeField]
+		private scr_Type _enemyType = null;
+		private int _enemyTypeID = 0;
+
+
 		public delegate void DamageableEvent(Damageable caller, int currentHealth, int damageTaken);
 		private event DamageableEvent _damageTaken = null;
 
@@ -58,5 +63,16 @@
 			particle.transform.position = transform.position;
 			Destroy(gameObject);
 		}
-	}
+
+        private void Start()
+        {
+			_enemyTypeID = _enemyType.GetEntityType();
+		}
+
+		public int GetEntityID()
+        {
+			return _enemyTypeID;
+
+		}
+    }
 }
