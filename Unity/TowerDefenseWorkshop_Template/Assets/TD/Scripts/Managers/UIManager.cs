@@ -7,5 +7,13 @@ namespace GSGD1
 
 	public class UIManager : Singleton<UIManager>
 	{
+		[SerializeField]
+		private scr_UITurretMenu _TurretMenu;
+
+		public scr_UITurretMenu GetUITurretMenu()
+        {
+			return _TurretMenu;
+
+		}
 	}
 }

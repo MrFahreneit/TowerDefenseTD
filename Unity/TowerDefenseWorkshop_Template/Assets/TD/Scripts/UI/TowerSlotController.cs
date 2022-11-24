@@ -88,7 +88,7 @@
 				break;
 				case State.GhostVisible:
 				{
-					PlayerPickerController.ActivateWithGhost(_currentTowerDescription.Instantiate());
+					//PlayerPickerController.ActivateWithGhost(_currentTowerDescription.Instantiate());
 				}
 					break;
 				default:
