@@ -16,9 +16,15 @@
 		[SerializeField]
 		private DamageableDetector _damageableDetector = null;
 
+		enum TowerType { Ground, Air, GroundAir };
+		[SerializeField]
+		private TowerType enemyType;
+
+
+
 		private void Awake()
 		{
-			enabled = false;
+			enabled = true;
 		}
 
 		public void Enable(bool isEnabled)
