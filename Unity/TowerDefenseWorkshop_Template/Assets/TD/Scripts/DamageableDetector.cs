@@ -8,6 +8,13 @@
 		[System.NonSerialized]
 		private List<Damageable> _damageablesInRange = new List<Damageable>();
 
+		private int EntityID = 0;
+
+		public void SetEntityID(int ID)
+        {
+			EntityID = ID;
+        }
+
 		public bool HasAnyDamageableInRange()
 		{
 			return _damageablesInRange.Count > 0;
@@ -31,12 +38,15 @@
 			int shortestDistanceIndex = 0;
 			for (int i = 0, length = _damageablesInRange.Count; i < length; i++)
 			{
+
 				var distance = (_damageablesInRange[i].transform.position - transform.position).sqrMagnitude;
 				if (distance < shortestDistance)
 				{
 					shortestDistance = distance;
 					shortestDistanceIndex = i;
 				}
+
+
 			}
 
 			return _damageablesInRange[shortestDistanceIndex];
@@ -49,9 +59,14 @@
 
 			if (damageable != null && _damageablesInRange.Contains(damageable) == false)
 			{
-				damageable.DamageTaken -= Damageable_OnDamageTaken;
-				damageable.DamageTaken += Damageable_OnDamageTaken;
-				_damageablesInRange.Add(damageable);
+				int _currentEnemyTypeID = damageable.GetEntityID();
+
+				if (_currentEnemyTypeID == EntityID || EntityID == 2)
+                {
+					damageable.DamageTaken -= Damageable_OnDamageTaken;
+					damageable.DamageTaken += Damageable_OnDamageTaken;
+					_damageablesInRange.Add(damageable);
+				}
 			}
 		}
 
@@ -61,12 +76,17 @@
 
 			if (damageable != null && _damageablesInRange.Contains(damageable) == true)
 			{
-				damageable.DamageTaken -= Damageable_OnDamageTaken;
-				_damageablesInRange.Remove(damageable);
+				int _currentEnemyTypeID = damageable.GetEntityID();
+
+				if (_currentEnemyTypeID == EntityID || EntityID == 2)
+				{
+					damageable.DamageTaken -= Damageable_OnDamageTaken;
+					_damageablesInRange.Remove(damageable);
+				}
 			}
 		}
 
-		private void Damageable_OnDamageTaken(Damageable caller, int currentHealth, int damageTaken)
+		private void Damageable_OnDamageTaken(Damageable caller, float currentHealth, float damageTaken)
 		{
 			if (currentHealth <= 0)
 			{

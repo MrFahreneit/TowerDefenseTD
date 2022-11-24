@@ -5,7 +5,7 @@
 	public class Damageable : MonoBehaviour
 	{
 		[SerializeField]
-		private int _health = 1;
+		private float _health = 1f;
 
 		[SerializeField]
 		private bool _destroyIfKilled = true;
@@ -16,7 +16,12 @@
 		[SerializeField]
 		private ParticleSystem _deathParticle = null;
 
-		public delegate void DamageableEvent(Damageable caller, int currentHealth, int damageTaken);
+		[SerializeField]
+		private scr_Type _enemyType = null;
+		private int _enemyTypeID = 0;
+
+
+		public delegate void DamageableEvent(Damageable caller, float currentHealth, float damageTaken);
 		private event DamageableEvent _damageTaken = null;
 
 		public event DamageableEvent DamageTaken
@@ -37,7 +42,7 @@
 			return _aimPosition.position;
 		}
 
-		public void TakeDamage(int damage)
+		public void TakeDamage(float damage)
 		{
 			_health -= damage;
 
@@ -58,5 +63,16 @@
 			particle.transform.position = transform.position;
 			Destroy(gameObject);
 		}
-	}
+
+        private void Start()
+        {
+			_enemyTypeID = _enemyType.GetEntityType();
+		}
+
+		public int GetEntityID()
+        {
+			return _enemyTypeID;
+
+		}
+    }
 }

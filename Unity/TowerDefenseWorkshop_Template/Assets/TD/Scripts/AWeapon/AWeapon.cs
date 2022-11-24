@@ -7,6 +7,9 @@
 		[SerializeField]
 		private Timer _timer = null;
 
+		[SerializeField]
+		protected float _damageProjectile = 1f;
+
 		public virtual bool CanFire()
 		{
 			return _timer.IsRunning == false;
@@ -26,6 +29,11 @@
 		}
 
 		protected abstract void DoFire();
+
+		public void SetDamage(float newDamage)
+        {
+			_damageProjectile = newDamage;
+		}
 
 	}
 

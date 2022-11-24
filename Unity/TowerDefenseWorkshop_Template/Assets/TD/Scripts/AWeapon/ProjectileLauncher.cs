@@ -9,12 +9,17 @@
 		[SerializeField]
 		private AProjectile _projectile = null;
 
+
 		[SerializeField]
 		private Transform _projectileAnchor = null;
 
 		protected override void DoFire()
 		{
+			
 			var instance = Instantiate(_projectile, _projectileAnchor.position, _projectileAnchor.rotation);
+			instance.SetDamage(_damageProjectile);
 		}
 	}
+
+
 }

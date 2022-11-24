@@ -4,8 +4,11 @@
 
 	public class WeaponController : MonoBehaviour
 	{
+
 		[SerializeField]
 		private AWeapon _weapon = null;
+
+
 
 		[SerializeField]
 		private float _rotationSpeed = 5f;
@@ -40,6 +43,12 @@
 		private void LateUpdate()
 		{
 			_lastLookRotation = transform.rotation;
+		}
+
+		public AWeapon GetWeapon()
+        {
+			return _weapon;
+
 		}
 	}
 }
