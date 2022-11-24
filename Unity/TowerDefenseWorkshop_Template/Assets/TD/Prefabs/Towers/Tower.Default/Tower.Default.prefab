@@ -693,6 +693,7 @@ MonoBehaviour:
   _weaponController: {fileID: 302692792590252287}
   _damageableDetector: {fileID: 302692793403659942}
   _typeEntity: {fileID: 7954490793965705602}
+  _towerStats: {fileID: 11400000, guid: b46b3ecb7293fe4409273b80dc2482bc, type: 2}
 --- !u!114 &7954490793965705602
 MonoBehaviour:
   m_ObjectHideFlags: 0

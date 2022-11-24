@@ -19,11 +19,15 @@
 		[SerializeField]
 		private scr_Type _typeEntity = null;
 
+		[SerializeField]
+		private DT_TowerStats _towerStats = null;
+
 
 		private void Awake()
 		{
 			enabled = true;
 			_damageableDetector.SetEntityID(_typeEntity.GetEntityType());
+			UpdateStats();
 		}
 
 		public void Enable(bool isEnabled)
@@ -52,6 +56,12 @@
 		public void OnSetChild()
 		{
 			Enable(true);
+		}
+
+		private void UpdateStats()
+        {
+			_weaponController.GetWeapon().SetDamage(_towerStats.GetDamageDT());
+
 		}
 	}
 }
