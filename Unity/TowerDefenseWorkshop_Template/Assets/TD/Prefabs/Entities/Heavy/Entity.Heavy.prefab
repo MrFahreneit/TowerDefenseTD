@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5412690654039449867}
   - component: {fileID: 2942146037294568418}
   - component: {fileID: 2942146037294568419}
+  - component: {fileID: 8530449687608211159}
   - component: {fileID: 902544328359584159}
   m_Layer: 0
   m_Name: Entity.Heavy
@@ -82,6 +83,20 @@ MonoBehaviour:
   _aimPosition: {fileID: 2942146038031326620}
   _deathParticle: {fileID: 6159851731732633496, guid: fad479241fc5cca47b823fc8ac0cd376,
     type: 3}
+  _enemyType: {fileID: 8530449687608211159}
+--- !u!114 &8530449687608211159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbeed3a06250de747a6ec7f8a5e30d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entityType: 1
 --- !u!114 &902544328359584159
 MonoBehaviour:
   m_ObjectHideFlags: 0
