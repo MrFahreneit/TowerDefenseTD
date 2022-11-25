@@ -15,11 +15,17 @@
 
 		protected override void DoFire()
 		{
-			
-			var instance = Instantiate(_projectile, _projectileAnchor.position, _projectileAnchor.rotation);
-			instance.SetDamage(_damageProjectile);
+
+			for (int i = 0; i < _bulletNB; i++)
+			{
+				
+				var instance = Instantiate(_projectile, _projectileAnchor.position, _projectileAnchor.rotation);
+				instance.SetDamage(_damageProjectile);
+				instance.transform.rotation = Quaternion.Euler(0, Random.Range(_spreadAmount * -1, _spreadAmount), 0) * instance.transform.rotation;
+			}
 		}
-	}
+
+    }
 
 
 }

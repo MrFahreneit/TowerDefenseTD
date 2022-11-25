@@ -22,6 +22,10 @@
 		[SerializeField]
 		private DT_TowerStats _towerStats = null;
 
+		private float _damageTurretCurrent = 0f;
+		private float _attackSpeedCurrent = 0f;
+		private int _bulletNumberCurrent = 1;
+		private float _spreadCurrent = 0f;
 
 		private void Awake()
 		{
@@ -60,7 +64,19 @@
 
 		private void UpdateStats()
         {
-			_weaponController.GetWeapon().SetDamage(_towerStats.GetDamageDT());
+			_damageTurretCurrent = _towerStats.GetDamageDT();
+			_attackSpeedCurrent = _towerStats.GetAttackSpeedDT();
+			_bulletNumberCurrent = _towerStats.GetbulletLaunchDT();
+			_spreadCurrent = _towerStats.GetSpreadDT();
+
+
+			_weaponController.GetWeapon().SetDamage(_damageTurretCurrent);
+			_weaponController.GetWeapon().SetAttackSpeed(_attackSpeedCurrent);
+			_weaponController.GetWeapon().SetBulletNumber(_bulletNumberCurrent);
+			_weaponController.GetWeapon().SetSpread(_spreadCurrent);
+
+			
+			_weaponController.GetWeapon().UpdateWeaponStat();
 
 		}
 	}
