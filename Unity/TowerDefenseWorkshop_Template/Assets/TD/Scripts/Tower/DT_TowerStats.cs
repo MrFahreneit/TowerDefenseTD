@@ -44,4 +44,21 @@ public class DT_TowerStats : ScriptableObject
     {
         return _damage;
     }
+    public float GetAttackSpeedDT()
+    {
+        return _attackSpeed;
+    }
+    public float GetrangeDT()
+    {
+        return _range;
+    }
+    public int GetbulletLaunchDT()
+    {
+        return _bulletLaunch;
+    }
+    public float GetSpreadDT()
+    {
+        return _spread;
+    }
+
 }

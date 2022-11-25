@@ -9,6 +9,12 @@
 
 		[SerializeField]
 		protected float _damageProjectile = 1f;
+		[SerializeField]
+		protected float _attackspeed = 1;
+		[SerializeField]
+		protected int _bulletNB = 1;
+		[SerializeField]
+		protected float _spreadAmount = 0f;
 
 		public virtual bool CanFire()
 		{
@@ -30,11 +36,27 @@
 
 		protected abstract void DoFire();
 
+		public void UpdateWeaponStat()
+        {
+			_timer.Start();
+			_timer.Set(_attackspeed, true);
+		}
+
 		public void SetDamage(float newDamage)
         {
 			_damageProjectile = newDamage;
 		}
-
+		public void SetBulletNumber(int newBulletNumber)
+        {
+			_bulletNB = newBulletNumber;
+		}
+		public void SetSpread(float newSpread)
+		{
+			_spreadAmount = newSpread;
+		}
+		public void SetAttackSpeed(float newSpeed)
+        {
+			_attackspeed = newSpeed;
+        }
 	}
-
 }
