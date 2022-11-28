@@ -9,25 +9,54 @@
 
 		[SerializeField]
 		private float _damage = 1f;
+		[SerializeField]
+		private bool isDot = false;
+
+		[SerializeField]
+		private bool doDamage = true;
+
+		[SerializeField]
+		private GameObject _ActorSpawnOnDeath = null;
 
 		protected virtual void OnTriggerEnter(Collider other)
 		{
-			var damageable = other.GetComponentInParent<Damageable>();
+			if (isDot == false)
+            {
+				var damageable = other.GetComponentInParent<Damageable>();
 
-			if (damageable != null)
-			{
-				damageable.TakeDamage(_damage);
-
-				if (_destroyIfGiveDamage == true)
+				if (damageable != null)
 				{
-					Destroy(gameObject);
+					if (doDamage == true)
+					{
+						damageable.TakeDamage(_damage);
+					}
+
+					if (_destroyIfGiveDamage == true)
+					{
+						if (_ActorSpawnOnDeath != null)
+						{
+							var instance = Instantiate(_ActorSpawnOnDeath, gameObject.transform.position, Quaternion.identity);
+							instance.GetComponentInParent<scr_Explosion>().InitializeDamage(_damage);
+						}
+						Destroy(gameObject);
+					}
 				}
 			}
+
+
 		}
 
 		public void SetDamage(float newDamage)
 		{
 			_damage = newDamage;
 		}
-	}
+
+        private void Start()
+        {
+			if (isDot == true)
+            {
+
+            }
+		}
+    }
 }
