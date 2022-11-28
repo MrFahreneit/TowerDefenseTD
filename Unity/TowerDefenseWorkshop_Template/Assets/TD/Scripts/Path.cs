@@ -6,6 +6,7 @@
 
 #if UNITY_EDITOR
 	using UnityEditor;
+	using UnityEngine.UIElements;
 #endif //UNITY_EDITOR
 
 	public class Path : MonoBehaviour
@@ -13,13 +14,17 @@
 		[SerializeField]
 		private List<Transform> _waypoints = null;
 
-		[SerializeField]
+        [SerializeField]
+        private List<Length> _pathLenght = null;
+
+        [SerializeField]
 		private bool _showGizmos = true;
 
 		[SerializeField]
 		private Color _lineColor = Color.white;
 
 		private readonly Vector3 _offset = new Vector3(0, 0.5f, 0);
+
 
 		public List<Transform> Waypoints
 		{
@@ -29,7 +34,9 @@
 			}
 		}
 
-		public Transform FirstWaypoint
+
+
+        public Transform FirstWaypoint
 		{
 			get
 			{
