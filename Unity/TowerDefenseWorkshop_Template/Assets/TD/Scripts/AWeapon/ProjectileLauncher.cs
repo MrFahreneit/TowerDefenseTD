@@ -6,8 +6,6 @@
 
 	public class ProjectileLauncher : AWeapon
 	{
-		[SerializeField]
-		private AProjectile _projectile = null;
 
 
 		[SerializeField]
@@ -25,7 +23,8 @@
 			}
 		}
 
-    }
+	}
+
 
 
 }

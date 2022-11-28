@@ -12,6 +12,7 @@ public class scr_SelectingActor : MonoBehaviour
     private scr_PlanteSpawner _hitPlante = null;
     private scr_CellInt _hitCell = null;
     private scr_DebrisPlante _hitDebris = null;
+    private Tower _hitTower = null;
 
     [SerializeField]
     private Camera _playerCamera = null;
@@ -82,6 +83,16 @@ public class scr_SelectingActor : MonoBehaviour
                     }
 
 
+                    //Upgrade HIT
+                    if (hitInfo.collider.GetComponentInParent<Tower>() == true)
+                    {
+                        UIManager.Instance.GetUITowerUpgrade().OpenTurretUpgradeMenu(hitInfo.collider.gameObject);
+
+                        _hitTower = hitInfo.collider.GetComponentInParent<Tower>();
+                        _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitTower.gameObject);
+                    }
+
+
                     //HIT Cell pour poser une tourelle
                     if (hitInfo.collider.GetComponentInParent<scr_CellInt>() == true)
                     {
@@ -107,7 +118,7 @@ public class scr_SelectingActor : MonoBehaviour
             }
 
         }
-        if (UIManager.Instance.GetUITurretMenu().GetTurretMenuCreateOpen() == true)
+        if (UIManager.Instance.GetMenuOpen() == true)
         {
             _AMenuIsOpen = true;
         }
