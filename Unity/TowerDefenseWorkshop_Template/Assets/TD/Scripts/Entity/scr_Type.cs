@@ -29,4 +29,21 @@ public class scr_Type : MonoBehaviour
 
 
     }
+
+    public void SetTargetTowerType(int targetType)
+    {
+        if(targetType == 0)
+        {
+            _entityType = TypeEntity.Ground;
+        }
+        if (targetType == 1)
+        {
+            _entityType = TypeEntity.Air;
+        }
+        if (targetType == 2)
+        {
+            _entityType = TypeEntity.GroundAir;
+        }
+
+    }
 }

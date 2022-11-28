@@ -13,9 +13,11 @@ public class scr_UITurretMenu : MonoBehaviour
     [SerializeField]
     private DT_GoldTurret _dt_GoldTurret = null;
 
-    private bool _TurretMenuCreateOpen = false;
+    //private bool _TurretMenuCreateOpen = false;
 
     private GameObject _instagator = null;
+    
+
 
     [SerializeField]
     private TextMeshProUGUI _priceText1 = null;
@@ -44,13 +46,9 @@ public class scr_UITurretMenu : MonoBehaviour
         }
 
         _UITurretCreate.SetActive(true);
-        _TurretMenuCreateOpen = true;
+        //_TurretMenuCreateOpen = true;
+        UIManager.Instance.SetMenuOpen(true);
     }
-
-    public bool GetTurretMenuCreateOpen()
-    {
-        return _TurretMenuCreateOpen;
-    } 
 
     public void chooseTurret(int turretINDEX)
     {
@@ -93,7 +91,8 @@ public class scr_UITurretMenu : MonoBehaviour
     public void CloseTurretMenu()
     {
         _UITurretCreate.SetActive(false);
-        _TurretMenuCreateOpen = false;
+        //_TurretMenuCreateOpen = false;
+        UIManager.Instance.SetMenuOpen(false);
     }
 
 }
