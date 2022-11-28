@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977ae1b0ad6a53447a5060286544e2a4, type: 3}
+  m_Name: DT_T1-2_Sniper
+  m_EditorClassIdentifier: 
+  _turretName: MonoTruc
+  _entityType: 0
+  TypeIndex: 0
+  _niv: 1
+  _damage: 100
+  _attackSpeed: 1
+  _range: 5
+  _bulletLaunch: 1
+  _spread: 0
+  _maxNiv: 1
+  _canEvolve: 0
+  _damagePercentNiv: 0.5
+  _attackSpeedPercentNiv: 0.2
+  _projectileSpawn: {fileID: 0}
+  _Spe1Pefab: {fileID: 0}
+  _Spel2Pefab: {fileID: 0}
+  _Spe3Pefab: {fileID: 0}
