@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 302692793403659943}
   - component: {fileID: 302692793403659936}
   m_Layer: 0
-  m_Name: Tower.Alt01
+  m_Name: UP_TowerShogun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
