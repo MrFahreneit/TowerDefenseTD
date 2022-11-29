@@ -8,6 +8,9 @@
 		private Timer _timer = null;
 
 		[SerializeField]
+		protected AProjectile _projectile = null;
+
+		[SerializeField]
 		protected float _damageProjectile = 1f;
 		[SerializeField]
 		protected float _attackspeed = 1;
@@ -58,5 +61,11 @@
         {
 			_attackspeed = newSpeed;
         }
+
+		public void SetProjectile(AProjectile newProjectile)
+		{
+			_projectile = newProjectile;
+
+		}
 	}
 }

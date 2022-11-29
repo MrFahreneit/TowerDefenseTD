@@ -1,5 +1,6 @@
 ﻿namespace GSGD1
 {
+	using System;
 	using System.Collections;
 	using System.Collections.Generic;
 	using Unity.Collections;
@@ -7,6 +8,10 @@
 
 	public class PathFollower : MonoBehaviour
 	{
+
+		// Variables 
+
+
 		[SerializeField]
 		private Path _path = null;
 
@@ -22,6 +27,13 @@
 		[System.NonSerialized]
 		private int _currentPathIndex = 0;
 
+
+		[SerializeField]
+		private bool _enemyInBase = false;
+
+		//Fonctions
+
+
 		public void SetCanMove(bool canMove)
 		{
 			this.enabled = canMove;
@@ -29,13 +41,13 @@
 
 		public void SetPath(Path path, bool teleportToFirstWaypoint = true)
 		{
-			_path = path;
+            _path = path;
 			if (teleportToFirstWaypoint == true)
 			{
 				Transform firstWaypoint = _path.FirstWaypoint;
 				if (firstWaypoint != null)
 				{
-					transform.position = firstWaypoint.position;
+                    transform.position = firstWaypoint.position;
 				}
 			}
 		}
@@ -44,20 +56,27 @@
 		{
 			if (_path == null || _currentPathIndex >= _path.Waypoints.Count)
 			{
-				return;
-			}
+                _enemyInBase = true;
 
-			Vector3 nextDestination = _path.Waypoints[_currentPathIndex].position;
+                return;
+
+            }
+
+            Vector3 nextDestination = _path.Waypoints[_currentPathIndex].position;
 
 			if (Vector3.Distance(transform.position, nextDestination) < _distanceThreshold)
 			{
 				_currentPathIndex = _currentPathIndex + 1;
 				return;
-			}
+
+            }
 
 			MoveTo(nextDestination);
 			LookAt(nextDestination);
-		}
+
+
+
+        }
 
 		private void MoveTo(Vector3 position)
 		{
@@ -74,5 +93,12 @@
 			Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
 			transform.rotation =  Quaternion.Slerp(transform.rotation, rotation, _rotateSpeed * Time.deltaTime);
 		}
+
+		public bool EnemyInBase()
+		{
+			return _enemyInBase;
+		}
+
+
 	}
 }

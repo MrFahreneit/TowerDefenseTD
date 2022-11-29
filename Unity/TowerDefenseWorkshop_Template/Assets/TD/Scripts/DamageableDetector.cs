@@ -12,6 +12,7 @@
 
 		public void SetEntityID(int ID)
         {
+			Debug.Log(ID);
 			EntityID = ID;
         }
 
