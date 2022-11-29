@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1697648429471405643}
   - component: {fileID: 1697648429471405642}
   m_Layer: 0
-  m_Name: UP_Roquette
+  m_Name: UP_Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,18 +46,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68332db8562b4e44996a4186faedd843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destroyIfGiveDamage: 1
+  _destroyIfGiveDamage: 0
   _dotDelay: 0.25
-  _lifeTimeTimer:
-    _duration: 5
-    _stopWhenCompleted: 1
-  _damage: 1
-  isDot: 0
+  _lifeTime: 5
+  _damage: 0.25
+  isDot: 1
   _collider: {fileID: 1697648429891245686}
-  doDamage: 0
-  _ActorSpawnOnDeath: {fileID: 5401439968005239301, guid: 29c48af184a5a4e41a0f6fad1056740a,
-    type: 3}
-  _moveSpeed: 35
+  doDamage: 1
+  _ActorSpawnOnDeath: {fileID: 0}
+  _frag: {fileID: 0}
+  _followingTarget: 0
+  _moveSpeed: 5
+  _rotateSpeed: 500
+  rb: {fileID: 0}
 --- !u!54 &1697648429471405642
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -102,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 1697648429891245682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1697648429471405644}

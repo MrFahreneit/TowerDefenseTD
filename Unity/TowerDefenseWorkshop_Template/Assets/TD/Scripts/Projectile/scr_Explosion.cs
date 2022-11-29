@@ -18,11 +18,19 @@ public class scr_Explosion : MonoBehaviour
 
     [SerializeField]
     private float _percentDamage = 1f;
+    private GameObject _hookedExplosion = null;
+
+    [SerializeField]
+    private bool _followHook = false;
+
 
     private float _initialDamage = 1f;
     private float _damage = 0f;
 
+    #pragma warning disable CS0414
     private bool isSpawned = false;
+    #pragma warning restore CS0414
+
     private Collider[] hitColliders = null;
 
     void Start()
@@ -65,6 +73,19 @@ public class scr_Explosion : MonoBehaviour
             _timer.Stop();
             Destroy(gameObject);
         }
+
+        if (_followHook == true)
+        {
+            if(_hookedExplosion != null)
+            {
+                gameObject.transform.position = _hookedExplosion.transform.position;
+            }
+            else
+            {
+
+            }
+            
+        }
     }
 
     private void DamageAround()
@@ -77,7 +98,6 @@ public class scr_Explosion : MonoBehaviour
             if (hitCollider.GetComponentInParent<Damageable>() == true)
             {
                 hitCollider.GetComponentInParent<Damageable>().TakeDamage(_damage);
-
             }
 
         }
@@ -88,6 +108,15 @@ public class scr_Explosion : MonoBehaviour
     public void InitializeDamage(float intialDamage)
     {
         _initialDamage = intialDamage;
+    }
+
+    public void SetHooked(GameObject newHooked)
+    {
+        _hookedExplosion = newHooked;
+    }
+    public GameObject GetHooked()
+    {
+        return _hookedExplosion;
     }
 
 

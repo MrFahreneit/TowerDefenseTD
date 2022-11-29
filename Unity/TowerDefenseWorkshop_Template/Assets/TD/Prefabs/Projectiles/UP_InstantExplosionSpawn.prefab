@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1697648429471405643}
   - component: {fileID: 1697648429471405642}
   m_Layer: 0
-  m_Name: UP_Roquette
+  m_Name: UP_InstantExplosionSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,16 +48,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyIfGiveDamage: 1
   _dotDelay: 0.25
-  _lifeTimeTimer:
-    _duration: 5
-    _stopWhenCompleted: 1
+  _lifeTime: 0.01
   _damage: 1
   isDot: 0
   _collider: {fileID: 1697648429891245686}
   doDamage: 0
-  _ActorSpawnOnDeath: {fileID: 5401439968005239301, guid: 29c48af184a5a4e41a0f6fad1056740a,
+  _ActorSpawnOnDeath: {fileID: 5401439968005239301, guid: 70e685267018bac42824fee78da55fe0,
     type: 3}
-  _moveSpeed: 35
+  _moveSpeed: 0
 --- !u!54 &1697648429471405642
 Rigidbody:
   m_ObjectHideFlags: 0
