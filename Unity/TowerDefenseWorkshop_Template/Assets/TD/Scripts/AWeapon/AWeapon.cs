@@ -19,6 +19,9 @@
 		[SerializeField]
 		protected float _spreadAmount = 0f;
 
+		[SerializeField]
+		protected GameObject _targetWeapon = null;
+
 		public virtual bool CanFire()
 		{
 			return _timer.IsRunning == false;
@@ -65,6 +68,11 @@
 		public void SetProjectile(AProjectile newProjectile)
 		{
 			_projectile = newProjectile;
+
+		}
+		public void SetTarget(GameObject newTarget)
+        {
+			_targetWeapon = newTarget;
 
 		}
 	}

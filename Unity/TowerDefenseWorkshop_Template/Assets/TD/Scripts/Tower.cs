@@ -57,6 +57,12 @@
 				//_weaponController.Fire();
 
 				_weaponController.LookAtAndFire(damageableTarget.GetAimPosition());
+				_weaponController.GetWeapon().SetTarget(_damageableDetector.GetNearestDamageable().gameObject);
+			}
+            else
+            {
+				_weaponController.GetWeapon().SetTarget(null);
+
 			}
 		}
 
@@ -102,7 +108,7 @@
 		{
 			_currentLevel = _currentLevel + 1;
 			_damageTurretCurrent = _damageTurretCurrent + _towerStats.GetUpgradeDamagePercentNiv() * _damageTurretCurrent;
-			_attackSpeedCurrent = _attackSpeedCurrent + _towerStats.GetUpgradeAttackSpeedPercentNiv() * _attackSpeedCurrent;
+			_attackSpeedCurrent = Mathf.Clamp((_attackSpeedCurrent - _towerStats.GetUpgradeAttackSpeedPercentNiv() * _attackSpeedCurrent), 0.1f, 999f);
 
 			UpdateStats(true);
 			_UIUpgradeMenu.SetInfoUpgrade(gameObject, this);

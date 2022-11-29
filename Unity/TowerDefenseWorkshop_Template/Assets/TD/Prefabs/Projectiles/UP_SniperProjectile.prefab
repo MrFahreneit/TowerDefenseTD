@@ -47,7 +47,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyIfGiveDamage: 1
+  _dotDelay: 0.25
+  _lifeTimeTimer:
+    _duration: 5
+    _stopWhenCompleted: 1
   _damage: 1
+  isDot: 0
+  _collider: {fileID: 1697648429891245686}
+  doDamage: 1
+  _ActorSpawnOnDeath: {fileID: 0}
   _moveSpeed: 35
 --- !u!54 &1697648429471405642
 Rigidbody:

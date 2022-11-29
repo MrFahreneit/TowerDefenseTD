@@ -6,16 +6,13 @@
 
 #if UNITY_EDITOR
 	using UnityEditor;
-	using UnityEngine.UIElements;
 #endif //UNITY_EDITOR
 
 	public class Path : MonoBehaviour
 	{
 		[SerializeField]
 		private List<Transform> _waypoints = null;
-
-        [SerializeField]
-        private List<Length> _pathLenght = null;
+		
 
         [SerializeField]
 		private bool _showGizmos = true;
