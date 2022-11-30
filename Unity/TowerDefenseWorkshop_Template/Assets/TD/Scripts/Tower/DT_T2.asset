@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DT_T2
   m_EditorClassIdentifier: 
   _turretName: MultiTruc
+  _entityType: 0
   TypeIndex: 0
   _niv: 1
   _damage: 30
@@ -24,6 +25,10 @@ MonoBehaviour:
   _canEvolve: 1
   _damagePercentNiv: 0.5
   _attackSpeedPercentNiv: 0.2
-  _Spe1Pefab: {fileID: 0}
-  _Spel2Pefab: {fileID: 0}
-  _Spe3Pefab: {fileID: 0}
+  _projectileSpawn: {fileID: 0}
+  _Spe1Pefab: {fileID: 302692793403659941, guid: 46ef9d1baeb76714d9a11423eaa3be05,
+    type: 3}
+  _Spe2Pefab: {fileID: 302692793403659941, guid: 251419a4fafa53d4980fb700a996855c,
+    type: 3}
+  _Spe3Pefab: {fileID: 302692793403659941, guid: 8e88240429d748a448a7b72e77d313d9,
+    type: 3}

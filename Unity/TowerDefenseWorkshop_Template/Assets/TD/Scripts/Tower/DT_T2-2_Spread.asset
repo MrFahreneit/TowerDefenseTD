@@ -25,7 +25,8 @@ MonoBehaviour:
   _canEvolve: 0
   _damagePercentNiv: 0.5
   _attackSpeedPercentNiv: 0.2
-  _projectileSpawn: {fileID: 0}
+  _projectileSpawn: {fileID: 1697648429471405643, guid: a1a1140bdc5abfd4b923056be28d793a,
+    type: 3}
   _Spe1Pefab: {fileID: 0}
-  _Spel2Pefab: {fileID: 0}
+  _Spe2Pefab: {fileID: 0}
   _Spe3Pefab: {fileID: 0}
