@@ -56,7 +56,7 @@ MonoBehaviour:
   _ActorSpawnOnDeath: {fileID: 0}
   _frag: {fileID: 0}
   _followingTarget: 0
-  _moveSpeed: 5
+  _moveSpeed: 20
   _rotateSpeed: 500
   rb: {fileID: 0}
 --- !u!54 &1697648429471405642
