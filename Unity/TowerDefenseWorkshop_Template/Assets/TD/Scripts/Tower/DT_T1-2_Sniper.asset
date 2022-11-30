@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977ae1b0ad6a53447a5060286544e2a4, type: 3}
   m_Name: DT_T1-2_Sniper
   m_EditorClassIdentifier: 
-  _turretName: MonoTruc
+  _turretName: Sniper
   _entityType: 0
   TypeIndex: 0
   _niv: 1
