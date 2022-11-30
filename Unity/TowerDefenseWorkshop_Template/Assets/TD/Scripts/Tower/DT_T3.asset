@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DT_T3
   m_EditorClassIdentifier: 
   _turretName: AATruc
+  _entityType: 1
   TypeIndex: 0
   _niv: 1
   _damage: 48
@@ -24,6 +25,11 @@ MonoBehaviour:
   _canEvolve: 1
   _damagePercentNiv: 0.5
   _attackSpeedPercentNiv: 0.2
-  _Spe1Pefab: {fileID: 0}
-  _Spel2Pefab: {fileID: 0}
-  _Spe3Pefab: {fileID: 0}
+  _projectileSpawn: {fileID: 1697648429471405643, guid: a1a1140bdc5abfd4b923056be28d793a,
+    type: 3}
+  _Spe1Pefab: {fileID: 302692793403659941, guid: 58b051682ad306747ae838654601dd17,
+    type: 3}
+  _Spe2Pefab: {fileID: 302692793403659941, guid: 5e9246932c19fde4dbd5646d32d600f0,
+    type: 3}
+  _Spe3Pefab: {fileID: 302692793403659941, guid: e5035ab75e098b1448bc55120d043562,
+    type: 3}
