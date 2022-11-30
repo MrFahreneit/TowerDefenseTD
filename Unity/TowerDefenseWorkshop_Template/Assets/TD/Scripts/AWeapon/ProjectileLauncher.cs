@@ -19,6 +19,7 @@
 				
 				var instance = Instantiate(_projectile, _projectileAnchor.position, _projectileAnchor.rotation);
 				instance.SetDamage(_damageProjectile);
+				instance.SetProjectileTarget(_targetWeapon);
 				instance.transform.rotation = Quaternion.Euler(0, Random.Range(_spreadAmount * -1, _spreadAmount), 0) * instance.transform.rotation;
 			}
 		}
