@@ -20,6 +20,9 @@
 		private scr_Type _enemyType = null;
 		private int _enemyTypeID = 0;
 
+		[SerializeField]
+		private bool _inviciFrame = false;
+
 
 		public delegate void DamageableEvent(Damageable caller, float currentHealth, float damageTaken);
 		private event DamageableEvent _damageTaken = null;
@@ -44,17 +47,26 @@
 
 		public void TakeDamage(float damage)
 		{
-			_health -= damage;
+			if(_inviciFrame == false)
+            {
+				_health -= damage;
 
-			if (_health <= 0)
-			{
-				_damageTaken?.Invoke(this, _health, damage);
+				_inviciFrame = true;
 
-				if (_destroyIfKilled == true)
+				Invoke("RemoveInviciFrame", 0.12f);
+
+				if (_health <= 0)
 				{
-					DoDestroy();
+					_damageTaken?.Invoke(this, _health, damage);
+
+					if (_destroyIfKilled == true)
+					{
+						DoDestroy();
+					}
 				}
 			}
+
+
 		}
 
 		private void DoDestroy()
@@ -73,6 +85,17 @@
         {
 			return _enemyTypeID;
 
+		}
+
+		private void RemoveInviciFrame()
+        {
+			_inviciFrame = false;
+
+		}
+
+		public bool GetInviciFrame()
+        {
+			return _inviciFrame;
 		}
     }
 }

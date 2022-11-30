@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1697648429471405643}
   - component: {fileID: 1697648429471405642}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: UP_Roquette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.978, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1697648429891245683}
   m_Father: {fileID: 0}
@@ -46,8 +47,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyIfGiveDamage: 1
+  _dotDelay: 0.25
+  _lifeTimeTimer:
+    _duration: 5
+    _stopWhenCompleted: 1
   _damage: 1
-  _moveSpeed: 25
+  isDot: 0
+  _collider: {fileID: 1697648429891245686}
+  doDamage: 0
+  _ActorSpawnOnDeath: {fileID: 5401439968005239301, guid: 29c48af184a5a4e41a0f6fad1056740a,
+    type: 3}
+  _moveSpeed: 35
 --- !u!54 &1697648429471405642
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -93,6 +103,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1697648429471405644}
   m_RootOrder: 0
@@ -116,6 +127,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

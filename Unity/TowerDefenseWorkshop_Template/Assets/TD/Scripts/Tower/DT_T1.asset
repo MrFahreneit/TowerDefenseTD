@@ -16,8 +16,8 @@ MonoBehaviour:
   _entityType: 0
   TypeIndex: 0
   _niv: 1
-  _damage: 50
-  _attackSpeed: 0.8
+  _damage: 1
+  _attackSpeed: 0.2
   _range: 5
   _bulletLaunch: 1
   _spread: 0
@@ -25,7 +25,8 @@ MonoBehaviour:
   _canEvolve: 1
   _damagePercentNiv: 0.5
   _attackSpeedPercentNiv: 0.2
-  _projectileSpawn: {fileID: 0}
+  _projectileSpawn: {fileID: 1697648429471405643, guid: b7939b7678309ed4080bdc396d981f21,
+    type: 3}
   _Spe1Pefab: {fileID: 0}
-  _Spel2Pefab: {fileID: 0}
+  _Spe2Pefab: {fileID: 0}
   _Spe3Pefab: {fileID: 0}
