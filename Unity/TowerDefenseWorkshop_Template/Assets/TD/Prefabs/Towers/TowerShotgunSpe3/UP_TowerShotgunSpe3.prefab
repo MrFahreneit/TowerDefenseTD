@@ -158,7 +158,7 @@ MonoBehaviour:
   _weaponController: {fileID: 302692792590252287}
   _damageableDetector: {fileID: 302692793403659942}
   _typeEntity: {fileID: 7954490793965705602}
-  _towerStats: {fileID: 11400000, guid: a475634ccfd59984790f68d5740f735d, type: 2}
+  _towerStats: {fileID: 11400000, guid: 9a59e6d27256e9c4d93de23b12a15b02, type: 2}
   _colliderRange: {fileID: 302692793403659943}
 --- !u!114 &7954490793965705602
 MonoBehaviour:
