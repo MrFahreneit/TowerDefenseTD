@@ -16,7 +16,6 @@ public class scr_UISpecialize : MonoBehaviour
         GameObject TowerUpgraded = _upgradeScript.GetTowerPrefab();
         if(Spe == 0)
         {
-            Debug.Log(towerStats);
 
             Instantiate(towerStats.GetSpe1DT(), TowerUpgraded.transform.position, TowerUpgraded.transform.rotation);
             Destroy(TowerUpgraded);
