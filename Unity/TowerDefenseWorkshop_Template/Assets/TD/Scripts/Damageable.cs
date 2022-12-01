@@ -1,6 +1,7 @@
 ﻿namespace GSGD1
 {
 	using UnityEngine;
+	using UnityEngine.Events;
 
 	public class Damageable : MonoBehaviour
 	{
@@ -12,9 +13,6 @@
 
 		[SerializeField]
 		private Transform _aimPosition = null;
-
-		[SerializeField]
-		private ParticleSystem _deathParticle = null;
 
 		[SerializeField]
 		private scr_Type _enemyType = null;
@@ -40,6 +38,8 @@
 			}
 		}
 
+		public UnityEvent DamageTakenUnityEvent;
+
 		public Vector3 GetAimPosition()
 		{
 			return _aimPosition.position;
@@ -59,11 +59,18 @@
 				{
 					_damageTaken?.Invoke(this, _health, damage);
 
+
 					if (_destroyIfKilled == true)
 					{
 						DoDestroy();
 					}
+
 				}
+                else
+                {
+					DamageTakenUnityEvent.Invoke();
+				}
+
 			}
 
 
@@ -71,8 +78,6 @@
 
 		private void DoDestroy()
 		{
-			var particle = Instantiate(_deathParticle);
-			particle.transform.position = transform.position;
 			Destroy(gameObject);
 		}
 
