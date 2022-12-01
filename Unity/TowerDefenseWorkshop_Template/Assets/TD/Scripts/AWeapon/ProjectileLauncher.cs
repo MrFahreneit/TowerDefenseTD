@@ -3,6 +3,7 @@
 	using System.Collections;
 	using System.Collections.Generic;
 	using UnityEngine;
+	using UnityEngine.Events;
 
 	public class ProjectileLauncher : AWeapon
 	{
@@ -10,9 +11,11 @@
 
 		[SerializeField]
 		private Transform _projectileAnchor = null;
+		public UnityEvent ShootUnityEvent;
 
 		protected override void DoFire()
 		{
+			ShootUnityEvent.Invoke();
 
 			for (int i = 0; i < _bulletNB; i++)
 			{
