@@ -25,7 +25,7 @@ public class scr_Explosion : MonoBehaviour
 
 
     private float _initialDamage = 1f;
-    private float _damage = 0f;
+    private float _damage = 1f;
 
     #pragma warning disable CS0414
     private bool isSpawned = false;
