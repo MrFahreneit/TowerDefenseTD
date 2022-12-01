@@ -1,6 +1,7 @@
 ﻿namespace GSGD1
 {
 	using UnityEngine;
+	using UnityEngine.Events;
 
 	public class WeaponController : MonoBehaviour
 	{
@@ -19,6 +20,7 @@
 		[System.NonSerialized]
 		private Quaternion _lastLookRotation = Quaternion.identity;
 
+
 		public void LookAt(Vector3 position)
 		{
 			Vector3 direction = (position - transform.position).normalized;
@@ -29,6 +31,7 @@
 		public void Fire()
 		{
 			_weapon.Fire();
+
 		}
 
 		public void LookAtAndFire(Vector3 position)
