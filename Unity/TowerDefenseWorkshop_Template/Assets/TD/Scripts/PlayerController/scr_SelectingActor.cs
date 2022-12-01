@@ -86,7 +86,7 @@ public class scr_SelectingActor : MonoBehaviour
                     //Upgrade HIT
                     if (hitInfo.collider.GetComponentInParent<Tower>() == true)
                     {
-                        UIManager.Instance.GetUITowerUpgrade().OpenTurretUpgradeMenu(hitInfo.collider.gameObject);
+                        UIManager.Instance.GetUITowerUpgrade().OpenTurretUpgradeMenu(hitInfo.transform.gameObject);
 
                         _hitTower = hitInfo.collider.GetComponentInParent<Tower>();
                         _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitTower.gameObject);

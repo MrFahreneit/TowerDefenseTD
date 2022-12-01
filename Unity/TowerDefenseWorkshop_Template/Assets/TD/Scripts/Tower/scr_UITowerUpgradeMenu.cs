@@ -30,8 +30,19 @@ public class scr_UITowerUpgradeMenu : MonoBehaviour
 
     private Tower _towerInfo = null;
 
+    #pragma warning disable CS0414
+    [SerializeField]
+    private TextMeshProUGUI _priceSpe1 = null;
+    [SerializeField]
+    private TextMeshProUGUI _priceSpe2 = null;
+    [SerializeField]
+    private TextMeshProUGUI _priceSpe3 = null;
+    #pragma warning restore CS0414
+
     public void SetInfoUpgrade(GameObject upgradedTower, Tower towerInfo)
     {
+        _towerUpgraded = upgradedTower;
+        _towerStats = towerInfo.GetDTTurret();
         _towerInfo = towerInfo;
         _towerInfo.SetInterfaceMenu(this);
 
@@ -79,6 +90,15 @@ public class scr_UITowerUpgradeMenu : MonoBehaviour
     public void StartUpgrading()
     {
         _towerInfo.UpgradingEvent();
+    }
+
+    public DT_TowerStats GetDTTowerStats()
+    {
+        return _towerStats;
+    }
+    public GameObject GetTowerPrefab()
+    {
+        return _towerUpgraded;
     }
 
 
