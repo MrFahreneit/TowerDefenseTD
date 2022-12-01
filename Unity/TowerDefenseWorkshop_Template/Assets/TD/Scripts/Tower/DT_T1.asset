@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977ae1b0ad6a53447a5060286544e2a4, type: 3}
+  m_Name: DT_T1
+  m_EditorClassIdentifier: 
+  _turretName: Monocible
+  _entityType: 0
+  TypeIndex: 0
+  _niv: 1
+  _damage: 50
+  _attackSpeed: 0.2
+  _range: 5
+  _bulletLaunch: 1
+  _spread: 0
+  _maxNiv: 3
+  _canEvolve: 1
+  _damagePercentNiv: 0.5
+  _attackSpeedPercentNiv: 0.2
+  _projectileSpawn: {fileID: 1697648429471405643, guid: a1a1140bdc5abfd4b923056be28d793a,
+    type: 3}
+  _Spe1Pefab: {fileID: 302692793403659941, guid: eee12eedd82a98145bd9a4909996192f,
+    type: 3}
+  _Spe2Pefab: {fileID: 302692793403659941, guid: 8f160e2c24c952643b2a7d9c159266d6,
+    type: 3}
+  _Spe3Pefab: {fileID: 302692793403659941, guid: 9895b20ca72dfc148aa77d11163ee4d2,
+    type: 3}

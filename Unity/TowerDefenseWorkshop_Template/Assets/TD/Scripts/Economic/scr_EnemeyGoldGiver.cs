@@ -13,7 +13,7 @@ public class scr_EnemeyGoldGiver : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(LevelReferences.Instance != null)
+        if(LevelReferences.HasInstance == true)
         {
             LevelReferences.Instance.Manager_Economic.AddGold(_goldDeath);
         }

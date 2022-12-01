@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GSGD1;
+#pragma warning disable CS0414
 
 [CreateAssetMenu(menuName = "GameSup/DataBaseTowerStat", fileName = "DataBaseTowerStat")]
 public class DT_TowerStats : ScriptableObject
@@ -44,7 +45,7 @@ public class DT_TowerStats : ScriptableObject
     [SerializeField]
     private GameObject _Spe1Pefab = null;
     [SerializeField]
-    private GameObject _Spel2Pefab = null;
+    private GameObject _Spe2Pefab = null;
     [SerializeField]
     private GameObject _Spe3Pefab = null;
 
@@ -118,6 +119,18 @@ public class DT_TowerStats : ScriptableObject
     public AProjectile GetProjectileDT()
     {
         return _projectileSpawn;
+    }
+    public GameObject GetSpe1DT()
+    {
+        return _Spe1Pefab;
+    }
+    public GameObject GetSpe2DT()
+    {
+        return _Spe2Pefab;
+    }
+    public GameObject GetSpe3DT()
+    {
+        return _Spe3Pefab;
     }
 
 }
