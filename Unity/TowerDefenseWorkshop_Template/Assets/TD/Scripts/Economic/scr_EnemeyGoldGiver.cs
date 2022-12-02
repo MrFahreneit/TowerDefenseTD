@@ -11,11 +11,16 @@ public class scr_EnemeyGoldGiver : MonoBehaviour
     [SerializeField]
     private int _goldDeath = 5;
 
+    [SerializeField]
+    private scr_GoldMultiplier _goldMultiSript = null;
+
     private void OnDestroy()
     {
         if(LevelReferences.HasInstance == true)
         {
-            LevelReferences.Instance.Manager_Economic.AddGold(_goldDeath);
+            LevelReferences.Instance.Manager_Economic.AddGold(
+                (Mathf.RoundToInt(_goldDeath * _goldMultiSript.GetMultiplier()))
+                );
         }
     }
 }
