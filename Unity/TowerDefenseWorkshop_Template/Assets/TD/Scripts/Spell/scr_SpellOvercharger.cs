@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GSGD1;
 
-public class scr_GoldSpell : MonoBehaviour
+public class scr_SpellOvercharger : MonoBehaviour
 {
     [SerializeField]
     private CapsuleCollider _capsuleCollider = null;
@@ -18,12 +18,11 @@ public class scr_GoldSpell : MonoBehaviour
         {
             if (hitCollider.GetComponentInParent<Damageable>() == true)
             {
-                hitCollider.GetComponentInParent<scr_GoldMultiplier>().AddAMultiplier();
+                hitCollider.GetComponentInParent<scr_overcharged>().SetOvercharged();
             }
 
         }
         hitColliders = null;
         Destroy(gameObject);
     }
-
 }
