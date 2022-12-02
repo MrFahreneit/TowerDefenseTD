@@ -16,18 +16,7 @@ public class scr_SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
-    [SerializeField]
-    private Button _optionsButton;
 
-
-    //[SerializeField]
-    //private Button _optionsReturn;
-
-    [SerializeField]
-    private GameObject _mainMenu;
-
-    [SerializeField]
-    private GameObject _optionSetting;
 
 
     private void Start()
@@ -77,17 +66,6 @@ public class scr_SettingsMenu : MonoBehaviour
         Screen.fullScreen = isFullScreen;
     }
 
-    public void OptionsClicked ()
-    {
-        _mainMenu.SetActive(false);
-        _optionSetting.SetActive(true);
-    }
 
-    public void OptionsReturn ()
-    {
-        _optionSetting.SetActive(false);
-        _mainMenu.SetActive(true);
-
-    }
 
 }
