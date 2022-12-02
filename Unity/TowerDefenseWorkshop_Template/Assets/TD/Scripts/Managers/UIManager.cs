@@ -26,6 +26,12 @@ namespace GSGD1
         [SerializeField]
         private GameObject _bestiaire;
 
+        [SerializeField]
+        private GameObject _towerBestiaire; 
+        
+        [SerializeField]
+        private GameObject _enemyBestiaire;
+
 
 
         public scr_UITurretMenu GetUITurretMenu()
@@ -84,5 +90,20 @@ namespace GSGD1
             _bestiaire.SetActive(false);
 
         }
+
+        public void TowerBestiaire()
+        {
+            _towerBestiaire.SetActive(true);
+
+        }
+
+
+        public void EnemyBestiaire()
+        {
+            _enemyBestiaire.SetActive(true);
+
+        }
+
+
     }
 }
