@@ -13,7 +13,7 @@
 		private float _rotateSpeed = 500f;
 
 		[SerializeField]
-		private Rigidbody rb = null;
+		//private Rigidbody rb = null;
 
 		private void Update()
 		{
