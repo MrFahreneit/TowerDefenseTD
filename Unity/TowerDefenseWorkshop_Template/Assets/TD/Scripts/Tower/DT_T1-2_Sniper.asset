@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977ae1b0ad6a53447a5060286544e2a4, type: 3}
   m_Name: DT_T1-2_Sniper
   m_EditorClassIdentifier: 
-  _turretName: MonoTruc
+  _turretName: Sniper
   _entityType: 0
   TypeIndex: 0
   _niv: 1
@@ -25,7 +25,8 @@ MonoBehaviour:
   _canEvolve: 0
   _damagePercentNiv: 0.5
   _attackSpeedPercentNiv: 0.2
-  _projectileSpawn: {fileID: 0}
+  _projectileSpawn: {fileID: 1697648429471405643, guid: 37bb702d180f5ce4d80049981757dc83,
+    type: 3}
   _Spe1Pefab: {fileID: 0}
-  _Spel2Pefab: {fileID: 0}
+  _Spe2Pefab: {fileID: 0}
   _Spe3Pefab: {fileID: 0}
