@@ -11,7 +11,6 @@
 		private int EntityID = 0;
 
 		public delegate void DamageableEvent(int DamageTaken, int remainingHealth);
-		public event DamageableEvent DamageTaken;
 
 
 		public void SetEntityID(int ID)
