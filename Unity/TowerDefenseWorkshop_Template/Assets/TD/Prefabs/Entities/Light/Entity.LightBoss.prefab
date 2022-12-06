@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 194615808828201957}
   - component: {fileID: 8270375698603788248}
   m_Layer: 0
-  m_Name: Entity.Boss
+  m_Name: Entity.LightBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968f346eb553e164c875a02622739750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3000
+  _health: 200
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2942146038031326620}
   _enemyType: {fileID: 5815297927120438070}
@@ -433,7 +433,6 @@ GameObject:
   - component: {fileID: 4276778175699756480}
   - component: {fileID: 391415744869150692}
   - component: {fileID: 4216253728911495896}
-  - component: {fileID: 8287915002130404291}
   m_Layer: 0
   m_Name: GoldBlock
   m_TagString: Untagged
@@ -506,19 +505,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8287915002130404291
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606211746523099435}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4654383938117914579
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +516,6 @@ GameObject:
   - component: {fileID: 1490012565557963919}
   - component: {fileID: 5590533841649659230}
   - component: {fileID: 4661846883143958151}
-  - component: {fileID: 755885511526274258}
   m_Layer: 0
   m_Name: StunBlock
   m_TagString: Untagged
@@ -603,19 +588,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &755885511526274258
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4654383938117914579}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9134734140481579077
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +599,6 @@ GameObject:
   - component: {fileID: 6371485353994554364}
   - component: {fileID: 6242689262293986782}
   - component: {fileID: 3096280577088483471}
-  - component: {fileID: 8632738635653953143}
   m_Layer: 0
   m_Name: ExplosionBlock
   m_TagString: Untagged
@@ -700,16 +671,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8632738635653953143
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9134734140481579077}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
