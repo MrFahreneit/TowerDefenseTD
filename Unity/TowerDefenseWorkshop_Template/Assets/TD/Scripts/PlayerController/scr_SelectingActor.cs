@@ -32,6 +32,9 @@ public class scr_SelectingActor : MonoBehaviour
     [SerializeField]
     private GameObject turret3 = null;
 
+    [SerializeField]
+    private scr_PlacingSpell _placingSpellScript;
+
 
 
     public void CreateTurret(int _TurretINDEX)
@@ -57,67 +60,71 @@ public class scr_SelectingActor : MonoBehaviour
     void Update()
     {
 
-
-        if (Input.GetMouseButtonDown(0) && _AMenuIsOpen == false)
+        if(_placingSpellScript.GetIsPlacingSpell() == false)
         {
+            if (Input.GetMouseButtonDown(0) && _AMenuIsOpen == false)
             {
-                Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hitInfo;
-                Physics.Raycast(ray, out hitInfo, _layerMask);
-                if (Physics.Raycast(ray, out hitInfo, float.MaxValue, _layerMask))
                 {
-
-
-                    //Hit une plante pour la récolter
-                    if (hitInfo.collider.GetComponentInParent<scr_PlanteSpawner>() == true)
+                    Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hitInfo;
+                    Physics.Raycast(ray, out hitInfo, _layerMask);
+                    if (Physics.Raycast(ray, out hitInfo, float.MaxValue, _layerMask))
                     {
-                        _hitPlante = hitInfo.collider.GetComponentInParent<scr_PlanteSpawner>();
 
-                        if(_hitPlante.GetPlantSpawned() == true)
+
+                        //Hit une plante pour la récolter
+                        if (hitInfo.collider.GetComponentInParent<scr_PlanteSpawner>() == true)
                         {
+                            _hitPlante = hitInfo.collider.GetComponentInParent<scr_PlanteSpawner>();
 
-                            _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitPlante.gameObject);
-                            _hitPlante.Interacte();
+                            if (_hitPlante.GetPlantSpawned() == true)
+                            {
+
+                                _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitPlante.gameObject);
+                                _hitPlante.Interacte();
+                            }
+
                         }
 
-                    }
+
+                        //Upgrade HIT
+                        if (hitInfo.collider.GetComponentInParent<Tower>() == true)
+                        {
+                            UIManager.Instance.GetUITowerUpgrade().OpenTurretUpgradeMenu(hitInfo.transform.gameObject);
+
+                            _hitTower = hitInfo.collider.GetComponentInParent<Tower>();
+                            _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitTower.gameObject);
+                        }
 
 
-                    //Upgrade HIT
-                    if (hitInfo.collider.GetComponentInParent<Tower>() == true)
-                    {
-                        UIManager.Instance.GetUITowerUpgrade().OpenTurretUpgradeMenu(hitInfo.transform.gameObject);
+                        //HIT Cell pour poser une tourelle
+                        if (hitInfo.collider.GetComponentInParent<scr_CellInt>() == true)
+                        {
+                            UIManager.Instance.GetUITurretMenu().OpenTurretMenu(gameObject);
 
-                        _hitTower = hitInfo.collider.GetComponentInParent<Tower>();
-                        _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitTower.gameObject);
-                    }
-
-
-                    //HIT Cell pour poser une tourelle
-                    if (hitInfo.collider.GetComponentInParent<scr_CellInt>() == true)
-                    {
-                        UIManager.Instance.GetUITurretMenu().OpenTurretMenu(gameObject);
-
-                        _hitCell = hitInfo.collider.GetComponentInParent<scr_CellInt>();
-                        _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitCell.gameObject);
-                    }
+                            _hitCell = hitInfo.collider.GetComponentInParent<scr_CellInt>();
+                            _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitCell.gameObject);
+                        }
 
 
 
-                    //HIT DEBRIS PLANT POUR LES ACHETER
-                    if (hitInfo.collider.GetComponentInParent<scr_DebrisPlante>() == true &&
-                        hitInfo.collider.GetComponentInParent<scr_DebrisPlante>().GetPrice() <= LevelReferences.Instance.Manager_Economic.GetGold() &&
-                        hitInfo.collider.GetComponentInParent<scr_DebrisPlante>().GetFriend() == true)
-                    {
-                        _hitDebris = hitInfo.collider.GetComponentInParent<scr_DebrisPlante>();
-                        _hitDebris.Interact();
-                        _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitDebris.gameObject);
-                        _hitDebris = null;
+                        //HIT DEBRIS PLANT POUR LES ACHETER
+                        if (hitInfo.collider.GetComponentInParent<scr_DebrisPlante>() == true &&
+                            hitInfo.collider.GetComponentInParent<scr_DebrisPlante>().GetPrice() <= LevelReferences.Instance.Manager_Economic.GetGold() &&
+                            hitInfo.collider.GetComponentInParent<scr_DebrisPlante>().GetFriend() == true)
+                        {
+                            _hitDebris = hitInfo.collider.GetComponentInParent<scr_DebrisPlante>();
+                            _hitDebris.Interact();
+                            _witchActor.GetComponentInParent<scr_WitchMovement>().SetNewTarget(_hitDebris.gameObject);
+                            _hitDebris = null;
+                        }
                     }
                 }
-            }
 
+            }
         }
+
+
         if (UIManager.Instance.GetMenuOpen() == true)
         {
             _AMenuIsOpen = true;
