@@ -72,7 +72,7 @@ MonoBehaviour:
   _path: {fileID: 0}
   _moveSpeed: 11.25
   _rotateSpeed: 5
-  _distanceThreshold: 0.5
+  _distanceThreshold: 1.5
   _enemyInBase: 0
 --- !u!114 &2942146037294568419
 MonoBehaviour:
@@ -433,7 +433,6 @@ GameObject:
   - component: {fileID: 3876139409508597303}
   - component: {fileID: 6983339580459591229}
   - component: {fileID: 4329011764724804528}
-  - component: {fileID: 4493788625536480458}
   m_Layer: 0
   m_Name: StunBlock
   m_TagString: Untagged
@@ -506,19 +505,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4493788625536480458
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4344002825202537075}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4626180943624417987
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +516,6 @@ GameObject:
   - component: {fileID: 5154259079534410082}
   - component: {fileID: 5830538759657287912}
   - component: {fileID: 4153065325598832983}
-  - component: {fileID: 7261125578124823806}
   m_Layer: 0
   m_Name: GoldBlock
   m_TagString: Untagged
@@ -603,19 +588,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7261125578124823806
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4626180943624417987}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7685246999256637731
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +599,6 @@ GameObject:
   - component: {fileID: 2274385340841735144}
   - component: {fileID: 150667114952438441}
   - component: {fileID: 4933605346142876153}
-  - component: {fileID: 9135717993613944214}
   m_Layer: 0
   m_Name: ExplosionBlock
   m_TagString: Untagged
@@ -700,16 +671,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9135717993613944214
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7685246999256637731}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
