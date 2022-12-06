@@ -88,12 +88,15 @@ namespace GSGD1
         public void BestiaireToGame()
         {
             _bestiaire.SetActive(false);
+            _towerBestiaire.SetActive(false);
+            _enemyBestiaire.SetActive(false);
 
         }
 
         public void TowerBestiaire()
         {
             _towerBestiaire.SetActive(true);
+            _enemyBestiaire.SetActive(false);
 
         }
 
@@ -101,7 +104,7 @@ namespace GSGD1
         public void EnemyBestiaire()
         {
             _enemyBestiaire.SetActive(true);
-
+            _towerBestiaire.SetActive(false);
         }
 
 
