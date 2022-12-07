@@ -13,7 +13,12 @@
 		None,
 		Light,
 		Heavy,
-		Speedy
+		Speedy,
+		Flying,
+		NormalBoss,
+		HeavyBoss,
+		SpeedyBoss,
+		FlyingBoss
 	}
 
 	[CreateAssetMenu(menuName = "GameSup/WaveDatabase")]
