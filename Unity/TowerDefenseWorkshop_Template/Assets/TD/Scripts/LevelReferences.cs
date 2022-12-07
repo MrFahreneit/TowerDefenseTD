@@ -18,9 +18,13 @@ namespace GSGD1
 		[SerializeField]
 		private scr_baseDamageable _BaseDamageable = null;
 
-        public PlayerPickerController PlayerPickerController => _playerPickerController;
+		[SerializeField]
+		private scr_PlanteSpawner _planteCraftEconomic = null;
+
+		public PlayerPickerController PlayerPickerController => _playerPickerController;
 		public SpawnerManager SpawnerManager => _spawnerManager;
 		public scr_Manager_Economic Manager_Economic => _EconomicManager;
 		public scr_baseDamageable BaseDamageable => _BaseDamageable;
-    }
+		public scr_PlanteSpawner PlanteCraftEconomic => _planteCraftEconomic;
+	}
 }
