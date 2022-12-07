@@ -1438,10 +1438,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1891926897}
         m_TargetAssemblyTypeName: scr_PlacingSpell, Assembly-CSharp
         m_MethodName: StartPlacing
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 9fa9119a4fb2823449a1c4c656a736d7,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: DT_SpellInfo, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
