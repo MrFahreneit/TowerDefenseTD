@@ -59,6 +59,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-Settings.json
-URPProjectSettings.asset
+/com.unity.probuilder
 
