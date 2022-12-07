@@ -5868,6 +5868,7 @@ GameObject:
   - component: {fileID: 1043908362}
   - component: {fileID: 1043908361}
   - component: {fileID: 1043908363}
+  - component: {fileID: 1043908364}
   m_Layer: 0
   m_Name: LevelReference
   m_TagString: Untagged
@@ -5891,6 +5892,7 @@ MonoBehaviour:
   _spawnerManager: {fileID: 114427185}
   _EconomicManager: {fileID: 1043908363}
   _BaseDamageable: {fileID: 0}
+  _planteCraftEconomic: {fileID: 0}
 --- !u!4 &1043908362
 Transform:
   m_ObjectHideFlags: 0
@@ -5923,6 +5925,30 @@ MonoBehaviour:
   _planteA: 0
   _planteB: 0
   _planteC: 0
+--- !u!114 &1043908364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043908360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb6284db57f34e44ac5321ab3239068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SpellPrice1: {x: 5, y: 2, z: 1}
+  _SpellPrice2: {x: 0, y: 0, z: 0}
+  _SpellPrice3: {x: 0, y: 0, z: 0}
+  _SpellPrice4: {x: 0, y: 0, z: 0}
+  _SpellPrice5: {x: 0, y: 0, z: 0}
+  _SpellPrice6: {x: 0, y: 0, z: 0}
+  _SpellMax1: 3
+  _SpellMax2: 3
+  _SpellMax3: 3
+  _SpellMax4: 2
+  _SpellMax5: 2
+  _SpellMax6: 2
 --- !u!1001 &1067819962
 PrefabInstance:
   m_ObjectHideFlags: 0
