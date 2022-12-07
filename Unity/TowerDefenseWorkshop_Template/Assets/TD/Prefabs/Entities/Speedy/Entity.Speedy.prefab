@@ -433,7 +433,6 @@ GameObject:
   - component: {fileID: 5987419918977146159}
   - component: {fileID: 8365800609893556638}
   - component: {fileID: 4701204952704038802}
-  - component: {fileID: 2902180638688458285}
   m_Layer: 0
   m_Name: GoldBlock
   m_TagString: Untagged
@@ -506,19 +505,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2902180638688458285
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3722522041754365069}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6246380959219299190
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +516,6 @@ GameObject:
   - component: {fileID: 6340765766920439247}
   - component: {fileID: 8040864351194280193}
   - component: {fileID: 5490442383254024822}
-  - component: {fileID: 5893147102244915281}
   m_Layer: 0
   m_Name: ExplosionBlock
   m_TagString: Untagged
@@ -603,19 +588,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5893147102244915281
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6246380959219299190}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6302454095060811798
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +599,6 @@ GameObject:
   - component: {fileID: 4162370361596568296}
   - component: {fileID: 828685599223429823}
   - component: {fileID: 5798450588195295315}
-  - component: {fileID: 3362905271209218990}
   m_Layer: 0
   m_Name: StunBlock
   m_TagString: Untagged
@@ -700,16 +671,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3362905271209218990
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302454095060811798}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
