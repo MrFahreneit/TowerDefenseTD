@@ -22,7 +22,20 @@ MonoBehaviour:
   - _waveEntityPrefab: {fileID: 5412690654039449867, guid: 5e3c08dd4a6bacf42b6cfcade9706784,
       type: 3}
     _entityType: 3
+  - _waveEntityPrefab: {fileID: 5412690654039449867, guid: f69a7d740c2e99644939a6011a09adea,
+      type: 3}
+    _entityType: 4
+  - _waveEntityPrefab: {fileID: 5412690654039449867, guid: 614d9d8590437ac4d9e5005652fb096f,
+      type: 3}
+    _entityType: 5
+  - _waveEntityPrefab: {fileID: 5412690654039449867, guid: c023a839d56f7aa4f85eaa41e70be25f,
+      type: 3}
+    _entityType: 7
+  - _waveEntityPrefab: {fileID: 5412690654039449867, guid: dec18996a9484b74d9511d304357dc87,
+      type: 3}
+    _entityType: 6
+  - _waveEntityPrefab: {fileID: 5412690654039449867, guid: e0535d6b87b35a347b01401f7cd051e9,
+      type: 3}
+    _entityType: 8
   _waves:
   - {fileID: 11400000, guid: a459061dc5860024590f76ddef462ecd, type: 2}
-  - {fileID: 11400000, guid: a530391b5ce8c734eac723b1d05fa896, type: 2}
-  - {fileID: 11400000, guid: d30e20404f780554084a0b1674949f70, type: 2}
