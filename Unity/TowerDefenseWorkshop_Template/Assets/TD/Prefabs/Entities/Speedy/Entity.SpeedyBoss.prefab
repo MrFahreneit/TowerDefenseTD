@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 6008011933787734400}
   - component: {fileID: 6070739952166988271}
   - component: {fileID: 7349188224928891886}
+  - component: {fileID: -5971040723430351658}
   - component: {fileID: 796571194147593973}
   - component: {fileID: 6273241710561537728}
   - component: {fileID: 2883311958606682510}
@@ -236,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _path: {fileID: 0}
-  _moveSpeed: 15
+  _moveSpeed: 5
   _rotateSpeed: 5
   _distanceThreshold: 0.5
   _enemyInBase: 0
@@ -252,6 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968f346eb553e164c875a02622739750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ParticleDamage: {fileID: 7349188224928891886}
+  _ParticleDeath: {fileID: -5971040723430351658}
   _health: 150
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2942146038031326620}
@@ -311,8 +314,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageParticle: {fileID: 6159851731732633496, guid: fad479241fc5cca47b823fc8ac0cd376,
-    type: 3}
+  _Particle: {fileID: 0}
+  _rotateFromSpawner: 0
+--- !u!114 &-5971040723430351658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 0}
   _rotateFromSpawner: 0
 --- !u!114 &796571194147593973
 MonoBehaviour:

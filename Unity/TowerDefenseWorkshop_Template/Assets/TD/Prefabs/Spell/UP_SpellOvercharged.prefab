@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7690907739416470011}
   - component: {fileID: 8092840138962813674}
+  - component: {fileID: 8141333834969702650}
   m_Layer: 0
   m_Name: UP_SpellOvercharged
   m_TagString: Untagged
@@ -46,3 +47,16 @@ CapsuleCollider:
   m_Height: 10
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8141333834969702650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5129315356442192989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af88248e49e61034582c8892bd170d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _capsuleCollider: {fileID: 8092840138962813674}
