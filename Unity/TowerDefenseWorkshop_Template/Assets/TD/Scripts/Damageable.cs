@@ -6,6 +6,12 @@
 	public class Damageable : MonoBehaviour
 	{
 		[SerializeField]
+		private scr_ParticleSpawner _ParticleDamage = null;
+        [SerializeField]
+        private scr_ParticleSpawner _ParticleDeath = null;
+
+
+        [SerializeField]
 		private float _health = 1f;
 
 		[SerializeField]
@@ -62,6 +68,7 @@
 
 					if (_destroyIfKilled == true)
 					{
+						_ParticleDamage.SpawnParticle();
 						DoDestroy();
 					}
 
@@ -78,7 +85,9 @@
 
 		private void DoDestroy()
 		{
-			Destroy(gameObject);
+			_ParticleDeath.SpawnParticle();
+
+            Destroy(gameObject);
 		}
 
         private void Start()
