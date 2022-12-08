@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5815297927120438070}
   - component: {fileID: 3078949404861870484}
   - component: {fileID: 8406676859938022519}
+  - component: {fileID: 5109399373307215911}
   - component: {fileID: 5040093621623231181}
   - component: {fileID: 194615808828201957}
   - component: {fileID: 8270375698603788248}
@@ -70,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _path: {fileID: 0}
-  _moveSpeed: 5
+  _moveSpeed: 2.5
   _rotateSpeed: 5
   _distanceThreshold: 0.5
   _enemyInBase: 0
@@ -86,6 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968f346eb553e164c875a02622739750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ParticleDamage: {fileID: 8406676859938022519}
+  _ParticleDeath: {fileID: 5109399373307215911}
   _health: 200
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2942146038031326620}
@@ -134,6 +137,21 @@ MonoBehaviour:
   _goldDeath: 5
   _goldMultiSript: {fileID: 5040093621623231181}
 --- !u!114 &8406676859938022519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageParticle: {fileID: 6159851731732633496, guid: fad479241fc5cca47b823fc8ac0cd376,
+    type: 3}
+  _rotateFromSpawner: 0
+--- !u!114 &5109399373307215911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
