@@ -85,4 +85,19 @@ public class scr_UISpellCraft : MonoBehaviour
 
 
     }
+
+    public void BuyPotion(int INDEX)
+    {
+        Vector3 priceVector = LevelReferences.Instance.PlanteCraftEconomic.GetPrice(SpellIndex);
+
+        priceA = (int)priceVector.x;
+        priceB = (int)priceVector.y;
+        priceC = (int)priceVector.z;
+
+        LevelReferences.Instance.Manager_Economic.AddPlanteA(priceA * (-1));
+        LevelReferences.Instance.Manager_Economic.AddPlanteB(priceB * (-1));
+        LevelReferences.Instance.Manager_Economic.AddPlanteC(priceC * (-1));
+
+        LevelReferences.Instance.PlanteCraftEconomic.AddPotion(INDEX);
+    }
 }

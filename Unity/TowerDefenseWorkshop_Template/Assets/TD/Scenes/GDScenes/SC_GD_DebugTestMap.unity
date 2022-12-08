@@ -3342,7 +3342,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 409735711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1099610973}
+        m_TargetAssemblyTypeName: scr_UISpellCraft, Assembly-CSharp
+        m_MethodName: BuyPotion
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &409735711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12671,6 +12683,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968f346eb553e164c875a02622739750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ParticleDamage: {fileID: 0}
+  _ParticleDeath: {fileID: 0}
   _health: 1
   _destroyIfKilled: 1
   _aimPosition: {fileID: 212901992}
