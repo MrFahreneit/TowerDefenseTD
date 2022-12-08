@@ -19,6 +19,9 @@ public class scr_SpellForwardReceiver : MonoBehaviour
 
     private float _currentScale = 1f;
 
+    [SerializeField]
+    private MeshRenderer _meshRenderer;
+
     public UnityEvent<float> TimerScaleHasChanged;
 
     public void StartFastForward()
@@ -30,7 +33,7 @@ public class scr_SpellForwardReceiver : MonoBehaviour
         _timerReset.Set(_timeSpeed, true);
         _timerReset.Start();
         TimerScaleHasChanged.Invoke(_currentScale);
-
+        _meshRenderer.enabled = true;
     }
 
     // Update is called once per frame
@@ -52,6 +55,7 @@ public class scr_SpellForwardReceiver : MonoBehaviour
     {
         _currentScale = 1f;
         _forwarder = 0;
-        TimerScaleHasChanged.Invoke(0);
+        TimerScaleHasChanged.Invoke(1);
+        _meshRenderer.enabled = false;
     }
 }

@@ -12,11 +12,11 @@ public class scr_ParticleSpawner : MonoBehaviour
 
     public void SpawnParticle()
     {
-        var instance = Instantiate(_Particle);
-        instance.transform.position = gameObject.transform.position;
-        if (_rotateFromSpawner)
-        {
-            instance.transform.rotation = gameObject.transform.rotation;
-        }
+        //var instance = Instantiate(_Particle);
+        //instance.transform.position = gameObject.transform.position;
+        //if (_rotateFromSpawner)
+        //{
+           // instance.transform.rotation = gameObject.transform.rotation;
+        //}
     }
 }

@@ -58,7 +58,6 @@ public class scr_UISpellCraft : MonoBehaviour
         priceA = (int)priceVector.x;
         priceB = (int)priceVector.y;
         priceC = (int)priceVector.z;
-        Debug.Log(maxSpellCount +" +" + currentSpellCount);
 
 
         if (

@@ -45,7 +45,7 @@
 
 		private void Awake()
 		{
-			_ParticleCreate.SpawnParticle();
+			//_ParticleCreate.SpawnParticle();
 			enabled = true;
 			UpdateStats(false);
 		}
@@ -63,7 +63,7 @@
                 //_weaponController.LookAt(damageableTarget.GetAimPosition());
                 //_weaponController.Fire();
 
-                _ParticleCreate.SpawnParticle();
+                //_ParticleCreate.SpawnParticle();
                 _weaponController.LookAtAndFire(damageableTarget.GetAimPosition());
 				_weaponController.GetWeapon().SetTarget(_damageableDetector.GetNearestDamageable().gameObject);
 			}
