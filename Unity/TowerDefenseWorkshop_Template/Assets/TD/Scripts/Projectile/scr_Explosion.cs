@@ -45,7 +45,6 @@ public class scr_Explosion : MonoBehaviour
             hitColliders = Physics.OverlapSphere(gameObject.transform.position, _collider.radius);
             foreach (var hitCollider in hitColliders)
             {
-                Debug.Log(hitCollider);
                 if (hitCollider.GetComponentInParent<Damageable>() == true)
                 {
                     hitCollider.GetComponentInParent<Damageable>().TakeDamage(_damage);
