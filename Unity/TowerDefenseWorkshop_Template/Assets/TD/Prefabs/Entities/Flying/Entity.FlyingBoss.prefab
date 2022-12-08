@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _path: {fileID: 0}
-  _moveSpeed: 5.625
+  _moveSpeed: 3.75
   _rotateSpeed: 5
   _distanceThreshold: 1.5
   _enemyInBase: 0
@@ -148,8 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageParticle: {fileID: 6159851731732633496, guid: fad479241fc5cca47b823fc8ac0cd376,
-    type: 3}
+  _Particle: {fileID: 0}
   _rotateFromSpawner: 0
 --- !u!114 &-8834133923763769236
 MonoBehaviour:
@@ -163,8 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageParticle: {fileID: 6159851731732633496, guid: 3ea4a61c4b55df646a70b23f46a8a762,
-    type: 3}
+  _Particle: {fileID: 0}
   _rotateFromSpawner: 0
 --- !u!114 &5033056442910615431
 MonoBehaviour:
@@ -333,7 +331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2942146038031326611}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
