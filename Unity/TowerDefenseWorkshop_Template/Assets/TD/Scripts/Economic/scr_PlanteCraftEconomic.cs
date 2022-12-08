@@ -138,4 +138,35 @@ public class scr_PlanteCraftEconomic : MonoBehaviour
            _SpellCurrent6++;
         }
     }
+    public int GetCurrent(int INDEX)
+    {
+        int currentChoosed = 0;
+
+        if (INDEX == 1)
+        {
+            currentChoosed = _SpellCurrent1;
+        }
+        if (INDEX == 2)
+        {
+            currentChoosed = _SpellCurrent2;
+        }
+        if (INDEX == 3)
+        {
+            currentChoosed = _SpellCurrent3;
+        }
+        if (INDEX == 4)
+        {
+            currentChoosed = _SpellCurrent4;
+        }
+        if (INDEX == 5)
+        {
+            currentChoosed = _SpellCurrent5;
+        }
+        if (INDEX == 6)
+        {
+            currentChoosed = _SpellCurrent6;
+        }
+
+        return currentChoosed;
+    }
 }
