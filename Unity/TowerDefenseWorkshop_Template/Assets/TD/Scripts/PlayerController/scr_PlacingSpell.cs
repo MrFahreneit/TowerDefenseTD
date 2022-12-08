@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GSGD1;
 
 public class scr_PlacingSpell : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class scr_PlacingSpell : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) == true && isPlacingSpell == true)
         {
+           LevelReferences.Instance.PlanteCraftEconomic.RemovePotion(_spellInfoDT.GetIndexSpell());
            var instance = Instantiate(_spellInfoDT.GetSpellPrefab(),_placement, Quaternion.identity);
            StopPlacingSpell();
         }
