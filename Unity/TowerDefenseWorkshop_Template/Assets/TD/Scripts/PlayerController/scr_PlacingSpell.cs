@@ -14,6 +14,8 @@ public class scr_PlacingSpell : MonoBehaviour
 
     private Vector3 _placement;
 
+    private DT_SpellInfo _spellInfoDT = null;
+
 
     public bool GetIsPlacingSpell()
     {
@@ -26,6 +28,7 @@ public class scr_PlacingSpell : MonoBehaviour
         {
             StopPlacingSpell();
         }
+        
         if (isPlacingSpell == true)
         {
             Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
@@ -35,6 +38,12 @@ public class scr_PlacingSpell : MonoBehaviour
             {
                 _placement = hitInfo.point;
             }
+        }
+
+        if (Input.GetMouseButtonDown(0) == true && isPlacingSpell == true)
+        {
+           var instance = Instantiate(_spellInfoDT.GetSpellPrefab(),_placement, Quaternion.identity);
+           StopPlacingSpell();
         }
     }
 
@@ -47,9 +56,9 @@ public class scr_PlacingSpell : MonoBehaviour
     {
         return _placement;
     }
-    public void StartPlacing()
+    public void StartPlacing(DT_SpellInfo spellChoosed)
     {
-        Debug.Log("oui");
+        _spellInfoDT = spellChoosed;
         isPlacingSpell = true;
     }
 
