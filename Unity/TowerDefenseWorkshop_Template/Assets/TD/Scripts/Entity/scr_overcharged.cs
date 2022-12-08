@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GSGD1;
 
 public class scr_overcharged : MonoBehaviour
 {
@@ -14,10 +15,15 @@ public class scr_overcharged : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(_isOvercharged == true)
+        if (LevelReferences.HasInstance == true)
         {
-            var instance = Instantiate(_explosionOvercharged, gameObject.transform.position, Quaternion.identity);
+
+            if (_isOvercharged == true)
+            {
+                var instance = Instantiate(_explosionOvercharged, gameObject.transform.position, Quaternion.identity);
+            }
         }
+
 
     }
 

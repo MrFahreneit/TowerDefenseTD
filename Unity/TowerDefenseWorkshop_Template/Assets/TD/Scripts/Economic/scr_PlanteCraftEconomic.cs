@@ -138,6 +138,33 @@ public class scr_PlanteCraftEconomic : MonoBehaviour
            _SpellCurrent6++;
         }
     }
+    public void RemovePotion(int INDEX)
+    {
+        if (INDEX == 1)
+        {
+            _SpellCurrent1--;
+        }
+        if (INDEX == 2)
+        {
+            _SpellCurrent2--;
+        }
+        if (INDEX == 3)
+        {
+            _SpellCurrent3--;
+        }
+        if (INDEX == 4)
+        {
+            _SpellCurrent4--;
+        }
+        if (INDEX == 5)
+        {
+            _SpellCurrent5--;
+        }
+        if (INDEX == 6)
+        {
+            _SpellCurrent6--;
+        }
+    }
     public int GetCurrent(int INDEX)
     {
         int currentChoosed = 0;
