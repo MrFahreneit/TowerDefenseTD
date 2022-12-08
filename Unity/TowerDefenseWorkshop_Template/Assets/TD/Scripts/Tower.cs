@@ -10,7 +10,13 @@
 	/// </summary>
 	public class Tower : MonoBehaviour, IPickerGhost, ICellChild
 	{
-		[SerializeField]
+        [SerializeField]
+        private scr_ParticleSpawner _ParticleCreate = null;
+        [SerializeField]
+        private scr_ParticleSpawner _ParticleShoot = null;
+
+
+        [SerializeField]
 		private WeaponController _weaponController = null;
 
 		[SerializeField]
@@ -39,6 +45,7 @@
 
 		private void Awake()
 		{
+			_ParticleCreate.SpawnParticle();
 			enabled = true;
 			UpdateStats(false);
 		}
@@ -53,10 +60,11 @@
 			if (_damageableDetector.HasAnyDamageableInRange() == true)
 			{
 				Damageable damageableTarget = _damageableDetector.GetNearestDamageable();
-				//_weaponController.LookAt(damageableTarget.GetAimPosition());
-				//_weaponController.Fire();
+                //_weaponController.LookAt(damageableTarget.GetAimPosition());
+                //_weaponController.Fire();
 
-				_weaponController.LookAtAndFire(damageableTarget.GetAimPosition());
+                _ParticleCreate.SpawnParticle();
+                _weaponController.LookAtAndFire(damageableTarget.GetAimPosition());
 				_weaponController.GetWeapon().SetTarget(_damageableDetector.GetNearestDamageable().gameObject);
 			}
             else
