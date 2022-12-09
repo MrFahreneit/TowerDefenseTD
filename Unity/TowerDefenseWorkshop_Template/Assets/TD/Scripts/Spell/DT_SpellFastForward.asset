@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: DT_SpellFastForward
   m_EditorClassIdentifier: 
   _name: FastForward
-  _spellPrefab: {fileID: 0}
+  _spellPrefab: {fileID: 5014484129279191619, guid: 3614c473068001940a23f954febd0e05,
+    type: 3}
   IndexSpell: 4
