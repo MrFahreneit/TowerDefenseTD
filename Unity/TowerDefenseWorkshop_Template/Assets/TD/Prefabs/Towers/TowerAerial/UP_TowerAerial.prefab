@@ -237,7 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Particle: {fileID: 0}
+  _Particle: {fileID: 5729378830009958310, guid: 0456a1d98e9e24b44a93236dbc0840fa,
+    type: 3}
   _rotateFromSpawner: 0
 --- !u!114 &8582805613381112369
 MonoBehaviour:
