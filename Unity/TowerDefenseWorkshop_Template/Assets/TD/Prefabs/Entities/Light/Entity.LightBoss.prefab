@@ -148,8 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageParticle: {fileID: 6159851731732633496, guid: fad479241fc5cca47b823fc8ac0cd376,
-    type: 3}
+  _Particle: {fileID: 0}
   _rotateFromSpawner: 0
 --- !u!114 &5109399373307215911
 MonoBehaviour:
@@ -163,8 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageParticle: {fileID: 6159851731732633496, guid: fad479241fc5cca47b823fc8ac0cd376,
-    type: 3}
+  _Particle: {fileID: 0}
   _rotateFromSpawner: 0
 --- !u!114 &5040093621623231181
 MonoBehaviour:
@@ -179,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _addMulti: 0.25
-  _goldActive: {fileID: 3606211746523099435}
+  _goldActive: {fileID: 4216253728911495896}
 --- !u!114 &194615808828201957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,8 +193,9 @@ MonoBehaviour:
   _pathFollower: {fileID: 2942146037294568418}
   _timerStun:
     _duration: 2.5
+    _timeScale: 1
     _stopWhenCompleted: 1
-  _stunBlock: {fileID: 4654383938117914579}
+  _stunBlock: {fileID: 4661846883143958151}
 --- !u!114 &8270375698603788248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,9 +208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29179005d1936514e89c7b1375c3b6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosionOvercharged: {fileID: 9134734140481579077}
-  _overchargedBlock: {fileID: 5401439968005239301, guid: 792be0572a9e701489631ddfc8ee0c48,
+  _explosionOvercharged: {fileID: 5401439968005239301, guid: 792be0572a9e701489631ddfc8ee0c48,
     type: 3}
+  _overchargedBlock: {fileID: 3096280577088483471}
 --- !u!1 &2942146037963372806
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4276778175699756480
 Transform:
   m_ObjectHideFlags: 0
@@ -488,7 +487,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3606211746523099435}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -540,7 +539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1490012565557963919
 Transform:
   m_ObjectHideFlags: 0
@@ -571,7 +570,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4654383938117914579}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -623,7 +622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6371485353994554364
 Transform:
   m_ObjectHideFlags: 0
@@ -654,7 +653,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9134734140481579077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

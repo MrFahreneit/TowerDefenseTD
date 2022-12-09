@@ -22,6 +22,26 @@
 		[SerializeField]
 		protected GameObject _targetWeapon = null;
 
+		[SerializeField]
+		protected scr_SpellForwardReceiver _spellSpeed = null;
+
+		private void OnEnable()
+		{
+			_spellSpeed.TimerScaleHasChanged.RemoveListener(ChangeTime);
+			_spellSpeed.TimerScaleHasChanged.AddListener(ChangeTime);
+		}
+
+		private void OnDisable()
+		{
+			_spellSpeed.TimerScaleHasChanged.RemoveListener(ChangeTime);
+		}
+
+		private void ChangeTime(float newTimer)
+        {
+			_timer.NewTimeScale(newTimer);
+
+		}
+
 		public virtual bool CanFire()
 		{
 			return _timer.IsRunning == false;
