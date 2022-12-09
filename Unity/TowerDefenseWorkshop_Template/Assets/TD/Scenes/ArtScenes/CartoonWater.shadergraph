@@ -5125,7 +5125,7 @@
         "m_Id": "e1f5acc6270842e0a2e0bfb7ecb40a34"
     },
     "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 0,
+    "m_SurfaceType": 1,
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
@@ -5721,7 +5721,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Scale",
     "m_StageCapability": 3,
-    "m_Value": 5.0,
+    "m_Value": 0.0,
     "m_DefaultValue": 10.0,
     "m_Labels": []
 }
