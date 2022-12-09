@@ -15,22 +15,22 @@ MonoBehaviour:
   _waves:
   - _waveEntitiesDescriptions:
     - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 1
-      _extraDurationAfterSpawned: 0
+      _extraDurationAfterSpawned: 7
     - _entityType: 4
       _extraDurationAfterSpawned: 0
     - _entityType: 2
+      _extraDurationAfterSpawned: 2
+    - _entityType: 3
       _extraDurationAfterSpawned: 0
     - _entityType: 2
-      _extraDurationAfterSpawned: 0
+      _extraDurationAfterSpawned: 5
     - _entityType: 1
       _extraDurationAfterSpawned: 0
     - _entityType: 2
-      _extraDurationAfterSpawned: 0
+      _extraDurationAfterSpawned: 7
     - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 1
       _extraDurationAfterSpawned: 0
     - _entityType: 4
       _extraDurationAfterSpawned: 0
