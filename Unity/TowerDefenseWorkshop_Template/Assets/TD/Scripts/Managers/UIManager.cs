@@ -3,6 +3,7 @@ namespace GSGD1
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
+    using UnityEngine.SceneManagement;
     using UnityEngine.UI;
 
     public class UIManager : Singleton<UIManager>
@@ -13,6 +14,9 @@ namespace GSGD1
         private scr_TowerUpgradeCanva _TurretUpgradeMenu;
 
         private bool _aMenuIsOpen = false;
+
+        [SerializeField] 
+        private string sceneToLoad;
 
         [SerializeField]
         private GameObject _mainMenu;
@@ -107,6 +111,9 @@ namespace GSGD1
             _towerBestiaire.SetActive(false);
         }
 
-
+        public void LoadScene()
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
     }
 }
