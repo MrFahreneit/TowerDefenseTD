@@ -8138,7 +8138,7 @@ PrefabInstance:
     - target: {fileID: 2344358980037288632, guid: b56b050f65ae542429a3af68d8f5f07e,
         type: 3}
       propertyPath: m_Name
-      value: SpellThrowButton1.05
+      value: SpellThrowButton6
       objectReference: {fileID: 0}
     - target: {fileID: 3124247675162732755, guid: b56b050f65ae542429a3af68d8f5f07e,
         type: 3}

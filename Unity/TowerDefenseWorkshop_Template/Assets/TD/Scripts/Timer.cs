@@ -21,6 +21,9 @@
 		private float _duration = 0f;
 
 		[SerializeField]
+		private float _timeScale = 1f;
+
+		[SerializeField]
 		private bool _stopWhenCompleted = true;
 
 		[System.NonSerialized]
@@ -140,7 +143,7 @@
 				}
 				case State.Started:
 				{
-					_remainingTime += Time.deltaTime;
+					_remainingTime += Time.deltaTime * _timeScale;
 					if (_remainingTime > _duration)
 					{
 						_remainingTime = _duration;
@@ -169,6 +172,12 @@
 				default: return false;
 			}
 		}
+
+		public void NewTimeScale(float newTimeScale)
+        {
+			_timeScale = newTimeScale;
+        }
+
 		#endregion Public
 
 		#region Protected

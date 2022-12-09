@@ -15,6 +15,7 @@
 
 		protected override void DoFire()
 		{
+			Debug.Log("WantToShoot");
 			ShootUnityEvent.Invoke();
 
 			for (int i = 0; i < _bulletNB; i++)
