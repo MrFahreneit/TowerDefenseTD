@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class scr_SpellEntiity : MonoBehaviour
 {
-    [SerializeField]
-    private bool isMeshVisible = false;
 
     [SerializeField]
     private GameObject _meshRenderer;

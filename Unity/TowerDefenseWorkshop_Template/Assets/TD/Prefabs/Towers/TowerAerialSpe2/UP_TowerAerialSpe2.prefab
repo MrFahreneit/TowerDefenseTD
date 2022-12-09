@@ -64,6 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timer:
     _duration: 1
+    _timeScale: 1
     _stopWhenCompleted: 1
   _projectile: {fileID: 1697648429471405643, guid: a1a1140bdc5abfd4b923056be28d793a,
     type: 3}
@@ -72,7 +73,11 @@ MonoBehaviour:
   _bulletNB: 1
   _spreadAmount: 0
   _targetWeapon: {fileID: 0}
+  _spellSpeed: {fileID: 7417979213988915711}
   _projectileAnchor: {fileID: 302692792940769431}
+  ShootUnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &302692792940769428
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +123,7 @@ GameObject:
   - component: {fileID: 302692793403659942}
   - component: {fileID: 302692793403659943}
   - component: {fileID: 302692793403659936}
+  - component: {fileID: 7417979213988915711}
   m_Layer: 0
   m_Name: UP_TowerAerialSpe2
   m_TagString: Untagged
@@ -140,6 +146,7 @@ Transform:
   - {fileID: 9167424300087546369}
   - {fileID: 302692792590252285}
   - {fileID: 8044269481545822748}
+  - {fileID: 2090028706220259894}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -155,6 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234767b6b1df3734886a7cf6007a3667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ParticleCreate: {fileID: 0}
+  _ParticleShoot: {fileID: 0}
   _weaponController: {fileID: 302692792590252287}
   _damageableDetector: {fileID: 302692793403659942}
   _typeEntity: {fileID: 7954490793965705602}
@@ -214,6 +223,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7417979213988915711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302692793403659941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0932111a735fc174e91d34eb94339fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timerReset:
+    _duration: 0
+    _timeScale: 1
+    _stopWhenCompleted: 1
+  _timeSpeed: 5
+  speedFactorScale: 0.5
+  _meshRenderer: {fileID: 8472354966479813754}
+  TimerScaleHasChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1600642480088593361
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +342,89 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4483459133969849903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2090028706220259894}
+  - component: {fileID: 1258728725671174844}
+  - component: {fileID: 8472354966479813754}
+  m_Layer: 0
+  m_Name: FastForwardCube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2090028706220259894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483459133969849903}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.497, z: 0}
+  m_LocalScale: {x: 0.59906, y: 1, z: 0.63433}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302692793403659940}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1258728725671174844
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483459133969849903}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8472354966479813754
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483459133969849903}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f22250fe25a308d4fbeaa61ae46059a6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &8283891139975549407
 PrefabInstance:
   m_ObjectHideFlags: 0

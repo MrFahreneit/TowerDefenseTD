@@ -3,6 +3,7 @@ namespace GSGD1
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
+    using UnityEngine.SceneManagement;
     using UnityEngine.UI;
 
     public class UIManager : Singleton<UIManager>
@@ -13,6 +14,9 @@ namespace GSGD1
         private scr_TowerUpgradeCanva _TurretUpgradeMenu;
 
         private bool _aMenuIsOpen = false;
+
+        [SerializeField] 
+        private string sceneToLoad;
 
         [SerializeField]
         private GameObject _mainMenu;
@@ -88,12 +92,15 @@ namespace GSGD1
         public void BestiaireToGame()
         {
             _bestiaire.SetActive(false);
+            _towerBestiaire.SetActive(false);
+            _enemyBestiaire.SetActive(false);
 
         }
 
         public void TowerBestiaire()
         {
             _towerBestiaire.SetActive(true);
+            _enemyBestiaire.SetActive(false);
 
         }
 
@@ -101,9 +108,12 @@ namespace GSGD1
         public void EnemyBestiaire()
         {
             _enemyBestiaire.SetActive(true);
-
+            _towerBestiaire.SetActive(false);
         }
 
-
+        public void LoadScene()
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
     }
 }

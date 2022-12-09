@@ -15,6 +15,9 @@ public class scr_PlanteSpawner : MonoBehaviour
     private Timer _timer = null;
 
     [SerializeField]
+    private DT_PlanteTimer _dtTimer;
+
+    [SerializeField]
     private bool isSpawned = true;
 
     [SerializeField]
@@ -37,6 +40,25 @@ public class scr_PlanteSpawner : MonoBehaviour
     [SerializeField]
     private scr_PlanteVisibility _planteVisibility = null;
 
+    [SerializeField]
+    protected scr_SpellForwardReceiver _spellSpeed = null;
+
+    private void OnEnable()
+    {
+        _spellSpeed.TimerScaleHasChanged.RemoveListener(ChangeTime);
+        _spellSpeed.TimerScaleHasChanged.AddListener(ChangeTime);
+    }
+
+    private void OnDisable()
+    {
+        _spellSpeed.TimerScaleHasChanged.RemoveListener(ChangeTime);
+    }
+
+    private void ChangeTime(float newTimer)
+    {
+        _timer.NewTimeScale(newTimer);
+
+    }
 
     public void Interacte()
     {
@@ -108,6 +130,7 @@ public class scr_PlanteSpawner : MonoBehaviour
         }
 
         UpdateMaterialAndFriends();
+
     }
 
     private void Start()
@@ -128,6 +151,22 @@ public class scr_PlanteSpawner : MonoBehaviour
                 break;
             case PlanteType.PlanteC:
                 _MATERIALTONPERE.GetComponent<MeshRenderer>().material = _plantCMat;
+                break;
+        }
+
+        switch (_planteChoice)
+        {
+            case PlanteType.PlanteA:
+                _timer.Set(_dtTimer.GetHatchTime(1),true);
+                PlanteIsCollected();
+                break;
+            case PlanteType.PlanteB:
+                _timer.Set(_dtTimer.GetHatchTime(2), true);
+                PlanteIsCollected();
+                break;
+            case PlanteType.PlanteC:
+                _timer.Set(_dtTimer.GetHatchTime(3), true);
+                PlanteIsCollected();
                 break;
         }
     }

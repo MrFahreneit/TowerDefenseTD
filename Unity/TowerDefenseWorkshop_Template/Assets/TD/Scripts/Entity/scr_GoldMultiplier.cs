@@ -12,13 +12,13 @@ public class scr_GoldMultiplier : MonoBehaviour
     private float _addMulti = 0.25f;
 
     [SerializeField]
-    private GameObject _goldActive = null;
+    private MeshRenderer _goldActive = null;
 
 
     public void AddAMultiplier()
     {
         _multiplierPercent = _multiplierPercent + _addMulti;
-        _goldActive.SetActive(true);
+        _goldActive.enabled = true;
     }
 
     public float GetMultiplier()
