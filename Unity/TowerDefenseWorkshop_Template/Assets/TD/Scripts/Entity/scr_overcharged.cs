@@ -9,7 +9,7 @@ public class scr_overcharged : MonoBehaviour
     private GameObject _explosionOvercharged = null;
 
     [SerializeField]
-    private GameObject _overchargedBlock = null;
+    private MeshRenderer _overchargedBlock = null;
 
     private bool _isOvercharged = false;
 
@@ -29,7 +29,7 @@ public class scr_overcharged : MonoBehaviour
 
     public void SetOvercharged()
     {
-        _overchargedBlock.SetActive(true);
+        _overchargedBlock.enabled = true;
         _isOvercharged = true;
     }
 }
