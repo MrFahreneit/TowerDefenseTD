@@ -14,43 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waves:
   - _waveEntitiesDescriptions:
-    - _entityType: 5
-      _extraDurationAfterSpawned: 0
-    - _entityType: 5
-      _extraDurationAfterSpawned: 0
-    - _entityType: 7
-      _extraDurationAfterSpawned: 0
-    - _entityType: 7
-      _extraDurationAfterSpawned: 0
     - _entityType: 6
+      _extraDurationAfterSpawned: 7
+    - _entityType: 7
+      _extraDurationAfterSpawned: 0
+    - _entityType: 5
+      _extraDurationAfterSpawned: 0
+    - _entityType: 5
+      _extraDurationAfterSpawned: 3
+    - _entityType: 7
       _extraDurationAfterSpawned: 0
     _durationBetweenSpawnedEntity: 1
   - _waveEntitiesDescriptions:
-    - _entityType: 5
-      _extraDurationAfterSpawned: 0
-    - _entityType: 5
-      _extraDurationAfterSpawned: 0
-    - _entityType: 5
-      _extraDurationAfterSpawned: 0
-    - _entityType: 7
-      _extraDurationAfterSpawned: 0
-    - _entityType: 7
-      _extraDurationAfterSpawned: 0
     - _entityType: 6
+      _extraDurationAfterSpawned: 7
+    - _entityType: 7
+      _extraDurationAfterSpawned: 0
+    - _entityType: 5
+      _extraDurationAfterSpawned: 7
+    - _entityType: 5
+      _extraDurationAfterSpawned: 0
+    - _entityType: 7
+      _extraDurationAfterSpawned: 0
+    - _entityType: 5
       _extraDurationAfterSpawned: 0
     _durationBetweenSpawnedEntity: 1
   - _waveEntitiesDescriptions:
-    - _entityType: 5
-      _extraDurationAfterSpawned: 0
-    - _entityType: 5
-      _extraDurationAfterSpawned: 0
-    - _entityType: 5
-      _extraDurationAfterSpawned: 0
-    - _entityType: 7
-      _extraDurationAfterSpawned: 0
-    - _entityType: 7
-      _extraDurationAfterSpawned: 0
     - _entityType: 6
+      _extraDurationAfterSpawned: 7
+    - _entityType: 7
+      _extraDurationAfterSpawned: 0
+    - _entityType: 5
+      _extraDurationAfterSpawned: 0
+    - _entityType: 5
+      _extraDurationAfterSpawned: 0
+    - _entityType: 7
+      _extraDurationAfterSpawned: 0
+    - _entityType: 5
       _extraDurationAfterSpawned: 0
     _durationBetweenSpawnedEntity: 1
   _waitingDurationBefore: 45
