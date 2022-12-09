@@ -33,3 +33,6 @@ MonoBehaviour:
     type: 3}
   _Spe3Pefab: {fileID: 302692793403659941, guid: 9895b20ca72dfc148aa77d11163ee4d2,
     type: 3}
+  UpgradePrice1: 150
+  UpgradePrice2: 300
+  _PlantePrice: {x: 3, y: 2, z: 1}

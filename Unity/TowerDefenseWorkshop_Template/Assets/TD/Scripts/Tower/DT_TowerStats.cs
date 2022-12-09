@@ -49,6 +49,14 @@ public class DT_TowerStats : ScriptableObject
     [SerializeField]
     private GameObject _Spe3Pefab = null;
 
+    [SerializeField]
+    private int UpgradePrice1 = 150;
+    [SerializeField]
+    private int UpgradePrice2 = 300;
+
+    [SerializeField]
+    private Vector3 _PlantePrice = new Vector3(0, 0, 0);
+
     public float GetDamageDT()
     {
         return _damage;
@@ -131,6 +139,20 @@ public class DT_TowerStats : ScriptableObject
     public GameObject GetSpe3DT()
     {
         return _Spe3Pefab;
+    }
+
+    public int GetUpgradePrice1()
+    {
+        return UpgradePrice1;
+    }
+    public int GetUpgradePrice2()
+    {
+        return UpgradePrice2;
+    }
+
+    public Vector3 GetPlantePrice()
+    {
+        return _PlantePrice;
     }
 
 }
