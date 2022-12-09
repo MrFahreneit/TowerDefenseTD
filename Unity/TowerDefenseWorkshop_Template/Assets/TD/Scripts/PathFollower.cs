@@ -24,7 +24,7 @@
 		[SerializeField]
 		private float _distanceThreshold = 0.5f;
 
-		[System.NonSerialized]
+		[SerializeField]
 		private int _currentPathIndex = 0;
 
 
@@ -54,11 +54,9 @@
 
 		private void Update()
 		{
-			if (_path == null || _currentPathIndex >= _path.Waypoints.Count)
+			if (_path == null || _currentPathIndex -1 >= _path.Waypoints.Count)
 			{
                 _enemyInBase = true;
-
-                return;
 
             }
 
