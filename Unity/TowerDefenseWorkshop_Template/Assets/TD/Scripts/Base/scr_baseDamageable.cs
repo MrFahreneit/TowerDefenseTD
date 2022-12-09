@@ -34,6 +34,10 @@ public class scr_baseDamageable : MonoBehaviour
         }
     }
 
+    public int GetBaseLife()
+    {
+        return _currentBaseLife;
+    }
 
 
 

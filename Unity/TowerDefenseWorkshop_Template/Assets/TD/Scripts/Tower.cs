@@ -10,7 +10,13 @@
 	/// </summary>
 	public class Tower : MonoBehaviour, IPickerGhost, ICellChild
 	{
-		[SerializeField]
+        [SerializeField]
+        private scr_ParticleSpawner _ParticleCreate = null;
+        [SerializeField]
+        private scr_ParticleSpawner _ParticleShoot = null;
+
+
+        [SerializeField]
 		private WeaponController _weaponController = null;
 
 		[SerializeField]
@@ -39,6 +45,7 @@
 
 		private void Awake()
 		{
+			//_ParticleCreate.SpawnParticle();
 			enabled = true;
 			UpdateStats(false);
 		}
@@ -53,10 +60,11 @@
 			if (_damageableDetector.HasAnyDamageableInRange() == true)
 			{
 				Damageable damageableTarget = _damageableDetector.GetNearestDamageable();
-				//_weaponController.LookAt(damageableTarget.GetAimPosition());
-				//_weaponController.Fire();
+                //_weaponController.LookAt(damageableTarget.GetAimPosition());
+                //_weaponController.Fire();
 
-				_weaponController.LookAtAndFire(damageableTarget.GetAimPosition());
+                //_ParticleCreate.SpawnParticle();
+                _weaponController.LookAtAndFire(damageableTarget.GetAimPosition());
 				_weaponController.GetWeapon().SetTarget(_damageableDetector.GetNearestDamageable().gameObject);
 			}
             else
@@ -106,11 +114,22 @@
 
 		public void UpgradingEvent()
 		{
+			if(_currentLevel == 1)
+            {
+				LevelReferences.Instance.Manager_Economic.AddGold(-1 * (_towerStats.GetUpgradePrice1()));
+			}
+			else if(_currentLevel == 2)
+			{
+				LevelReferences.Instance.Manager_Economic.AddGold(-1 * (_towerStats.GetUpgradePrice2()));
+			}
+
 			_currentLevel = _currentLevel + 1;
 			_damageTurretCurrent = _damageTurretCurrent + _towerStats.GetUpgradeDamagePercentNiv() * _damageTurretCurrent;
 			_attackSpeedCurrent = Mathf.Clamp((_attackSpeedCurrent - _towerStats.GetUpgradeAttackSpeedPercentNiv() * _attackSpeedCurrent), 0.1f, 999f);
 
 			UpdateStats(true);
+
+
 			_UIUpgradeMenu.SetInfoUpgrade(gameObject, this);
 		}
 
