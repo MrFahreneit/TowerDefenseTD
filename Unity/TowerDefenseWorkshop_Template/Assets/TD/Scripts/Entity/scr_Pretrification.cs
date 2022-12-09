@@ -12,7 +12,7 @@ public class scr_Pretrification : MonoBehaviour
     private Timer _timerStun = null;
 
     [SerializeField]
-    private GameObject _stunBlock = null;
+    private MeshRenderer _stunBlock = null;
 
     private bool isStun = false;
 
@@ -27,7 +27,7 @@ public class scr_Pretrification : MonoBehaviour
     public void SetStun()
     {
         isStun = true;
-        _stunBlock.SetActive(true);
+        _stunBlock.enabled = true;
         _pathFollower.SetCanMove(false);
         _timerStun.Start();
     }
@@ -42,7 +42,7 @@ public class scr_Pretrification : MonoBehaviour
             {
                 _timerStun.Stop();
                 isStun = false;
-                _stunBlock.SetActive(false);
+                _stunBlock.enabled = false;
                 _pathFollower.SetCanMove(true);
             }
         }
