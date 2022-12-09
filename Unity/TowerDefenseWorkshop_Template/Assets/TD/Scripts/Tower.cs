@@ -114,11 +114,22 @@
 
 		public void UpgradingEvent()
 		{
+			if(_currentLevel == 1)
+            {
+				LevelReferences.Instance.Manager_Economic.AddGold(-1 * (_towerStats.GetUpgradePrice1()));
+			}
+			else if(_currentLevel == 2)
+			{
+				LevelReferences.Instance.Manager_Economic.AddGold(-1 * (_towerStats.GetUpgradePrice2()));
+			}
+
 			_currentLevel = _currentLevel + 1;
 			_damageTurretCurrent = _damageTurretCurrent + _towerStats.GetUpgradeDamagePercentNiv() * _damageTurretCurrent;
 			_attackSpeedCurrent = Mathf.Clamp((_attackSpeedCurrent - _towerStats.GetUpgradeAttackSpeedPercentNiv() * _attackSpeedCurrent), 0.1f, 999f);
 
 			UpdateStats(true);
+
+
 			_UIUpgradeMenu.SetInfoUpgrade(gameObject, this);
 		}
 
