@@ -30,15 +30,15 @@ MonoBehaviour:
       _extraDurationAfterSpawned: 0
     - _entityType: 5
       _extraDurationAfterSpawned: 0
-    - _entityType: 7
-      _extraDurationAfterSpawned: 0
     - _entityType: 5
+      _extraDurationAfterSpawned: 0
+    - _entityType: 7
       _extraDurationAfterSpawned: 0
     _durationBetweenSpawnedEntity: 1
   - _waveEntitiesDescriptions:
-    - _entityType: 7
-      _extraDurationAfterSpawned: 0
     - _entityType: 5
+      _extraDurationAfterSpawned: 0
+    - _entityType: 7
       _extraDurationAfterSpawned: 0
     - _entityType: 5
       _extraDurationAfterSpawned: 0
