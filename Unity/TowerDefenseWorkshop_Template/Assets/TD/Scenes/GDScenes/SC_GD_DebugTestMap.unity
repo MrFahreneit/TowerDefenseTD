@@ -9960,6 +9960,7 @@ GameObject:
   - component: {fileID: 1043908361}
   - component: {fileID: 1043908363}
   - component: {fileID: 1043908364}
+  - component: {fileID: 1043908365}
   m_Layer: 0
   m_Name: LevelReference
   m_TagString: Untagged
@@ -9982,7 +9983,7 @@ MonoBehaviour:
   _playerPickerController: {fileID: 0}
   _spawnerManager: {fileID: 114427185}
   _EconomicManager: {fileID: 1043908363}
-  _BaseDamageable: {fileID: 0}
+  _BaseDamageable: {fileID: 1043908365}
   _planteCraftEconomic: {fileID: 1043908364}
 --- !u!4 &1043908362
 Transform:
@@ -10040,6 +10041,19 @@ MonoBehaviour:
   _SpellMax4: 2
   _SpellMax5: 2
   _SpellMax6: 2
+--- !u!114 &1043908365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043908360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be340afb8263ffd4da38442d8eb47dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pathFollower: {fileID: 0}
 --- !u!1001 &1067819962
 PrefabInstance:
   m_ObjectHideFlags: 0
