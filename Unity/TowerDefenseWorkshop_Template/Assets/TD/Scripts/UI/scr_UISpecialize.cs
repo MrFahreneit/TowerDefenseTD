@@ -16,17 +16,19 @@ public class scr_UISpecialize : MonoBehaviour
         GameObject TowerUpgraded = _upgradeScript.GetTowerPrefab();
         if(Spe == 0)
         {
-
+            LevelReferences.Instance.Manager_Economic.AddPlanteA(-1*(int)(_upgradeScript.GetDTTowerStats().GetPlantePrice().x));
             Instantiate(towerStats.GetSpe1DT(), TowerUpgraded.transform.position, TowerUpgraded.transform.rotation);
             Destroy(TowerUpgraded);
         }
         else if(Spe == 1)
         {
+            LevelReferences.Instance.Manager_Economic.AddPlanteA(-1 * (int)(_upgradeScript.GetDTTowerStats().GetPlantePrice().y));
             Instantiate(towerStats.GetSpe2DT(), TowerUpgraded.transform.position, TowerUpgraded.transform.rotation);
             Destroy(TowerUpgraded);
         }
         else if(Spe == 2)
         {
+            LevelReferences.Instance.Manager_Economic.AddPlanteA(-1 * (int)(_upgradeScript.GetDTTowerStats().GetPlantePrice().z));
             Instantiate(towerStats.GetSpe3DT(), TowerUpgraded.transform.position, TowerUpgraded.transform.rotation);
             Destroy(TowerUpgraded);
         }
