@@ -27,9 +27,11 @@
 		[SerializeField]
 		private int _currentPathIndex = 0;
 
-
 		[SerializeField]
 		private bool _enemyInBase = false;
+
+		[SerializeField]
+		private int enemyDamage = 1;
 
 		//Fonctions
 
@@ -54,24 +56,38 @@
 
 		private void Update()
 		{
+			if(_path.Waypoints.Count <= _currentPathIndex)
+            {
+				gameObject.transform.position = new Vector3(0, -10, 0);
+				LevelReferences.Instance.BaseDamageable.DamageBase(enemyDamage);
+            }
+
 			if (_path == null || _currentPathIndex -1 >= _path.Waypoints.Count)
 			{
                 _enemyInBase = true;
 
             }
 
-            Vector3 nextDestination = _path.Waypoints[_currentPathIndex].position;
 
-			if (Vector3.Distance(transform.position, nextDestination) < _distanceThreshold)
-			{
-				_currentPathIndex = _currentPathIndex + 1;
-				return;
 
-            }
+			if (_path.Waypoints[_currentPathIndex] != null)
+            {
+				Vector3 nextDestination = _path.Waypoints[_currentPathIndex].position;
+				if (Vector3.Distance(transform.position, nextDestination) < _distanceThreshold)
+				{
+					_currentPathIndex = _currentPathIndex + 1;
+					return;
 
-			MoveTo(nextDestination);
-			LookAt(nextDestination);
+				}
+				MoveTo(nextDestination);
+				LookAt(nextDestination);
 
+			}
+
+
+
+
+			
 
 
         }

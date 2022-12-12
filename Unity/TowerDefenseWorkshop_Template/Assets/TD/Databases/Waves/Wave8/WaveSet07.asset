@@ -57,3 +57,6 @@ MonoBehaviour:
     _durationBetweenSpawnedEntity: 1
   _waitingDurationBefore: 65
   _waitingDurationAfter: 5
+  showArrow1: 1
+  showArrow2: 1
+  showArrow3: 1
