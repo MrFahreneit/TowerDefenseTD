@@ -60,6 +60,7 @@
             {
 				gameObject.transform.position = new Vector3(0, -10, 0);
 				LevelReferences.Instance.BaseDamageable.DamageBase(enemyDamage);
+				Destroy(gameObject);
             }
 
 			if (_path == null || _currentPathIndex -1 >= _path.Waypoints.Count)

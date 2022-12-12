@@ -14,6 +14,9 @@ public class scr_baseDamageable : MonoBehaviour
     [SerializeField]
     private PathFollower _pathFollower = null;
 
+    [SerializeField]
+    private scr_baseLifeUI _baselifUI;
+
 
 
     private void Start()
@@ -26,7 +29,9 @@ public class scr_baseDamageable : MonoBehaviour
     {
         _currentBaseLife = Mathf.Clamp((_currentBaseLife - _damage), 0, _baseLife);
 
-        if(_currentBaseLife <= 0)
+        _baselifUI.OnBasedDamaged();
+
+        if (_currentBaseLife <= 0)
         {
             //Le joueur est dead mec;
         }
