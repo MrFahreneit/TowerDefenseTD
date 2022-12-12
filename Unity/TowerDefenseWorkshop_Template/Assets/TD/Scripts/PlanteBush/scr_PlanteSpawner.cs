@@ -7,6 +7,10 @@ using TMPro;
 [SelectionBase]
 public class scr_PlanteSpawner : MonoBehaviour
 {
+    [SerializeField]
+    private scr_SoundsCaller _HarvestSound = null;
+
+
     enum PlanteType { PlanteA, PlanteB, PlanteC};
     [SerializeField]
     private PlanteType _planteChoice;
@@ -90,6 +94,8 @@ public class scr_PlanteSpawner : MonoBehaviour
 
     private void PlanteIsCollected()
     {
+        _HarvestSound.SpawnSound();
+
         isSpawned = false;
         _timer.Start();
     }

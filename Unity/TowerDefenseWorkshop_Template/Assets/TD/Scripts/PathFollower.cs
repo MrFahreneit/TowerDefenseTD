@@ -60,18 +60,25 @@
 
             }
 
-            Vector3 nextDestination = _path.Waypoints[_currentPathIndex].position;
 
-			if (Vector3.Distance(transform.position, nextDestination) < _distanceThreshold)
-			{
-				_currentPathIndex = _currentPathIndex + 1;
-				return;
+			if (_path.Waypoints[_currentPathIndex] != null)
+            {
+				Vector3 nextDestination = _path.Waypoints[_currentPathIndex].position;
+				if (Vector3.Distance(transform.position, nextDestination) < _distanceThreshold)
+				{
+					_currentPathIndex = _currentPathIndex + 1;
+					return;
 
-            }
+				}
+				MoveTo(nextDestination);
+				LookAt(nextDestination);
 
-			MoveTo(nextDestination);
-			LookAt(nextDestination);
+			}
 
+
+
+
+			
 
 
         }
