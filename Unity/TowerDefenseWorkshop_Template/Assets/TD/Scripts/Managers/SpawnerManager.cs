@@ -41,6 +41,13 @@ namespace GSGD1
 		public delegate void SpawnerEvent(SpawnerManager sender, SpawnerStatus status, int runningWaveCount);
 		public event SpawnerEvent WaveStatusChanged = null;
 
+		[SerializeField]
+		private GameObject _arrow1 = null;
+		[SerializeField]
+		private GameObject _arrow2 = null;
+		[SerializeField]
+		private GameObject _arrow3 = null;
+
 		[ContextMenu("Start waves")]
 		public void StartWaves()
 		{
@@ -122,6 +129,37 @@ namespace GSGD1
 
 			Debug.LogFormat("Waiting {0} seconds until next wave.", waitingDuration);
 			yield return new WaitForSeconds(waitingDuration);
+
+			//1
+			if(waveDatabase.Waves[_currentWaveSetIndex].GetArrow1() == true)
+            {
+				_arrow1.SetActive(true);
+
+			}
+            else
+            {
+				_arrow1.SetActive(false);
+			}
+			//2
+			if (waveDatabase.Waves[_currentWaveSetIndex].GetArrow2() == true)
+			{
+				_arrow2.SetActive(true);
+
+			}
+			else
+			{
+				_arrow2.SetActive(false);
+			}
+			//3
+			if (waveDatabase.Waves[_currentWaveSetIndex].GetArrow3() == true)
+			{
+				_arrow3.SetActive(true);
+
+			}
+			else
+			{
+				_arrow3.SetActive(false);
+			}
 
 			_waitForNextWaveCoroutine = null;
 			StartNewWaveSet();
