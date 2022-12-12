@@ -42,12 +42,15 @@
 
 		private scr_UITowerUpgradeMenu _UIUpgradeMenu = null;
 
+		[SerializeField]
+		private scr_AnimationPlayer animPlayer;
 
 		private void Awake()
 		{
 			//_ParticleCreate.SpawnParticle();
 			enabled = true;
 			UpdateStats(false);
+			animPlayer.PlayAnim();
 		}
 
 		public void Enable(bool isEnabled)
@@ -129,6 +132,7 @@
 
 			UpdateStats(true);
 
+			animPlayer.PlayAnim();
 
 			_UIUpgradeMenu.SetInfoUpgrade(gameObject, this);
 		}
