@@ -20,6 +20,13 @@
 		[SerializeField]
 		private float _waitingDurationAfter = 5f;
 
+		[SerializeField]
+		private bool showArrow1 = false;
+		[SerializeField]
+		private bool showArrow2 = false;
+		[SerializeField]
+		private bool showArrow3 = false;
+
 		public List<Wave> Waves => _waves;
 
 		public float WaitingDurationBefore => _waitingDurationBefore;
@@ -33,6 +40,19 @@
 				duration += _waves[i].GetWaveDuration();
 			}
 			return duration + _waitingDurationBefore + _waitingDurationAfter;
+		}
+
+		public bool GetArrow1()
+        {
+			return showArrow1;
+        }
+		public bool GetArrow2()
+		{
+			return showArrow1;
+		}
+		public bool GetArrow3()
+		{
+			return showArrow1;
 		}
 	}
 

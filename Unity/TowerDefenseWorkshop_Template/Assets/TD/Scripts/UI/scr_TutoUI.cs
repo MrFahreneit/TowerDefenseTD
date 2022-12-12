@@ -6,7 +6,16 @@ using UnityEngine.UI;
 public class scr_TutoUI : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> _tutoStep;
+    private GameObject _tutoStep1;
+
+    [SerializeField]
+    private GameObject _tutoStep2;
+
+    [SerializeField]
+    private GameObject _tutoStep3;
+
+    [SerializeField]
+    private GameObject _tutoStep4;
 
     [SerializeField]
     private GameObject _tuto;
@@ -23,11 +32,33 @@ public class scr_TutoUI : MonoBehaviour
 
     public void NextTutoStep()
     {
+        
         _currentTutoStep = _currentTutoStep + 1;
 
         if (_currentTutoStep == 1)
         {
-            _tuto.SetActive(true);
+            _tutoStep1.SetActive(false);
+            _tutoStep2.SetActive(true);
+
+        }
+
+        if (_currentTutoStep == 2)
+        {
+            _tutoStep2.SetActive(false);
+            _tutoStep3.SetActive(true);
+
+        }
+
+        if (_currentTutoStep == 3)
+        {
+            _tutoStep3.SetActive(false);
+            _tutoStep4.SetActive(true);
+
+        }
+
+        if (_currentTutoStep == 4)
+        {
+            _tuto.SetActive(false);
 
         }
 
