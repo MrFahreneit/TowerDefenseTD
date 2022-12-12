@@ -24,6 +24,10 @@ public class scr_Explosion : MonoBehaviour
     private bool _followHook = false;
 
 
+    [SerializeField]
+    private scr_ParticleSpawner ParticleExplosion = null;
+
+
     private float _initialDamage = 1f;
     private float _damage = 1f;
 
@@ -59,6 +63,10 @@ public class scr_Explosion : MonoBehaviour
         {
             DamageAround();
         }
+
+        ParticleExplosion.SpawnParticle();
+
+
 
     }
 

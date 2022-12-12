@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5401439968005239303}
   - component: {fileID: 5401439968005239302}
   - component: {fileID: 5401439968005239305}
-  - component: {fileID: 1686285863938787661}
   - component: {fileID: 6132232085320536898}
   m_Layer: 0
   m_Name: UP_SpellExplosion
@@ -87,19 +86,6 @@ MonoBehaviour:
   _insta: 1
   _percentDamage: 500
   _followHook: 0
---- !u!114 &1686285863938787661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5401439968005239301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1240663ca5baac547b50e7db52c4c451, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Sound: {fileID: 6132232085320536898}
 --- !u!82 &6132232085320536898
 AudioSource:
   m_ObjectHideFlags: 0
