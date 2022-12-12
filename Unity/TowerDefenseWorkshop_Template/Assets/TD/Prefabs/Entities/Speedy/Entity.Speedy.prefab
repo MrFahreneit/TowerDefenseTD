@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb44cc7c9a5a3346a0fbdb25cccc9f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goldDeath: 5
+  _goldDeath: 24
   _goldMultiSript: {fileID: 2068174507606456564}
 --- !u!114 &8715029109019830029
 MonoBehaviour:
@@ -263,7 +263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2942146038736970687
 Transform:
   m_ObjectHideFlags: 0
@@ -294,7 +294,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2942146038736970686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

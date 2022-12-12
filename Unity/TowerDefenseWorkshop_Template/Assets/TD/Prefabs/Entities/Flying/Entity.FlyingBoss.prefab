@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb44cc7c9a5a3346a0fbdb25cccc9f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goldDeath: 5
+  _goldDeath: 108
   _goldMultiSript: {fileID: 5033056442910615431}
 --- !u!114 &6720402905949803780
 MonoBehaviour:
