@@ -94,7 +94,7 @@ public class scr_PlanteSpawner : MonoBehaviour
 
     private void PlanteIsCollected()
     {
-        _HarvestSound.SpawnSound();
+        //_HarvestSound.SpawnSound();
 
         isSpawned = false;
         _timer.Start();
