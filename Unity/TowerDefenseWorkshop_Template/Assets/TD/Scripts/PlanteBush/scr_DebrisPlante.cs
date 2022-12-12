@@ -36,6 +36,8 @@ public class scr_DebrisPlante : MonoBehaviour
     [SerializeField]
     private Material _plantCMat = null;
 
+    [SerializeField]
+    private float _multiplicateur = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +58,7 @@ public class scr_DebrisPlante : MonoBehaviour
                     break;
             }
 
-
+            _plantePrice = (int)(_plantePrice * _multiplicateur);
 
         }
 

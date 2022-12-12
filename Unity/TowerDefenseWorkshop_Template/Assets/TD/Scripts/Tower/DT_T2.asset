@@ -18,7 +18,7 @@ MonoBehaviour:
   _niv: 1
   _damage: 30
   _attackSpeed: 1.2
-  _range: 5
+  _range: 2.5
   _bulletLaunch: 5
   _spread: 30
   _maxNiv: 3
