@@ -10,9 +10,12 @@ using GSGD1;
 public class scr_SelectingActor : MonoBehaviour
 {
     private scr_PlanteSpawner _hitPlante = null;
+    private scr_DebrisPlante _hitHoverDebris = null;
     private scr_CellInt _hitCell = null;
+    private scr_BuildIconScript _hitHoverCell = null;
     private scr_DebrisPlante _hitDebris = null;
     private Tower _hitTower = null;
+    private scr_TowerRange _hitHoverTower = null;
 
     [SerializeField]
     private Camera _playerCamera = null;
@@ -51,7 +54,7 @@ public class scr_SelectingActor : MonoBehaviour
         {
             Instantiate(turret3, _hitCell.transform.position, Quaternion.identity);
         }
-        Destroy(_hitCell);
+        Destroy(_hitCell.gameObject);
         _hitCell = null;
 
     }
@@ -122,6 +125,97 @@ public class scr_SelectingActor : MonoBehaviour
                 }
 
             }
+
+            if (_AMenuIsOpen == false)
+            {
+                Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hitInfo;
+                Physics.Raycast(ray, out hitInfo, _layerMask);
+                if (Physics.Raycast(ray, out hitInfo, float.MaxValue, _layerMask))
+                {
+
+
+                    //Hit une plante pour la récolter
+                    if (hitInfo.collider.GetComponentInParent<scr_DebrisPlante>() == true)
+                    {
+                        if(_hitHoverDebris != null && hitInfo.collider.GetComponentInParent<scr_DebrisPlante>() != _hitHoverDebris)
+                        {
+                            _hitHoverDebris.GetComponentInParent<scr_PlanteShowPrice>().ShowPrice(false);
+                        }
+
+
+                        _hitHoverDebris = hitInfo.collider.GetComponentInParent<scr_DebrisPlante>();
+                        _hitHoverDebris.GetComponentInParent<scr_PlanteShowPrice>().ShowPrice(true);
+
+
+
+                    }
+                    else
+                    {
+                        if (_hitHoverDebris != null)
+                        {
+                            _hitHoverDebris.GetComponentInParent<scr_PlanteShowPrice>().ShowPrice(false);
+                        }
+
+                        _hitHoverDebris = null;
+                    }
+
+
+                    //cell anim
+                    if (hitInfo.collider.GetComponentInParent<scr_BuildIconScript>() == true)
+                    {
+                        if (_hitHoverCell != null && hitInfo.collider.GetComponentInParent<scr_BuildIconScript>() != _hitHoverCell)
+                        {
+                            _hitHoverCell.GetComponentInParent<scr_BuildIconScript>().ShowHammerAnim(false);
+                        }
+
+
+                        _hitHoverCell = hitInfo.collider.GetComponentInParent<scr_BuildIconScript>();
+                        _hitHoverCell.GetComponentInParent<scr_BuildIconScript>().ShowHammerAnim(true);
+                    }
+                    else
+                    {
+
+                        if (_hitHoverCell != null)
+                        {
+                            _hitHoverCell.GetComponentInParent<scr_BuildIconScript>().ShowHammerAnim(false);
+                        }
+
+                        _hitHoverCell = null;
+
+                    }
+
+
+                    //tower anim
+                    if (hitInfo.collider.GetComponentInParent<scr_TowerRange>() == true)
+                    {
+                        if (_hitHoverTower != null && hitInfo.collider.GetComponentInParent<scr_TowerRange>() != _hitHoverTower)
+                        {
+                            _hitHoverTower.GetComponentInParent<scr_TowerRange>().ShowRangeAnim(false);
+                        }
+
+
+                        _hitHoverTower = hitInfo.collider.GetComponentInParent<scr_TowerRange>();
+                        _hitHoverTower.GetComponentInParent<scr_TowerRange>().ShowRangeAnim(true);
+                    }
+                    else
+                    {
+
+                        if (_hitHoverTower != null)
+                        {
+                            _hitHoverTower.GetComponentInParent<scr_TowerRange>().ShowRangeAnim(false);
+                        }
+
+                        _hitHoverTower = null;
+
+                    }
+                }
+
+
+                
+            }
+
+        
         }
 
 
@@ -133,5 +227,10 @@ public class scr_SelectingActor : MonoBehaviour
         {
             _AMenuIsOpen = false;
         }
+    }
+
+    public scr_CellInt GetHitCell()
+    {
+        return _hitCell;
     }
 }

@@ -6,6 +6,10 @@ using GSGD1;
 public class scr_Explosion : MonoBehaviour
 {
     [SerializeField]
+    private scr_SoundsCaller _ExplosionSpawnSound = null; 
+
+
+    [SerializeField]
     private Timer _timer = null;
     [SerializeField]
     private float _dotTimer = 0.25f;
@@ -43,7 +47,17 @@ public class scr_Explosion : MonoBehaviour
         isSpawned = false;
         _timer.Start();
 
-        if(_insta == true)
+        if (_ExplosionSpawnSound != null)
+        {
+            _ExplosionSpawnSound.SpawnSound(true);
+        }  
+
+        if (ParticleExplosion != null)
+        {
+            ParticleExplosion.SpawnParticle();
+        }
+
+        if (_insta == true)
         {
             hitColliders = null;
             hitColliders = Physics.OverlapSphere(gameObject.transform.position, _collider.radius);
@@ -64,7 +78,7 @@ public class scr_Explosion : MonoBehaviour
             DamageAround();
         }
 
-        ParticleExplosion.SpawnParticle();
+        
 
 
 

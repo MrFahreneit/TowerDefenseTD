@@ -7,14 +7,31 @@
 	public class Projectile : AProjectile
 	{
 		[SerializeField]
+		private scr_SoundsCaller _ProjectileSpawnSound = null;
+
+		[SerializeField]
+		private scr_ParticleSpawner _ProjectileSpawnParticle = null;
+
+		[SerializeField]
 		private float _moveSpeed = 5f;
 
 		[SerializeField]
 		private float _rotateSpeed = 500f;
 
 		[SerializeField]
-		//private Rigidbody rb = null;
 
+		private void Start()
+		{
+			if (_ProjectileSpawnSound != null)
+			{
+				_ProjectileSpawnSound.SpawnSound(true);
+			}
+
+            if (_ProjectileSpawnParticle != null)
+            {
+                _ProjectileSpawnParticle.SpawnParticle();
+            }
+        }
 		private void Update()
 		{
 			if (_followingTarget == true && _target != null)

@@ -71,6 +71,7 @@ public class scr_UITurretMenu : MonoBehaviour
         {
             LevelReferences.Instance.Manager_Economic.AddGold(-1 * _currentPrice);
 
+            
 
             CloseTurretMenu();
 
