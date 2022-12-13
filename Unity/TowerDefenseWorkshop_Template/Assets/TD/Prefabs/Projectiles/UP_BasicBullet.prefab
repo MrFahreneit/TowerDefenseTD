@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1697648429471405642}
   - component: {fileID: -3715936240342487370}
   - component: {fileID: -782996423899474818}
+  - component: {fileID: 502640861984479002}
   m_Layer: 0
   m_Name: UP_BasicBullet
   m_TagString: Untagged
@@ -188,6 +189,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &502640861984479002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697648429471405641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f311e50bf1ce5489a438ee75dc3498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeAlive: 5
 --- !u!1 &1697648429891245682
 GameObject:
   m_ObjectHideFlags: 0

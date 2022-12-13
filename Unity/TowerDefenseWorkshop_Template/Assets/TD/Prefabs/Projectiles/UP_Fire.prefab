@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1697648429471405642}
   - component: {fileID: 3573151039335678594}
   - component: {fileID: 3254018935833861414}
+  - component: {fileID: 3711358142941702275}
   m_Layer: 0
   m_Name: UP_Fire
   m_TagString: Untagged
@@ -58,9 +59,9 @@ MonoBehaviour:
   _ActorSpawnOnDeath: {fileID: 0}
   _frag: {fileID: 0}
   _followingTarget: 0
-  _ProjectileSpawnSound: {fileID: 0}
+  _ProjectileSpawnSound: {fileID: 3573151039335678594}
   _ProjectileSpawnParticle: {fileID: 0}
-  _moveSpeed: 20
+  _moveSpeed: 4
   _rotateSpeed: 500
 --- !u!54 &1697648429471405642
 Rigidbody:
@@ -187,6 +188,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3711358142941702275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697648429471405641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f311e50bf1ce5489a438ee75dc3498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeAlive: 2.5
 --- !u!1 &1697648429891245682
 GameObject:
   m_ObjectHideFlags: 0

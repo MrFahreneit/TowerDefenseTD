@@ -36,6 +36,12 @@
 		private Collider[] hitColliders = null;
 		private bool hasSpawned = false;
 
+		[SerializeField]
+		protected scr_SoundsCaller _ProjectileSpawnSound = null;
+
+		[SerializeField]
+		protected scr_ParticleSpawner _ProjectileSpawnParticle = null;
+
 		protected virtual void OnTriggerEnter(Collider other)
 		{
 			if (isDot == false)
@@ -100,6 +106,18 @@
 
 		private void Start()
         {
+			if (_ProjectileSpawnSound != null)
+			{
+				_ProjectileSpawnSound.SpawnSound(true);
+			}
+
+			if (_ProjectileSpawnParticle != null)
+			{
+				_ProjectileSpawnParticle.SpawnParticle();
+			}
+
+			Debug.Log("FIRE");
+
 			Invoke("LifeTimeEnd", _lifeTime);
 
 			if (isDot == true)
@@ -111,6 +129,7 @@
 
 		private void DotDamage()
         {
+
 			hitColliders = null;
 
 			hitColliders = Physics.OverlapSphere(gameObject.transform.position, _collider.radius);
