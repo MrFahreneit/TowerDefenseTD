@@ -21,9 +21,9 @@ public class scr_StatGetter : MonoBehaviour
 
     public void UpdateStats(int gold, int planteA, int planteB, int planteC)
     {
-        _goldText.text = "Gold :" + gold;
-        _planteAText.text = "Plante A :" + planteA;
-        _planteBText.text = "Plante B :" + planteB;
-        _planteCText.text = "Plante C :" + planteC;
+        _goldText.text = "" + gold;
+        _planteAText.text = "" + planteA;
+        _planteBText.text = "" + planteB;
+        _planteCText.text = "" + planteC;
     }
 }

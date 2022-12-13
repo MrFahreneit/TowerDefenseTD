@@ -10,10 +10,12 @@ public class scr_baseDamageable : MonoBehaviour
 
     private int _currentBaseLife = 0;
 
-    private int _damageTaken = 1;
 
     [SerializeField]
     private PathFollower _pathFollower = null;
+
+    [SerializeField]
+    private scr_baseLifeUI _baselifUI;
 
 
 
@@ -23,18 +25,22 @@ public class scr_baseDamageable : MonoBehaviour
 
     }
 
-    private void Update()
+    public void DamageBase(int _damage)
     {
+        _currentBaseLife = Mathf.Clamp((_currentBaseLife - _damage), 0, _baseLife);
 
-        if (_pathFollower.EnemyInBase() == true)
+        _baselifUI.OnBasedDamaged();
+
+        if (_currentBaseLife <= 0)
         {
-            Debug.Log("test");
-
-            _currentBaseLife = _currentBaseLife - _damageTaken;
+            //Le joueur est dead mec;
         }
     }
 
-
+    public int GetBaseLife()
+    {
+        return _currentBaseLife;
+    }
 
 
 

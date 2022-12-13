@@ -30,7 +30,7 @@ public class scr_UISpellThrowContainer : MonoBehaviour
 
     private void Start()
     {
-        _spellName.text = dt_spellInfo.GetSpellName();
+        //_spellName.text = dt_spellInfo.GetSpellName();
     }
 
     private void Update()
