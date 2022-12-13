@@ -15,6 +15,7 @@ public class scr_SelectingActor : MonoBehaviour
     private scr_BuildIconScript _hitHoverCell = null;
     private scr_DebrisPlante _hitDebris = null;
     private Tower _hitTower = null;
+    private scr_TowerRange _hitHoverTower = null;
 
     [SerializeField]
     private Camera _playerCamera = null;
@@ -53,7 +54,7 @@ public class scr_SelectingActor : MonoBehaviour
         {
             Instantiate(turret3, _hitCell.transform.position, Quaternion.identity);
         }
-        Destroy(_hitCell);
+        Destroy(_hitCell.gameObject);
         _hitCell = null;
 
     }
@@ -159,28 +160,55 @@ public class scr_SelectingActor : MonoBehaviour
                         _hitHoverDebris = null;
                     }
 
-                    //if(hitInfo.collider.GetComponentInParent<scr_BuildIconScript>() == true)
-                    //{
-                    //    if (_hitHoverCell != null && hitInfo.collider.GetComponentInParent<scr_BuildIconScript>() != _hitHoverCell)
-                    //    {
-                    //        _hitHoverCell.GetComponentInParent<scr_BuildIconScript>().ShowHammerAnim(false);
-                    //    }
+
+                    //cell anim
+                    if (hitInfo.collider.GetComponentInParent<scr_BuildIconScript>() == true)
+                    {
+                        if (_hitHoverCell != null && hitInfo.collider.GetComponentInParent<scr_BuildIconScript>() != _hitHoverCell)
+                        {
+                            _hitHoverCell.GetComponentInParent<scr_BuildIconScript>().ShowHammerAnim(false);
+                        }
 
 
-                    //    _hitHoverCell = hitInfo.collider.GetComponentInParent<scr_BuildIconScript>();
-                    //    _hitHoverCell.GetComponentInParent<scr_BuildIconScript>().ShowHammerAnim(true);
-                    //}
-                    //else
-                    //{
+                        _hitHoverCell = hitInfo.collider.GetComponentInParent<scr_BuildIconScript>();
+                        _hitHoverCell.GetComponentInParent<scr_BuildIconScript>().ShowHammerAnim(true);
+                    }
+                    else
+                    {
 
-                    //    if (_hitHoverDebris != null)
-                    //    {
-                    //        _hitHoverDebris.GetComponentInParent<scr_PlanteShowPrice>().ShowPrice(false);
-                    //    }
+                        if (_hitHoverCell != null)
+                        {
+                            _hitHoverCell.GetComponentInParent<scr_BuildIconScript>().ShowHammerAnim(false);
+                        }
 
-                    //    _hitHoverDebris = null;
+                        _hitHoverCell = null;
 
-                    //}
+                    }
+
+
+                    //tower anim
+                    if (hitInfo.collider.GetComponentInParent<scr_TowerRange>() == true)
+                    {
+                        if (_hitHoverTower != null && hitInfo.collider.GetComponentInParent<scr_TowerRange>() != _hitHoverTower)
+                        {
+                            _hitHoverTower.GetComponentInParent<scr_TowerRange>().ShowRangeAnim(false);
+                        }
+
+
+                        _hitHoverTower = hitInfo.collider.GetComponentInParent<scr_TowerRange>();
+                        _hitHoverTower.GetComponentInParent<scr_TowerRange>().ShowRangeAnim(true);
+                    }
+                    else
+                    {
+
+                        if (_hitHoverTower != null)
+                        {
+                            _hitHoverTower.GetComponentInParent<scr_TowerRange>().ShowRangeAnim(false);
+                        }
+
+                        _hitHoverTower = null;
+
+                    }
                 }
 
 
@@ -199,5 +227,10 @@ public class scr_SelectingActor : MonoBehaviour
         {
             _AMenuIsOpen = false;
         }
+    }
+
+    public scr_CellInt GetHitCell()
+    {
+        return _hitCell;
     }
 }

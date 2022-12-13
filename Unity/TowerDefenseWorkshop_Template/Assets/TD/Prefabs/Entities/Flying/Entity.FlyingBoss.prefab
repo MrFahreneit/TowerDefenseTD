@@ -12,13 +12,15 @@ GameObject:
   - component: {fileID: 5412690654039449867}
   - component: {fileID: 2942146037294568418}
   - component: {fileID: 2942146037294568419}
-  - component: {fileID: 5815297927120438070}
-  - component: {fileID: 3078949404861870484}
+  - component: {fileID: -7790002421011324073}
+  - component: {fileID: 7487472638443365986}
   - component: {fileID: 6720402905949803780}
   - component: {fileID: -8834133923763769236}
+  - component: {fileID: 5815297927120438070}
   - component: {fileID: 5033056442910615431}
   - component: {fileID: 814395603246606679}
   - component: {fileID: 8956850993434339393}
+  - component: {fileID: 3078949404861870484}
   m_Layer: 0
   m_Name: Entity.FlyingBoss
   m_TagString: Untagged
@@ -76,6 +78,7 @@ MonoBehaviour:
   _distanceThreshold: 1.5
   _currentPathIndex: 0
   _enemyInBase: 0
+  enemyDamage: 1
 --- !u!114 &2942146037294568419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ParticleDamage: {fileID: 6720402905949803780}
   _ParticleDeath: {fileID: -8834133923763769236}
+  _SoundDamage: {fileID: 0}
+  _SoundDeath: {fileID: 0}
   _health: 320
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2942146038031326620}
@@ -97,20 +102,8 @@ MonoBehaviour:
   _inviciFrame: 0
   DamageTakenUnityEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6720402905949803780}
-        m_TargetAssemblyTypeName: scr_ParticleSpawner, Assembly-CSharp
-        m_MethodName: SpawnParticle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5815297927120438070
+      m_Calls: []
+--- !u!114 &-7790002421011324073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,11 +112,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2942146037294568416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbeed3a06250de747a6ec7f8a5e30d33, type: 3}
+  m_Script: {fileID: 11500000, guid: 1240663ca5baac547b50e7db52c4c451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _entityType: 1
---- !u!114 &3078949404861870484
+  _Sound: {fileID: 0}
+--- !u!114 &7487472638443365986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,11 +125,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2942146037294568416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb44cc7c9a5a3346a0fbdb25cccc9f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1240663ca5baac547b50e7db52c4c451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goldDeath: 108
-  _goldMultiSript: {fileID: 5033056442910615431}
+  _Sound: {fileID: 0}
 --- !u!114 &6720402905949803780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +157,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Particle: {fileID: 0}
   _rotateFromSpawner: 0
+--- !u!114 &5815297927120438070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbeed3a06250de747a6ec7f8a5e30d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entityType: 1
 --- !u!114 &5033056442910615431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +217,20 @@ MonoBehaviour:
   _explosionOvercharged: {fileID: 5401439968005239301, guid: 792be0572a9e701489631ddfc8ee0c48,
     type: 3}
   _overchargedBlock: {fileID: 4933605346142876153}
+--- !u!114 &3078949404861870484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb44cc7c9a5a3346a0fbdb25cccc9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _goldDeath: 108
+  _goldMultiSript: {fileID: 5033056442910615431}
 --- !u!1 &2942146038031326611
 GameObject:
   m_ObjectHideFlags: 0

@@ -174,6 +174,7 @@ MonoBehaviour:
   _distanceThreshold: 0.5
   _currentPathIndex: 0
   _enemyInBase: 0
+  enemyDamage: 1
 --- !u!114 &2942146037294568419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ParticleDamage: {fileID: 2248908937768028583}
   _ParticleDeath: {fileID: -5801299481671220428}
+  _SoundDamage: {fileID: 0}
+  _SoundDeath: {fileID: 0}
   _health: 900
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2942146038031326620}
@@ -195,19 +198,7 @@ MonoBehaviour:
   _inviciFrame: 0
   DamageTakenUnityEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2248908937768028583}
-        m_TargetAssemblyTypeName: scr_ParticleSpawner, Assembly-CSharp
-        m_MethodName: SpawnParticle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &8530449687608211159
 MonoBehaviour:
   m_ObjectHideFlags: 0
