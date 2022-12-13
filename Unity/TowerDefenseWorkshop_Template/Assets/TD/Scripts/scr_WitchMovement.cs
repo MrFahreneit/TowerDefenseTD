@@ -5,6 +5,10 @@ using UnityEngine;
 public class scr_WitchMovement : MonoBehaviour
 {
     [SerializeField]
+    private scr_ParticleSpawner _WitchMovementParticle = null;
+
+
+    [SerializeField]
     private GameObject _targetMovement = null;
     [SerializeField]
     private float _speed = 12f;
@@ -17,6 +21,10 @@ public class scr_WitchMovement : MonoBehaviour
 
     private void Awake()
     {
+        if (_WitchMovementParticle != null)
+        {
+            _WitchMovementParticle.SpawnParticle();
+        }
         SetNewTarget(gameObject);
     }
 

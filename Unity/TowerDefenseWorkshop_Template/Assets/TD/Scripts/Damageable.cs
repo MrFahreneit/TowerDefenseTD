@@ -10,6 +10,11 @@
         [SerializeField]
         private scr_ParticleSpawner _ParticleDeath = null;
 
+		[SerializeField]
+		private scr_SoundsCaller _SoundDamage = null; 
+		[SerializeField]
+		private scr_SoundsCaller _SoundDeath = null; 
+
 
         [SerializeField]
 		private float _health = 1f;
@@ -68,8 +73,17 @@
 
 					if (_destroyIfKilled == true)
 					{
-						_ParticleDamage.SpawnParticle();
-						DoDestroy();
+                        if (_ParticleDamage != null)
+                        {
+                            _ParticleDamage.SpawnParticle();
+                        }
+
+                        if (_SoundDamage != null)
+                        {
+                            _SoundDamage.SpawnSound(true);
+                        }
+
+                        DoDestroy();
 					}
 
 				}
@@ -85,7 +99,15 @@
 
 		private void DoDestroy()
 		{
-			_ParticleDeath.SpawnParticle();
+            if (_ParticleDeath != null)
+            {
+                _ParticleDeath.SpawnParticle();
+            }
+
+            if (_SoundDeath != null)
+            {
+                _SoundDeath.SpawnSound(true);
+            }
 
             Destroy(gameObject);
 		}
