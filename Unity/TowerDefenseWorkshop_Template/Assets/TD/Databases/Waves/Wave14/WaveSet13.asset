@@ -83,7 +83,7 @@ MonoBehaviour:
     - _entityType: 3
       _extraDurationAfterSpawned: 0
     _durationBetweenSpawnedEntity: 1
-  _waitingDurationBefore: 39
+  _waitingDurationBefore: 36
   _waitingDurationAfter: 0
   showArrow1: 1
   showArrow2: 1
