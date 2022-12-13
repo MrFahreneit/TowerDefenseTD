@@ -116,7 +116,6 @@
 				_ProjectileSpawnParticle.SpawnParticle();
 			}
 
-			Debug.Log("FIRE");
 
 			Invoke("LifeTimeEnd", _lifeTime);
 
