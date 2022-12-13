@@ -41,12 +41,19 @@ namespace GSGD1
 		public delegate void SpawnerEvent(SpawnerManager sender, SpawnerStatus status, int runningWaveCount);
 		public event SpawnerEvent WaveStatusChanged = null;
 
+
 		[SerializeField]
 		private GameObject _arrow1 = null;
 		[SerializeField]
 		private GameObject _arrow2 = null;
 		[SerializeField]
 		private GameObject _arrow3 = null;
+
+		private WaveDatabase waveDatabase;
+
+		private WaveSet waveSet;
+
+		private float waitingDuration;
 
 		[ContextMenu("Start waves")]
 		public void StartWaves()
@@ -61,11 +68,16 @@ namespace GSGD1
 		public void StartNewWaveSet()
 		{
 			_currentWaveSetIndex += 1;
-			var waveDatabase = DatabaseManager.Instance.WaveDatabase;
+			waveDatabase = DatabaseManager.Instance.WaveDatabase;
+
+
+			_arrow1.SetActive(false);
+			_arrow2.SetActive(false);
+			_arrow3.SetActive(false);
 
 			if (waveDatabase.Waves.Count > _currentWaveSetIndex)
 			{
-				WaveSet waveSet = waveDatabase.Waves[_currentWaveSetIndex];
+				waveSet = waveDatabase.Waves[_currentWaveSetIndex];
 				List<Wave> waves = waveSet.Waves;
 
 				for (int i = 0, length = _spawners.Count; i < length; i++)
@@ -113,14 +125,15 @@ namespace GSGD1
 				{
 					StopCoroutine(_waitForNextWaveCoroutine);
 				}
+				Invoke("ShowArrowEvent", 10f);
 				_waitForNextWaveCoroutine = StartCoroutine(WaitForNewWaveSet());
 			}
 		}
 
 		private IEnumerator WaitForNewWaveSet()
 		{
-			var waveDatabase = DatabaseManager.Instance.WaveDatabase;
-			float waitingDuration = waveDatabase.Waves[_currentWaveSetIndex].WaitingDurationBefore;
+			waveDatabase = DatabaseManager.Instance.WaveDatabase;
+			waitingDuration = waveDatabase.Waves[_currentWaveSetIndex].WaitingDurationBefore;
 			
 			if (_currentWaveSetIndex - 1 > 0)
 			{
@@ -130,14 +143,24 @@ namespace GSGD1
 			Debug.LogFormat("Waiting {0} seconds until next wave.", waitingDuration);
 			yield return new WaitForSeconds(waitingDuration);
 
+
+			_waitForNextWaveCoroutine = null;
+			StartNewWaveSet();
+		}
+
+
+
+		private void ShowArrowEvent()
+		{
+
 			//1
-			if(waveDatabase.Waves[_currentWaveSetIndex].GetArrow1() == true)
-            {
+			if (waveDatabase.Waves[_currentWaveSetIndex].GetArrow1() == true)
+			{
 				_arrow1.SetActive(true);
 
 			}
-            else
-            {
+			else
+			{
 				_arrow1.SetActive(false);
 			}
 			//2
@@ -160,10 +183,8 @@ namespace GSGD1
 			{
 				_arrow3.SetActive(false);
 			}
-
-			_waitForNextWaveCoroutine = null;
-			StartNewWaveSet();
 		}
 
 	}
+
 }
