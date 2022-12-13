@@ -17,6 +17,9 @@ public class scr_baseDamageable : MonoBehaviour
     [SerializeField]
     private scr_baseLifeUI _baselifUI;
 
+    [SerializeField]
+    private GameObject _Defeat;
+
 
 
     private void Start()
@@ -33,7 +36,7 @@ public class scr_baseDamageable : MonoBehaviour
 
         if (_currentBaseLife <= 0)
         {
-            //Le joueur est dead mec;
+            _Defeat.SetActive(true);
         }
     }
 
