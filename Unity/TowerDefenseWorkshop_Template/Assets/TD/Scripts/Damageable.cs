@@ -62,7 +62,7 @@
             {
 				_health -= damage;
 
-				_inviciFrame = true;
+				_inviciFrame = false;
 
 				Invoke("RemoveInviciFrame", 0.12f);
 
