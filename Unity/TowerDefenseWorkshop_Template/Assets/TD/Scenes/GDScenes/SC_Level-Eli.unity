@@ -29856,7 +29856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statGetter: {fileID: 1024547477}
-  _gold: 50000
+  _gold: 250
   _planteA: 0
   _planteB: 0
   _planteC: 0
