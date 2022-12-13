@@ -27,9 +27,7 @@ public class scr_baseLifeUI : MonoBehaviour
 
     public void OnBasedDamaged()
     {
-        Debug.Log("testbasedamageui");
-
-        health = health - 1;
+        //Debug.Log("testbasedamageui");
 
         _HealthBar.fillAmount = health / max_health;
 

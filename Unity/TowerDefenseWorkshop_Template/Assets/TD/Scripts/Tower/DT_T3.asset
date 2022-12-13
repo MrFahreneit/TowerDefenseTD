@@ -35,4 +35,4 @@ MonoBehaviour:
     type: 3}
   UpgradePrice1: 150
   UpgradePrice2: 300
-  _PlantePrice: {x: 15, y: 150, z: 2350}
+  _PlantePrice: {x: 3, y: 2, z: 1}
