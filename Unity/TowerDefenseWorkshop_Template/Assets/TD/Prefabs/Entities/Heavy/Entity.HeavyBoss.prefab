@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 1704940322751051345}
   - component: {fileID: -5574888967582435603}
   - component: {fileID: -109168932618980878}
+  - component: {fileID: 479120073113208959}
   m_Layer: 0
   m_Name: Entity.HeavyBoss
   m_TagString: Untagged
@@ -412,6 +413,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &479120073113208959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaf06463ff2fe54190b2e068d04f30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pathFollower: {fileID: 2942146037294568418}
+  _spawnPoint: {fileID: 7185137959976122942}
+  _purified: {fileID: 7747698232297498108, guid: d5621bbf141587c4cae8bf71cd88c02d,
+    type: 3}
 --- !u!1 &2942146038031326611
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +792,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ea9f123a7c3093a4ea79cee6618cf45c, type: 2}
+      objectReference: {fileID: 2100000, guid: 763b64117d8b4f9439a1b710212facc3, type: 2}
     - target: {fileID: 919132149155446097, guid: b8dd63370731f4a4ba666afef3824bf9,
         type: 3}
       propertyPath: m_Name

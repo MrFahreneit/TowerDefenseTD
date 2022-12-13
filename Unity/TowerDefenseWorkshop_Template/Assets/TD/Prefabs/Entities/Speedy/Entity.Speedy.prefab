@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 4267397655602703197}
   - component: {fileID: 6457582559471193390}
   - component: {fileID: 4929214700946024477}
+  - component: {fileID: 8292609076525076801}
   m_Layer: 0
   m_Name: Entity.Speedy
   m_TagString: Untagged
@@ -328,6 +329,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8292609076525076801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaf06463ff2fe54190b2e068d04f30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pathFollower: {fileID: 2942146037294568418}
+  _spawnPoint: {fileID: 4124970475390836421}
+  _purified: {fileID: 7747698232297498108, guid: d5621bbf141587c4cae8bf71cd88c02d,
+    type: 3}
 --- !u!1 &2942146038031326611
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +802,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3554854212129046243, guid: 86e6461b83cb69a4ead349f9d8c12d50,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 53382c40bad23b646bc412a67c40ee0d, type: 2}
     - target: {fileID: 919132149155446097, guid: 86e6461b83cb69a4ead349f9d8c12d50,
         type: 3}
       propertyPath: m_Name
