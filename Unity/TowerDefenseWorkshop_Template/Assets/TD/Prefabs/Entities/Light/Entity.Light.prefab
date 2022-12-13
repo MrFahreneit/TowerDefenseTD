@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 645788304906515587}
   - component: {fileID: 7345224977317090861}
   - component: {fileID: -599214119789128689}
+  - component: {fileID: 5564578970544001260}
   m_Layer: 0
   m_Name: Entity.Light
   m_TagString: Untagged
@@ -329,6 +330,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5564578970544001260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaf06463ff2fe54190b2e068d04f30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pathFollower: {fileID: 2942146037294568418}
+  _spawnPoint: {fileID: 4934771934662190408}
+  _purified: {fileID: 7747698232297498108, guid: d5621bbf141587c4cae8bf71cd88c02d,
+    type: 3}
 --- !u!1 &2942146038031326611
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +838,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5fde43a0487bf204a99d9708d65a1c81, type: 2}
+      objectReference: {fileID: 2100000, guid: cab3655ec4aec854f98632b91cd762a1, type: 2}
     - target: {fileID: 919132149155446097, guid: d3ea49b4797a238449e421ddf411bdda,
         type: 3}
       propertyPath: m_Name

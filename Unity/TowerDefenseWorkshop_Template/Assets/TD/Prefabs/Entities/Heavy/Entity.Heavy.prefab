@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2942146037294568417}
   - component: {fileID: 5412690654039449867}
   - component: {fileID: 2942146037294568418}
+  - component: {fileID: 3910715378927372578}
   - component: {fileID: 2942146037294568419}
   - component: {fileID: 3861277075220588812}
   - component: {fileID: -5517461910868795009}
@@ -80,6 +81,22 @@ MonoBehaviour:
   _currentPathIndex: 0
   _enemyInBase: 0
   enemyDamage: 1
+--- !u!114 &3910715378927372578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaf06463ff2fe54190b2e068d04f30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pathFollower: {fileID: 2942146037294568418}
+  _spawnPoint: {fileID: 2036032550650093236}
+  _purified: {fileID: 7747698232297498108, guid: d5621bbf141587c4cae8bf71cd88c02d,
+    type: 3}
 --- !u!114 &2942146037294568419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,7 +806,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ea9f123a7c3093a4ea79cee6618cf45c, type: 2}
+      objectReference: {fileID: 2100000, guid: 0af4d7bbd1490f94b8ea2e3d54ddceb0, type: 2}
     - target: {fileID: 919132149155446097, guid: b8dd63370731f4a4ba666afef3824bf9,
         type: 3}
       propertyPath: m_Name

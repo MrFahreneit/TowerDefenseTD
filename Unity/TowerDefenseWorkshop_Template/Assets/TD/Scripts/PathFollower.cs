@@ -36,6 +36,11 @@
 		//Fonctions
 
 
+
+		public int GetDamage()
+        {
+			return enemyDamage;
+        }
 		public void SetCanMove(bool canMove)
 		{
 			this.enabled = canMove;
