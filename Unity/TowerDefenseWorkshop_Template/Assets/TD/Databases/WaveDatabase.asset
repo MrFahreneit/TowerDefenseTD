@@ -37,4 +37,7 @@ MonoBehaviour:
   - _waveEntityPrefab: {fileID: 5412690654039449867, guid: e0535d6b87b35a347b01401f7cd051e9,
       type: 3}
     _entityType: 5
-  _waves: []
+  _waves:
+  - {fileID: 11400000, guid: a459061dc5860024590f76ddef462ecd, type: 2}
+  - {fileID: 11400000, guid: 26971d91714ee2d42b393da7465fdb46, type: 2}
+  - {fileID: 11400000, guid: eb61c9e5d4319c648ba6504e366a0e51, type: 2}
