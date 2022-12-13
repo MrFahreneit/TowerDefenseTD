@@ -2221,6 +2221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TurretPlaceMenu: {fileID: 0}
   _TurretUpgradeMenu: {fileID: 0}
+  sceneToLoad: 
   _mainMenu: {fileID: 798582257}
   _optionMenuSetting: {fileID: 224110956}
   _optionsInGame: {fileID: 0}
