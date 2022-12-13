@@ -12,8 +12,9 @@
 	{
         [SerializeField]
         private scr_ParticleSpawner _ParticleCreate = null;
-        [SerializeField]
-        private scr_ParticleSpawner _ParticleShoot = null;
+
+		[SerializeField]
+		private scr_SoundsCaller _TowerCreateSound = null;
 
 
         [SerializeField]
@@ -48,7 +49,17 @@
 		private void Awake()
 		{
 			//_ParticleCreate.SpawnParticle();
-			enabled = true;
+            if (_ParticleCreate != null)
+            {
+                _ParticleCreate.SpawnParticle();
+            }
+
+            if (_TowerCreateSound != null)
+            {
+                _TowerCreateSound.SpawnSound(true);
+            }
+
+            enabled = true;
 			UpdateStats(false);
 			animPlayer.PlayAnim();
 		}
@@ -66,7 +77,7 @@
                 //_weaponController.LookAt(damageableTarget.GetAimPosition());
                 //_weaponController.Fire();
 
-                //_ParticleCreate.SpawnParticle();
+
                 _weaponController.LookAtAndFire(damageableTarget.GetAimPosition());
 				_weaponController.GetWeapon().SetTarget(_damageableDetector.GetNearestDamageable().gameObject);
 			}

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7690907739416470011}
   - component: {fileID: 8092840138962813674}
   - component: {fileID: 4347655131817816134}
+  - component: {fileID: -3501388891717851327}
+  - component: {fileID: 8724843270184691851}
   m_Layer: 0
   m_Name: UP_PetrificationSpell
   m_TagString: Untagged
@@ -59,4 +61,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3ea03a3b33a8845b1caf6b49f3de24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _PretricationSound: {fileID: 0}
+  _PretricationParticle: {fileID: 0}
   _capsuleCollider: {fileID: 8092840138962813674}
+--- !u!114 &-3501388891717851327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5129315356442192989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 0}
+  _rotateFromSpawner: 0
+--- !u!114 &8724843270184691851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5129315356442192989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240663ca5baac547b50e7db52c4c451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Sound: {fileID: 0}

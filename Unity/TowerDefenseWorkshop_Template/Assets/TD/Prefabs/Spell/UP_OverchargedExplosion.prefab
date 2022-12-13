@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5401439968005239302}
   - component: {fileID: 5401439968005239305}
   - component: {fileID: 5285762404030371020}
+  - component: {fileID: -8087229479468532751}
   m_Layer: 0
   m_Name: UP_OverchargedExplosion
   m_TagString: Untagged
@@ -77,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c6f4148572254458921f9ad44dc7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ExplosionSpawnSound: {fileID: 0}
   _timer:
     _duration: 0
     _timeScale: 1
@@ -86,7 +88,7 @@ MonoBehaviour:
   _insta: 1
   _percentDamage: 25
   _followHook: 0
-  ParticleExplosion: {fileID: 0}
+  ParticleExplosion: {fileID: 5285762404030371020}
 --- !u!114 &5285762404030371020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +104,19 @@ MonoBehaviour:
   _Particle: {fileID: 4384304716607901189, guid: 296425f0a340ab5488a901670d21c78e,
     type: 3}
   _rotateFromSpawner: 0
+--- !u!114 &-8087229479468532751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401439968005239301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240663ca5baac547b50e7db52c4c451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Sound: {fileID: 0}
 --- !u!1 &7622043407362385505
 GameObject:
   m_ObjectHideFlags: 0
