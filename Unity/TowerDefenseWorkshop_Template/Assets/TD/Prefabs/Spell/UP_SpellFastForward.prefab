@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5221265200040326787}
   - component: {fileID: 5466362874623135768}
   - component: {fileID: 3023266292801096128}
+  - component: {fileID: 8769182872427159887}
+  - component: {fileID: -5381475989398275205}
   m_Layer: 0
   m_Name: UP_SpellFastForward
   m_TagString: Untagged
@@ -59,4 +61,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8524965b311d01f4a8b6226b1c31f5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _SpellForwardParticle: {fileID: 0}
+  _SpellForwardSound: {fileID: 0}
   _capsuleCollider: {fileID: 5466362874623135768}
+--- !u!114 &8769182872427159887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5014484129279191619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240663ca5baac547b50e7db52c4c451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Sound: {fileID: 0}
+--- !u!114 &-5381475989398275205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5014484129279191619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 0}
+  _rotateFromSpawner: 0

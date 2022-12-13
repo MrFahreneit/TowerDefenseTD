@@ -9,12 +9,16 @@ public class scr_SoundsCaller : MonoBehaviour
 
     public void SpawnSound(bool randomPitch)
     {
-        if (randomPitch)
+        if (_Sound != null)
         {
-            _Sound.pitch = Random.Range(0.75f, 1.2f);
-        }
+            if (randomPitch)
+            {
+                _Sound.pitch = Random.Range(0.75f, 1.2f);
+            }
 
-      _Sound.Play();
+            _Sound.Play();
+
+        }
 
     }
 }
