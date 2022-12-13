@@ -46,8 +46,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 50
-  m_Height: 5
+  m_Radius: 5
+  m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3023266292801096128
@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8524965b311d01f4a8b6226b1c31f5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SpellForwardParticle: {fileID: 0}
-  _SpellForwardSound: {fileID: 0}
+  _SpellForwardParticle: {fileID: -5381475989398275205}
+  _SpellForwardSound: {fileID: 8769182872427159887}
   _capsuleCollider: {fileID: 5466362874623135768}
 --- !u!114 &8769182872427159887
 MonoBehaviour:
@@ -90,7 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Particle: {fileID: 0}
+  _Particle: {fileID: 6053844452160403832, guid: 94d20f51a6458a045973dae30147a64e,
+    type: 3}
   _rotateFromSpawner: 0
 --- !u!82 &-8683511080439708331
 AudioSource:
