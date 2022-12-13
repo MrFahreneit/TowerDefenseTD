@@ -1165,7 +1165,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh90722
+  m_Name: pb_Mesh27578
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29846,7 +29846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statGetter: {fileID: 1024547477}
-  _gold: 250
+  _gold: 50000
   _planteA: 0
   _planteB: 0
   _planteC: 0

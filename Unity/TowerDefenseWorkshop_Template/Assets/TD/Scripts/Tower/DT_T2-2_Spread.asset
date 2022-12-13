@@ -21,7 +21,7 @@ MonoBehaviour:
   _range: 8
   _bulletLaunch: 15
   _spread: 50
-  _maxNiv: 0
+  _maxNiv: 1
   _canEvolve: 0
   _damagePercentNiv: 0.5
   _attackSpeedPercentNiv: 0.2
@@ -30,3 +30,6 @@ MonoBehaviour:
   _Spe1Pefab: {fileID: 0}
   _Spe2Pefab: {fileID: 0}
   _Spe3Pefab: {fileID: 0}
+  UpgradePrice1: 150
+  UpgradePrice2: 300
+  _PlantePrice: {x: 0, y: 0, z: 0}
