@@ -12,10 +12,12 @@ GameObject:
   - component: {fileID: 5412690654039449867}
   - component: {fileID: 2942146037294568418}
   - component: {fileID: 2942146037294568419}
-  - component: {fileID: 6008011933787734400}
-  - component: {fileID: 6070739952166988271}
   - component: {fileID: 8715029109019830029}
   - component: {fileID: 1958710467641383341}
+  - component: {fileID: 3152511937471084108}
+  - component: {fileID: -6741777912698367189}
+  - component: {fileID: 6070739952166988271}
+  - component: {fileID: 6008011933787734400}
   - component: {fileID: 2068174507606456564}
   - component: {fileID: 4267397655602703197}
   - component: {fileID: 6457582559471193390}
@@ -76,6 +78,7 @@ MonoBehaviour:
   _distanceThreshold: 0.5
   _currentPathIndex: 0
   _enemyInBase: 0
+  enemyDamage: 1
 --- !u!114 &2942146037294568419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ParticleDamage: {fileID: 8715029109019830029}
   _ParticleDeath: {fileID: 1958710467641383341}
+  _SoundDamage: {fileID: 0}
+  _SoundDeath: {fileID: 0}
   _health: 50
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2942146038031326620}
@@ -97,46 +102,7 @@ MonoBehaviour:
   _inviciFrame: 0
   DamageTakenUnityEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8715029109019830029}
-        m_TargetAssemblyTypeName: scr_ParticleSpawner, Assembly-CSharp
-        m_MethodName: SpawnParticle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &6008011933787734400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2942146037294568416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbeed3a06250de747a6ec7f8a5e30d33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _entityType: 0
---- !u!114 &6070739952166988271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2942146037294568416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb44cc7c9a5a3346a0fbdb25cccc9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _goldDeath: 24
-  _goldMultiSript: {fileID: 2068174507606456564}
+      m_Calls: []
 --- !u!114 &8715029109019830029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +131,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Particle: {fileID: 0}
   _rotateFromSpawner: 0
+--- !u!114 &3152511937471084108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240663ca5baac547b50e7db52c4c451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Sound: {fileID: 0}
+--- !u!114 &-6741777912698367189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240663ca5baac547b50e7db52c4c451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Sound: {fileID: 0}
+--- !u!114 &6070739952166988271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb44cc7c9a5a3346a0fbdb25cccc9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _goldDeath: 24
+  _goldMultiSript: {fileID: 2068174507606456564}
+--- !u!114 &6008011933787734400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbeed3a06250de747a6ec7f8a5e30d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entityType: 0
 --- !u!114 &2068174507606456564
 MonoBehaviour:
   m_ObjectHideFlags: 0

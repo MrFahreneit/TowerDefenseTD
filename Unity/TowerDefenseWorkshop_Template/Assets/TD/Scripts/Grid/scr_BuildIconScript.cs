@@ -10,13 +10,16 @@ public class scr_BuildIconScript : MonoBehaviour
 
     public void ShowHammerAnim(bool show)
     {
-        if (show == true)
+        if(hammerAnimation != null)
         {
-            hammerAnimation.SetActive(true);
-        }
-        else
-        {
-            hammerAnimation.SetActive(false);
+            if (show == true)
+            {
+                hammerAnimation.SetActive(true);
+            }
+            else
+            {
+                hammerAnimation.SetActive(false);
+            }
         }
     }
 }
