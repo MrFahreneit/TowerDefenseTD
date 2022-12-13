@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5401439968005239304}
+  - component: {fileID: 5401439968005239305}
   - component: {fileID: 5401439968005239303}
   - component: {fileID: 5401439968005239302}
-  - component: {fileID: 5401439968005239305}
   m_Layer: 0
   m_Name: UP_ExplosionRoquette
   m_TagString: Untagged
@@ -35,6 +35,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5401439968005239305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401439968005239301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c6f4148572254458921f9ad44dc7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timer:
+    _duration: 0
+    _timeScale: 1
+    _stopWhenCompleted: 1
+  _dotTimer: 0.25
+  _collider: {fileID: 5401439968005239302}
+  _insta: 1
+  _percentDamage: 1
+  _followHook: 0
+  ParticleExplosion: {fileID: 0}
 --- !u!54 &5401439968005239303
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64,25 +86,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5401439968005239305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5401439968005239301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24c6f4148572254458921f9ad44dc7df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _timer:
-    _duration: 0
-    _stopWhenCompleted: 1
-  _dotTimer: 0.25
-  _collider: {fileID: 5401439968005239302}
-  _insta: 1
-  _percentDamage: 1
 --- !u!1 &7622043407362385505
 GameObject:
   m_ObjectHideFlags: 0

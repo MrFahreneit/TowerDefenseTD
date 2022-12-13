@@ -59,8 +59,14 @@
 			if(_path.Waypoints.Count <= _currentPathIndex)
             {
 				gameObject.transform.position = new Vector3(0, -10, 0);
-				LevelReferences.Instance.BaseDamageable.DamageBase(enemyDamage);
-				Destroy(gameObject);
+
+				if(LevelReferences.Instance.BaseDamageable != null)
+                {
+					LevelReferences.Instance.BaseDamageable.DamageBase(enemyDamage);
+				}
+				
+
+				Destroy(gameObject.GetComponentInParent<Transform>().gameObject);
             }
 
 			if (_path == null || _currentPathIndex -1 >= _path.Waypoints.Count)
