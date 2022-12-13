@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ParticleCreate: {fileID: 7062438140718467970}
-  _ParticleShoot: {fileID: 8582805613381112369}
+  _TowerCreateSound: {fileID: 0}
   _weaponController: {fileID: 302692792590252287}
   _damageableDetector: {fileID: 302692793403659942}
   _typeEntity: {fileID: 7954490793965705602}
@@ -292,7 +292,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerScript: {fileID: 302692793403659937}
   _rangeObject: {fileID: 6919364129897862679}
-  RangeAnimation: {fileID: 0}
 --- !u!1 &1507338550182944304
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4895257010966457952}
+  - component: {fileID: 3809950898379390774}
   m_Layer: 0
   m_Name: RangeVisual
   m_TagString: Untagged
@@ -506,6 +506,26 @@ Transform:
   m_Father: {fileID: 1244546834978365711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3809950898379390774
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2436844657208091898}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4c8c3d3ad663c749a1558002de7e501, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2989573025231547393
 GameObject:
   m_ObjectHideFlags: 0
