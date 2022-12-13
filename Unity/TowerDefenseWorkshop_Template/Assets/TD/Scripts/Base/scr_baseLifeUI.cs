@@ -15,9 +15,6 @@ public class scr_baseLifeUI : MonoBehaviour
 
 
     [SerializeField]
-    private scr_baseDamageable _baseHealth;
-
-    [SerializeField]
     private Image _HealthBar;
 
     [SerializeField]
@@ -27,20 +24,21 @@ public class scr_baseLifeUI : MonoBehaviour
 
 
 
-    private void Start()
-    {
-        _HealthBar = GetComponent<Image>();
-    }
 
     public void OnBasedDamaged()
     {
-        _HealthBar.fillAmount -= 1.0f;
+        Debug.Log("testbasedamageui");
+
+        health = health - 1;
+
+        _HealthBar.fillAmount = health / max_health;
 
         _currentbaselife = _currentbaselife - 1;
 
         _lifeTxt.text = _currentbaselife + "/ 100";
 
     }
+
 
 
 }
