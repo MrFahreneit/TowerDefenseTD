@@ -30,16 +30,19 @@ public class scr_DebrisPlante : MonoBehaviour
     [SerializeField]
     private GameObject _MATERIALTONPERE = null;
     [SerializeField]
-    private Material _plantAMat = null;
+    private GameObject _plantAMesh = null;
     [SerializeField]
-    private Material _plantBMat = null;
+    private GameObject _plantBMesh = null;
     [SerializeField]
-    private Material _plantCMat = null;
+    private GameObject _plantCMesh = null;
 
+    [SerializeField]
+    private float _multiplicateur = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
+        _plantAMesh.SetActive(false);
 
         if (dt_PlantePrice != null)
         {
@@ -56,7 +59,7 @@ public class scr_DebrisPlante : MonoBehaviour
                     break;
             }
 
-
+            _plantePrice = (int)(_plantePrice * _multiplicateur);
 
         }
 
@@ -118,13 +121,13 @@ public class scr_DebrisPlante : MonoBehaviour
         {
 
             case PlanteDebrisType.PlanteA:
-                _MATERIALTONPERE.GetComponent<MeshRenderer>().material = _plantAMat;
+                _plantAMesh.SetActive(true);
                 break;
             case PlanteDebrisType.PlanteB:
-                _MATERIALTONPERE.GetComponent<MeshRenderer>().material = _plantBMat;
+                _plantAMesh.SetActive(true);
                 break;
             case PlanteDebrisType.PlanteC:
-                _MATERIALTONPERE.GetComponent<MeshRenderer>().material = _plantCMat;
+                _plantAMesh.SetActive(true);
                 break;
         }
     }

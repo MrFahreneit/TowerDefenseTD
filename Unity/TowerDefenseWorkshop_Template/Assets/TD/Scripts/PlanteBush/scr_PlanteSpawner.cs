@@ -7,6 +7,10 @@ using TMPro;
 [SelectionBase]
 public class scr_PlanteSpawner : MonoBehaviour
 {
+    [SerializeField]
+    private scr_SoundsCaller _HarvestSound = null;
+
+
     enum PlanteType { PlanteA, PlanteB, PlanteC};
     [SerializeField]
     private PlanteType _planteChoice;
@@ -30,11 +34,17 @@ public class scr_PlanteSpawner : MonoBehaviour
     [SerializeField]
     private GameObject _MATERIALTONPERE = null;
     [SerializeField]
-    private Material _plantAMat = null;
+    private GameObject _plantAMesh = null;
     [SerializeField]
-    private Material _plantBMat = null;
+    private GameObject _plantBMesh = null;
     [SerializeField]
-    private Material _plantCMat = null;
+    private GameObject _plantCMesh = null;
+    [SerializeField]
+    private GameObject _plantANoPlantMesh = null;
+    [SerializeField]
+    private GameObject _plantBNoPlantMesh = null;
+    [SerializeField]
+    private GameObject _plantCNoPlantMesh = null;
 
 
     [SerializeField]
@@ -43,8 +53,16 @@ public class scr_PlanteSpawner : MonoBehaviour
     [SerializeField]
     protected scr_SpellForwardReceiver _spellSpeed = null;
 
+    [SerializeField]
+    private scr_AnimationPlayer animStart;
+    [SerializeField]
+    private scr_AnimationPlayer animHarvest;
+    [SerializeField]
+    private scr_AnimationPlayer plantspawned;
+
     private void OnEnable()
     {
+        animStart.PlayAnim();
         _spellSpeed.TimerScaleHasChanged.RemoveListener(ChangeTime);
         _spellSpeed.TimerScaleHasChanged.AddListener(ChangeTime);
     }
@@ -90,6 +108,13 @@ public class scr_PlanteSpawner : MonoBehaviour
 
     private void PlanteIsCollected()
     {
+
+        if(_HarvestSound != null)
+        {
+            _HarvestSound.SpawnSound(true);
+        }
+
+        animHarvest.PlayAnim();
         isSpawned = false;
         _timer.Start();
     }
@@ -98,11 +123,53 @@ public class scr_PlanteSpawner : MonoBehaviour
     {
         if(isSpawned == true)
         {
-           _bushMesh.GetComponent<MeshRenderer>().material = _plantMat;
+            _plantANoPlantMesh.SetActive(false);
+            _plantBNoPlantMesh.SetActive(false);
+            _plantCNoPlantMesh.SetActive(false);
+            _planteVisibility.ShowVisibility();
+            switch (_planteChoice)
+            {
+                case PlanteType.PlanteA:
+                    _plantAMesh.SetActive(true);
+                    _plantBMesh.SetActive(false);
+                    _plantCMesh.SetActive(false);
+                    break;
+                case PlanteType.PlanteB:
+                    _plantAMesh.SetActive(false);
+                    _plantBMesh.SetActive(true);
+                    _plantCMesh.SetActive(false);
+                    break;
+                case PlanteType.PlanteC:
+                    _plantAMesh.SetActive(false);
+                    _plantBMesh.SetActive(false);
+                    _plantCMesh.SetActive(true);
+                    break;
+            }
         }
         else
         {
-            _bushMesh.GetComponent<MeshRenderer>().material = _noPlantMat;
+            _plantAMesh.SetActive(false);
+            _plantBMesh.SetActive(false);
+            _plantCMesh.SetActive(false);
+            _planteVisibility.ShowVisibility();
+            switch (_planteChoice)
+            {
+                case PlanteType.PlanteA:
+                    _plantANoPlantMesh.SetActive(true);
+                    _plantBNoPlantMesh.SetActive(false);
+                    _plantCNoPlantMesh.SetActive(false);
+                    break;
+                case PlanteType.PlanteB:
+                    _plantANoPlantMesh.SetActive(false);
+                    _plantBNoPlantMesh.SetActive(true);
+                    _plantCNoPlantMesh.SetActive(false);
+                    break;
+                case PlanteType.PlanteC:
+                    _plantANoPlantMesh.SetActive(false);
+                    _plantBNoPlantMesh.SetActive(false);
+                    _plantCNoPlantMesh.SetActive(true);
+                    break;
+            }
         }
         _timer.Update();
 
@@ -110,6 +177,7 @@ public class scr_PlanteSpawner : MonoBehaviour
         {
             isSpawned = true;
             _timer.Stop();
+            plantspawned.PlayAnim();
         }
 
     }
@@ -144,13 +212,13 @@ public class scr_PlanteSpawner : MonoBehaviour
         switch (_planteChoice)
         {
             case PlanteType.PlanteA:
-                _MATERIALTONPERE.GetComponent<MeshRenderer>().material = _plantAMat;
+                _plantAMesh.SetActive(true);
                 break;
             case PlanteType.PlanteB:
-                _MATERIALTONPERE.GetComponent<MeshRenderer>().material = _plantBMat;
+                _plantBMesh.SetActive(true);
                 break;
             case PlanteType.PlanteC:
-                _MATERIALTONPERE.GetComponent<MeshRenderer>().material = _plantCMat;
+                _plantCMesh.SetActive(true);
                 break;
         }
 
