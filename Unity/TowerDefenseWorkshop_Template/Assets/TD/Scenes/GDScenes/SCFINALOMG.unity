@@ -50682,7 +50682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statGetter: {fileID: 2031489735}
-  _gold: 300
+  _gold: 350
   _planteA: 0
   _planteB: 0
   _planteC: 0
