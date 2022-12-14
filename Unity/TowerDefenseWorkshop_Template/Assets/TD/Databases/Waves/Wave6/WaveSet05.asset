@@ -52,3 +52,5 @@ MonoBehaviour:
   showArrow1: 1
   showArrow2: 1
   showArrow3: 1
+  showTextFlyingEnemy: 1
+  nightWave: 0
