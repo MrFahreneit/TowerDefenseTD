@@ -16,6 +16,8 @@ public class DT_PlanteTimer : ScriptableObject
 
     public float GetHatchTime(int INDEX)
     {
+
+
         float currentHatch = 5f;
 
         if (INDEX == 1)
