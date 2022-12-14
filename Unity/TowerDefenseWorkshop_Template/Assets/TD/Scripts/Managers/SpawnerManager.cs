@@ -126,7 +126,18 @@ namespace GSGD1
 					StopCoroutine(_waitForNextWaveCoroutine);
 				}
 				Invoke("ShowArrowEvent", 10f);
-				_waitForNextWaveCoroutine = StartCoroutine(WaitForNewWaveSet());
+
+				waveDatabase = DatabaseManager.Instance.WaveDatabase;
+				waitingDuration = waveDatabase.Waves[_currentWaveSetIndex].WaitingDurationBefore;
+
+				if (_currentWaveSetIndex - 1 > 0)
+				{
+					waitingDuration += waveDatabase.Waves[_currentWaveSetIndex - 1].WaitingDurationAfter;
+				}
+
+				Debug.Log(waitingDuration);
+				Invoke("StartNewWaveSet", waitingDuration);
+				//_waitForNextWaveCoroutine = StartCoroutine(WaitForNewWaveSet());
 			}
 		}
 

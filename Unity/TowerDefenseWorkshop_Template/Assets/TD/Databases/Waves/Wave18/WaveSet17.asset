@@ -14,96 +14,96 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waves:
   - _waveEntitiesDescriptions:
+    - _entityType: 2
+      _extraDurationAfterSpawned: 7
+    - _entityType: 2
+      _extraDurationAfterSpawned: 5
+    - _entityType: 2
+      _extraDurationAfterSpawned: 3
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
     - _entityType: 1
       _extraDurationAfterSpawned: 0
+    - _entityType: 2
+      _extraDurationAfterSpawned: 3
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
     - _entityType: 1
       _extraDurationAfterSpawned: 0
     - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
       _extraDurationAfterSpawned: 0
     _durationBetweenSpawnedEntity: 1
   - _waveEntitiesDescriptions:
+    - _entityType: 2
+      _extraDurationAfterSpawned: 7
+    - _entityType: 2
+      _extraDurationAfterSpawned: 5
+    - _entityType: 2
+      _extraDurationAfterSpawned: 3
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 1
+      _extraDurationAfterSpawned: 0
+    - _entityType: 2
+      _extraDurationAfterSpawned: 3
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
     - _entityType: 1
       _extraDurationAfterSpawned: 0
     - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
       _extraDurationAfterSpawned: 0
     _durationBetweenSpawnedEntity: 1
   - _waveEntitiesDescriptions:
+    - _entityType: 2
+      _extraDurationAfterSpawned: 7
+    - _entityType: 2
+      _extraDurationAfterSpawned: 5
+    - _entityType: 2
+      _extraDurationAfterSpawned: 3
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
     - _entityType: 1
       _extraDurationAfterSpawned: 0
+    - _entityType: 2
+      _extraDurationAfterSpawned: 3
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
     - _entityType: 1
       _extraDurationAfterSpawned: 0
     - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
       _extraDurationAfterSpawned: 0
     _durationBetweenSpawnedEntity: 1
-  _waitingDurationBefore: 32
+  _waitingDurationBefore: 43
   _waitingDurationAfter: 0
   showArrow1: 1
   showArrow2: 1

@@ -14,72 +14,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waves:
   - _waveEntitiesDescriptions:
-    - _entityType: 1
-      _extraDurationAfterSpawned: 0
-    - _entityType: 1
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 0
     - _entityType: 4
       _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    _durationBetweenSpawnedEntity: 1
-  - _waveEntitiesDescriptions:
-    - _entityType: 1
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 3
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 2
-    - _entityType: 2
-      _extraDurationAfterSpawned: 5
-    - _entityType: 2
-      _extraDurationAfterSpawned: 7
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 1
-      _extraDurationAfterSpawned: 0
-    _durationBetweenSpawnedEntity: 1
-  - _waveEntitiesDescriptions:
-    - _entityType: 4
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 2
-    - _entityType: 1
-      _extraDurationAfterSpawned: 0
-    - _entityType: 2
-      _extraDurationAfterSpawned: 2
     - _entityType: 3
       _extraDurationAfterSpawned: 0
     - _entityType: 2
       _extraDurationAfterSpawned: 5
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 2
+      _extraDurationAfterSpawned: 4
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 1
+      _extraDurationAfterSpawned: 0
+    - _entityType: 2
+      _extraDurationAfterSpawned: 2
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 1
+      _extraDurationAfterSpawned: 0
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    _durationBetweenSpawnedEntity: 1
+  - _waveEntitiesDescriptions:
     - _entityType: 2
       _extraDurationAfterSpawned: 7
+    - _entityType: 1
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 2
+      _extraDurationAfterSpawned: 2
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 2
+      _extraDurationAfterSpawned: 5
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 1
+      _extraDurationAfterSpawned: 0
+    _durationBetweenSpawnedEntity: 1
+  - _waveEntitiesDescriptions:
+    - _entityType: 2
+      _extraDurationAfterSpawned: 7
+    - _entityType: 4
+      _extraDurationAfterSpawned: 0
+    - _entityType: 2
+      _extraDurationAfterSpawned: 5
+    - _entityType: 3
+      _extraDurationAfterSpawned: 0
+    - _entityType: 2
+      _extraDurationAfterSpawned: 2
+    - _entityType: 2
+      _extraDurationAfterSpawned: 2
+    - _entityType: 1
+      _extraDurationAfterSpawned: 0
     - _entityType: 4
       _extraDurationAfterSpawned: 0
     - _entityType: 4
@@ -95,7 +95,7 @@ MonoBehaviour:
     - _entityType: 4
       _extraDurationAfterSpawned: 0
     _durationBetweenSpawnedEntity: 1
-  _waitingDurationBefore: 37
+  _waitingDurationBefore: 45
   _waitingDurationAfter: 0
   showArrow1: 1
   showArrow2: 1
