@@ -81,7 +81,7 @@ MonoBehaviour:
   _distanceThreshold: 1.5
   _currentPathIndex: 0
   _enemyInBase: 0
-  enemyDamage: 1
+  enemyDamage: 3
 --- !u!114 &2942146037294568419
 MonoBehaviour:
   m_ObjectHideFlags: 0

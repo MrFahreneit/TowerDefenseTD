@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 129605973110404261}
   - component: {fileID: 6218586904951299113}
   - component: {fileID: -8905734524157408480}
+  - component: {fileID: 6806569899006056509}
   m_Layer: 7
   m_Name: UP_PlanteSpawner
   m_TagString: Untagged
@@ -60,6 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _HarvestSound: {fileID: 6218586904951299113}
+  _PlantGrossSound: {fileID: 6806569899006056509}
   _planteChoice: 0
   _timer:
     _duration: 5
@@ -277,6 +279,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6806569899006056509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2769187287564570483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 1091842890971607496, guid: 4c9f4125a1580944bba3b8ca491d913a,
+    type: 3}
+  _rotateFromSpawner: 0
 --- !u!1 &2769187289125985613
 GameObject:
   m_ObjectHideFlags: 0

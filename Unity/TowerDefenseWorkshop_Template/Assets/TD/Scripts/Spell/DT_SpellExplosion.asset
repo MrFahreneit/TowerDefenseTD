@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85b1372e88805d43a5fa84561e9fef7, type: 3}
   m_Name: DT_SpellExplosion
   m_EditorClassIdentifier: 
-  _name: Explosion
+  _name: Traitement de Choc
   _spellPrefab: {fileID: 5401439968005239301, guid: 45513153b4a2c814c9f83222d8cdabdb,
     type: 3}
   IndexSpell: 3
