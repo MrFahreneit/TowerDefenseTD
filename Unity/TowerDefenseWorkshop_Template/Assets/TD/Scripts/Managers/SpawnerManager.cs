@@ -55,6 +55,9 @@ namespace GSGD1
 
 		private float waitingDuration;
 
+		[SerializeField]
+		private GameObject TextFlying = null;
+
 		[ContextMenu("Start waves")]
 		public void StartWaves()
 		{
@@ -135,7 +138,6 @@ namespace GSGD1
 					waitingDuration += waveDatabase.Waves[_currentWaveSetIndex - 1].WaitingDurationAfter;
 				}
 
-				Debug.Log(waitingDuration);
 				Invoke("StartNewWaveSet", waitingDuration);
 				//_waitForNextWaveCoroutine = StartCoroutine(WaitForNewWaveSet());
 			}
@@ -194,7 +196,23 @@ namespace GSGD1
 			{
 				_arrow3.SetActive(false);
 			}
-		}
+			//4
+			if(TextFlying != null)
+
+			{
+				if (waveDatabase.Waves[_currentWaveSetIndex].GetShowTextFlyingEnemy() == true)
+				{
+					TextFlying.SetActive(true);
+				}
+				else
+				{
+					TextFlying.SetActive(false);
+
+				}
+
+			}
+
+        }
 
 	}
 

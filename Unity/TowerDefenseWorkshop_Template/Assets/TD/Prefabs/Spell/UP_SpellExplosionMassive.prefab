@@ -89,7 +89,7 @@ MonoBehaviour:
   _insta: 1
   _percentDamage: 500
   _followHook: 0
-  ParticleExplosion: {fileID: 0}
+  ParticleExplosion: {fileID: 3914444968842763749}
 --- !u!114 &3914444968842763749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Particle: {fileID: 0}
+  _Particle: {fileID: 4384304716607901189, guid: 296425f0a340ab5488a901670d21c78e,
+    type: 3}
   _rotateFromSpawner: 0
 --- !u!114 &-4376706387694097103
 MonoBehaviour:
