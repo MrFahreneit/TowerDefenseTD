@@ -16,7 +16,7 @@ MonoBehaviour:
   _entityType: 0
   TypeIndex: 0
   _niv: 1
-  _damage: 30
+  _damage: 35
   _attackSpeed: 1.4
   _range: 2.5
   _bulletLaunch: 5
