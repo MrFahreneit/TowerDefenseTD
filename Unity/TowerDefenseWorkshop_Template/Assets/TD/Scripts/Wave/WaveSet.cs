@@ -30,7 +30,8 @@
 		[SerializeField]
 		private bool showTextFlyingEnemy = false;
 
-		
+		[SerializeField]
+		private bool nightWave = false;
 
 		public List<Wave> Waves => _waves;
 
@@ -65,6 +66,11 @@
 		{
 			return showTextFlyingEnemy;
 		}
+
+		public bool GetNightWave()
+        {
+			return nightWave;
+        }
 	}
 
 #if UNITY_EDITOR
