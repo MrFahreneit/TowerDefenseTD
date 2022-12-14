@@ -33,6 +33,9 @@
 		[SerializeField]
 		private bool nightWave = false;
 
+		[SerializeField]
+		private bool finalwave = false;
+
 		public List<Wave> Waves => _waves;
 
 		public float WaitingDurationBefore => _waitingDurationBefore;
@@ -70,6 +73,11 @@
 		public bool GetNightWave()
         {
 			return nightWave;
+        }
+
+		public bool GetFinalWave()
+        {
+			return finalwave;
         }
 	}
 

@@ -54,6 +54,9 @@ namespace GSGD1
 		[SerializeField]
 		private GameObject LightNight = null;
 
+		[SerializeField]
+		private GameObject _finalScreen = null;
+
 		private WaveDatabase waveDatabase;
 
 		private WaveSet waveSet;
@@ -227,8 +230,19 @@ namespace GSGD1
 				}
 
 			}
+			if(waveDatabase.Waves[_currentWaveSetIndex].GetFinalWave() == true)
+            {
+				Invoke("StartScreen", 30f);
+            }
 
-        }
+
+		}
+
+		private void StartScreen()
+        {
+			_finalScreen.SetActive(true);
+
+		}
 
 	}
 
