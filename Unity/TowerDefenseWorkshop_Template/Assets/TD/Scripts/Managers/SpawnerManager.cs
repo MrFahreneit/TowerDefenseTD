@@ -138,7 +138,6 @@ namespace GSGD1
 					waitingDuration += waveDatabase.Waves[_currentWaveSetIndex - 1].WaitingDurationAfter;
 				}
 
-				Debug.Log(waitingDuration);
 				Invoke("StartNewWaveSet", waitingDuration);
 				//_waitForNextWaveCoroutine = StartCoroutine(WaitForNewWaveSet());
 			}
