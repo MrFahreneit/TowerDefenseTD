@@ -13,8 +13,13 @@
 		[SerializeField]
 		private scr_SoundsCaller _SoundDamage = null; 
 		[SerializeField]
-		private scr_SoundsCaller _SoundDeath = null; 
+		private scr_SoundsCaller _SoundDeath = null;
 
+		[SerializeField]
+		private AudioClip SonDeDeces;
+
+		[SerializeField]
+		private GameObject SoundSpawner;
 
         [SerializeField]
 		private float _health = 1f;
@@ -28,6 +33,9 @@
 		[SerializeField]
 		private scr_Type _enemyType = null;
 		private int _enemyTypeID = 0;
+
+		[SerializeField]
+		private scr_EnemeyGoldGiver _GiveGold;
 
 		[SerializeField]
 		private bool _inviciFrame = false;
@@ -85,6 +93,7 @@
                             _SoundDamage.SpawnSound(true);
                         }
 
+						_GiveGold.GiveGold();
                         DoDestroy();
 					}
 
@@ -105,6 +114,11 @@
             {
                 _ParticleDeath.SpawnParticle();
             }
+
+
+			var soundOfDeath = Instantiate(SoundSpawner);
+			soundOfDeath.GetComponent<AudioSource>().clip = SonDeDeces;
+			soundOfDeath.GetComponent<AudioSource>().Play();
 
             if (_SoundDeath != null)
             {

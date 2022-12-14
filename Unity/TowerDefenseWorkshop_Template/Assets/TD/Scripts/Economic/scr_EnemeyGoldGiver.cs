@@ -14,7 +14,7 @@ public class scr_EnemeyGoldGiver : MonoBehaviour
     [SerializeField]
     private scr_GoldMultiplier _goldMultiSript = null;
 
-    private void OnDestroy()
+    public void GiveGold()
     {
         if(LevelReferences.HasInstance == true)
         {
