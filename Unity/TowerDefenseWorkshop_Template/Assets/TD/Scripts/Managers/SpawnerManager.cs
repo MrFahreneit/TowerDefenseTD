@@ -55,6 +55,9 @@ namespace GSGD1
 
 		private float waitingDuration;
 
+		[SerializeField]
+		private GameObject TextFlying = null;
+
 		[ContextMenu("Start waves")]
 		public void StartWaves()
 		{
@@ -194,7 +197,23 @@ namespace GSGD1
 			{
 				_arrow3.SetActive(false);
 			}
-		}
+			//4
+			if(TextFlying != null)
+
+			{
+				if (waveDatabase.Waves[_currentWaveSetIndex].GetShowTextFlyingEnemy() == true)
+				{
+					TextFlying.SetActive(true);
+				}
+				else
+				{
+					TextFlying.SetActive(false);
+
+				}
+
+			}
+
+        }
 
 	}
 

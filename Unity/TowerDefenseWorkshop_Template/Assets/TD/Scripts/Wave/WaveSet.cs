@@ -27,6 +27,11 @@
 		[SerializeField]
 		private bool showArrow3 = false;
 
+		[SerializeField]
+		private bool showTextFlyingEnemy = false;
+
+		
+
 		public List<Wave> Waves => _waves;
 
 		public float WaitingDurationBefore => _waitingDurationBefore;
@@ -53,6 +58,12 @@
 		public bool GetArrow3()
 		{
 			return showArrow1;
+		}
+
+
+		public bool GetShowTextFlyingEnemy()
+		{
+			return showTextFlyingEnemy;
 		}
 	}
 
