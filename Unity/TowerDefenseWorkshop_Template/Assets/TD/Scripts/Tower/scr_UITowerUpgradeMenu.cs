@@ -28,6 +28,9 @@ public class scr_UITowerUpgradeMenu : MonoBehaviour
     [SerializeField]
     private GameObject _upgradeMenuSpe = null;
 
+    [SerializeField]
+    private GameObject CellActor;
+
     private Tower _towerInfo = null;
 
     #pragma warning disable CS0414
@@ -100,6 +103,15 @@ public class scr_UITowerUpgradeMenu : MonoBehaviour
     {
         return _towerUpgraded;
     }
+
+    public void SellTurret()
+    {
+        Instantiate(CellActor, _towerUpgraded.transform.position, Quaternion.identity);
+        Destroy(_towerUpgraded);
+        LevelReferences.Instance.Manager_Economic.AddGold((int)(_towerInfo.GetDTTurret().GetUpgradePrice1() * 0.5f));
+        
+    }
+
 
 
 }
