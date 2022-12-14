@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 6273241710561537728}
   - component: {fileID: 2883311958606682510}
   - component: {fileID: 5370816051131418127}
+  - component: {fileID: 2877175301601272441}
   m_Layer: 0
   m_Name: Entity.SpeedyBoss
   m_TagString: Untagged
@@ -408,7 +409,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 16717cec6a83d7346b401d3b8294c4b4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -493,6 +494,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2877175301601272441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaf06463ff2fe54190b2e068d04f30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pathFollower: {fileID: 2942146037294568418}
+  _spawnPoint: {fileID: 4806590715912381093}
+  _purified: {fileID: 7747698232297498108, guid: d5621bbf141587c4cae8bf71cd88c02d,
+    type: 3}
 --- !u!1 &2942146038031326611
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +801,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3554854212129046243, guid: 86e6461b83cb69a4ead349f9d8c12d50,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1aca07187d6560a43a7685744ac5c37a, type: 2}
     - target: {fileID: 919132149155446097, guid: 86e6461b83cb69a4ead349f9d8c12d50,
         type: 3}
       propertyPath: m_Name

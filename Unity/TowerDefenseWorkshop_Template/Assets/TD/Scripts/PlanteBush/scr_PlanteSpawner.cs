@@ -62,7 +62,7 @@ public class scr_PlanteSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        animStart.PlayAnim();
+        
         _spellSpeed.TimerScaleHasChanged.RemoveListener(ChangeTime);
         _spellSpeed.TimerScaleHasChanged.AddListener(ChangeTime);
     }
@@ -108,8 +108,9 @@ public class scr_PlanteSpawner : MonoBehaviour
 
     private void PlanteIsCollected()
     {
+        animStart.PlayAnim();
 
-        if(_HarvestSound != null)
+        if (_HarvestSound != null)
         {
             _HarvestSound.SpawnSound(true);
         }
