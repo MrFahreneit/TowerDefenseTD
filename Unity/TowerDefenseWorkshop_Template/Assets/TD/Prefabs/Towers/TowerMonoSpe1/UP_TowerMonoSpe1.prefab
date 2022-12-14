@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 302692793403659936}
   - component: {fileID: 8873962572497203327}
   - component: {fileID: 6195798059365664965}
+  - component: {fileID: -1507124292801115119}
   m_Layer: 0
   m_Name: UP_TowerMonoSpe1
   m_TagString: Untagged
@@ -190,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234767b6b1df3734886a7cf6007a3667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ParticleCreate: {fileID: 0}
+  _ParticleCreate: {fileID: -1507124292801115119}
   _TowerCreateSound: {fileID: 0}
   _weaponController: {fileID: 302692792590252287}
   _damageableDetector: {fileID: 302692793403659942}
@@ -288,6 +289,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerScript: {fileID: 302692793403659937}
   _rangeObject: {fileID: 2580546168172875549}
+--- !u!114 &-1507124292801115119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302692793403659941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 2412649900493353114, guid: ab8b25d0244fde541993a1f078f358dc,
+    type: 3}
+  _rotateFromSpawner: 0
 --- !u!1 &1600642480088593361
 GameObject:
   m_ObjectHideFlags: 0

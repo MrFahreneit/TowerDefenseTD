@@ -10,6 +10,8 @@ public class scr_PlanteSpawner : MonoBehaviour
     [SerializeField]
     private scr_SoundsCaller _HarvestSound = null;
 
+    [SerializeField]
+    private scr_ParticleSpawner _PlantGrossSound = null;
 
     enum PlanteType { PlanteA, PlanteB, PlanteC};
     [SerializeField]
@@ -103,6 +105,7 @@ public class scr_PlanteSpawner : MonoBehaviour
 
     public bool GetPlantSpawned()
     {
+
         return isSpawned;
     }
 
@@ -179,6 +182,13 @@ public class scr_PlanteSpawner : MonoBehaviour
             isSpawned = true;
             _timer.Stop();
             plantspawned.PlayAnim();
+
+
+            if (_PlantGrossSound != null)
+            {
+                _PlantGrossSound.SpawnParticle();
+            }
+
         }
 
     }

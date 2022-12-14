@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5401439968005239305}
   - component: {fileID: -3489578892618640107}
   - component: {fileID: -7961545907502131520}
+  - component: {fileID: -78193968510187978}
   m_Layer: 0
   m_Name: UP_HarpoonExplosion
   m_TagString: Untagged
@@ -79,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c6f4148572254458921f9ad44dc7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ExplosionSpawnSound: {fileID: 0}
+  _ExplosionSpawnSound: {fileID: -3489578892618640107}
   _timer:
     _duration: 7
     _timeScale: 1
@@ -89,7 +90,7 @@ MonoBehaviour:
   _insta: 0
   _percentDamage: 0.5
   _followHook: 1
-  ParticleExplosion: {fileID: 0}
+  ParticleExplosion: {fileID: -78193968510187978}
 --- !u!114 &-3489578892618640107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +200,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-78193968510187978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401439968005239301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 5680274664147718242, guid: 8080d609a66ad3044be6b091b3727348,
+    type: 3}
+  _rotateFromSpawner: 0
 --- !u!1 &7622043407362385505
 GameObject:
   m_ObjectHideFlags: 0

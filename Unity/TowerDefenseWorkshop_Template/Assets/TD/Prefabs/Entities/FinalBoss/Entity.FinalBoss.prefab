@@ -194,7 +194,7 @@ MonoBehaviour:
   _ParticleDeath: {fileID: -5801299481671220428}
   _SoundDamage: {fileID: 0}
   _SoundDeath: {fileID: -5574888967582435603}
-  _health: 3000
+  _health: 6000
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2942146038031326620}
   _enemyType: {fileID: 8530449687608211159}

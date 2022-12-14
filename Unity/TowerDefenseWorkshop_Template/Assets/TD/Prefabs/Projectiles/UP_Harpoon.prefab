@@ -61,7 +61,7 @@ MonoBehaviour:
     type: 3}
   _frag: {fileID: 0}
   _followingTarget: 0
-  _ProjectileSpawnSound: {fileID: 0}
+  _ProjectileSpawnSound: {fileID: 1199846514733382696}
   _ProjectileSpawnParticle: {fileID: 0}
   _moveSpeed: 35
   _rotateSpeed: 500

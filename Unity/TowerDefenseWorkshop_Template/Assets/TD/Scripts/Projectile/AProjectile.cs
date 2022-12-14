@@ -50,6 +50,8 @@
 
 				if (damageable != null && damageable.GetInviciFrame() == false)
 				{
+
+					Debug.Log(other);
 					if (doDamage == true)
 					{
 						damageable.TakeDamage(_damage);
@@ -135,7 +137,6 @@
 
 			foreach (var hitCollider in hitColliders)
 			{
-				Debug.Log(hitCollider);
 				if (hitCollider.GetComponentInParent<Damageable>() == true)
 				{
 					hitCollider.GetComponentInParent<Damageable>().TakeDamage(_damage);

@@ -22,13 +22,13 @@ public class scr_UISpecialize : MonoBehaviour
         }
         else if(Spe == 1)
         {
-            LevelReferences.Instance.Manager_Economic.AddPlanteA(-1 * (int)(_upgradeScript.GetDTTowerStats().GetPlantePrice().y));
+            LevelReferences.Instance.Manager_Economic.AddPlanteB(-1 * (int)(_upgradeScript.GetDTTowerStats().GetPlantePrice().y));
             Instantiate(towerStats.GetSpe2DT(), TowerUpgraded.transform.position, TowerUpgraded.transform.rotation);
             Destroy(TowerUpgraded);
         }
         else if(Spe == 2)
         {
-            LevelReferences.Instance.Manager_Economic.AddPlanteA(-1 * (int)(_upgradeScript.GetDTTowerStats().GetPlantePrice().z));
+            LevelReferences.Instance.Manager_Economic.AddPlanteC(-1 * (int)(_upgradeScript.GetDTTowerStats().GetPlantePrice().z));
             Instantiate(towerStats.GetSpe3DT(), TowerUpgraded.transform.position, TowerUpgraded.transform.rotation);
             Destroy(TowerUpgraded);
         }
