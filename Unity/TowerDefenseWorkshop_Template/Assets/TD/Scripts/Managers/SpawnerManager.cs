@@ -49,11 +49,19 @@ namespace GSGD1
 		[SerializeField]
 		private GameObject _arrow3 = null;
 
+		[SerializeField]
+		private GameObject LightDay = null;
+		[SerializeField]
+		private GameObject LightNight = null;
+
 		private WaveDatabase waveDatabase;
 
 		private WaveSet waveSet;
 
 		private float waitingDuration;
+
+		[SerializeField]
+		private GameObject TextFlying = null;
 
 		[ContextMenu("Start waves")]
 		public void StartWaves()
@@ -70,6 +78,17 @@ namespace GSGD1
 			_currentWaveSetIndex += 1;
 			waveDatabase = DatabaseManager.Instance.WaveDatabase;
 
+			if (waveDatabase.Waves[_currentWaveSetIndex].GetNightWave() == true)
+            {
+				LightDay.SetActive(false);
+				LightNight.SetActive(true);
+
+			}
+            else
+            {
+				LightDay.SetActive(true);
+				LightNight.SetActive(false);
+			}
 
 			_arrow1.SetActive(false);
 			_arrow2.SetActive(false);
@@ -135,7 +154,6 @@ namespace GSGD1
 					waitingDuration += waveDatabase.Waves[_currentWaveSetIndex - 1].WaitingDurationAfter;
 				}
 
-				Debug.Log(waitingDuration);
 				Invoke("StartNewWaveSet", waitingDuration);
 				//_waitForNextWaveCoroutine = StartCoroutine(WaitForNewWaveSet());
 			}
@@ -194,7 +212,23 @@ namespace GSGD1
 			{
 				_arrow3.SetActive(false);
 			}
-		}
+			//4
+			if(TextFlying != null)
+
+			{
+				if (waveDatabase.Waves[_currentWaveSetIndex].GetShowTextFlyingEnemy() == true)
+				{
+					TextFlying.SetActive(true);
+				}
+				else
+				{
+					TextFlying.SetActive(false);
+
+				}
+
+			}
+
+        }
 
 	}
 

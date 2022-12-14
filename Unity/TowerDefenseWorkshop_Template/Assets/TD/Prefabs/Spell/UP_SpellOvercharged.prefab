@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4592221460000812686}
   - component: {fileID: -9223348749162905971}
   - component: {fileID: 3534135870693624469}
+  - component: {fileID: -5151833475683315655}
   m_Layer: 0
   m_Name: UP_SpellOvercharged
   m_TagString: Untagged
@@ -62,8 +63,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af88248e49e61034582c8892bd170d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SpellOverchargerParticle: {fileID: 0}
-  _SpellOverchargerSound: {fileID: 0}
+  _SpellOverchargerParticle: {fileID: -5151833475683315655}
+  _SpellOverchargerSound: {fileID: -4592221460000812686}
   _capsuleCollider: {fileID: 8092840138962813674}
 --- !u!114 &-4592221460000812686
 MonoBehaviour:
@@ -188,3 +189,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-5151833475683315655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5129315356442192989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 4767491230383273053, guid: c1dbaf68d0184d64da1475c30fd4b4ea,
+    type: 3}
+  _rotateFromSpawner: 0

@@ -59,7 +59,7 @@ MonoBehaviour:
   _ActorSpawnOnDeath: {fileID: 0}
   _frag: {fileID: 0}
   _followingTarget: 0
-  _ProjectileSpawnSound: {fileID: 0}
+  _ProjectileSpawnSound: {fileID: 8136482311194697474}
   _ProjectileSpawnParticle: {fileID: 0}
   _moveSpeed: 75
   _rotateSpeed: 500
@@ -104,7 +104,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ba2498e85bbdccb489e2b814970d7eaa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.84
   m_Pitch: 1
   Loop: 0
   Mute: 0

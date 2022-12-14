@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85b1372e88805d43a5fa84561e9fef7, type: 3}
   m_Name: DT_SpellOvercharge
   m_EditorClassIdentifier: 
-  _name: Overcharged
+  _name: Guerison en Cascade
   _spellPrefab: {fileID: 5129315356442192989, guid: 647c181d7a5c91849a4f36103bcf658f,
     type: 3}
   IndexSpell: 2

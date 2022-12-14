@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85b1372e88805d43a5fa84561e9fef7, type: 3}
   m_Name: DT_SpellScreenBomb
   m_EditorClassIdentifier: 
-  _name: Screen Bomb
+  _name: Vague de Remede
   _spellPrefab: {fileID: 5401439968005239301, guid: 5260180866a55d247b8bae5839472da4,
     type: 3}
   IndexSpell: 6

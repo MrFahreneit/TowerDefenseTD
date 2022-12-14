@@ -177,7 +177,7 @@ MonoBehaviour:
   _distanceThreshold: 0.5
   _currentPathIndex: 0
   _enemyInBase: 0
-  enemyDamage: 1
+  enemyDamage: 100
 --- !u!114 &2942146037294568419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   _ParticleDeath: {fileID: -5801299481671220428}
   _SoundDamage: {fileID: 0}
   _SoundDeath: {fileID: -5574888967582435603}
-  _health: 3000
+  _health: 6000
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2942146038031326620}
   _enemyType: {fileID: 8530449687608211159}

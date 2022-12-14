@@ -27,6 +27,12 @@
 		[SerializeField]
 		private bool showArrow3 = false;
 
+		[SerializeField]
+		private bool showTextFlyingEnemy = false;
+
+		[SerializeField]
+		private bool nightWave = false;
+
 		public List<Wave> Waves => _waves;
 
 		public float WaitingDurationBefore => _waitingDurationBefore;
@@ -54,6 +60,17 @@
 		{
 			return showArrow1;
 		}
+
+
+		public bool GetShowTextFlyingEnemy()
+		{
+			return showTextFlyingEnemy;
+		}
+
+		public bool GetNightWave()
+        {
+			return nightWave;
+        }
 	}
 
 #if UNITY_EDITOR
