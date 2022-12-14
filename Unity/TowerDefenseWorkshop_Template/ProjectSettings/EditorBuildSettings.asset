@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TD/Scenes/GDScenes/SC_GD_DebugTestMap.unity
-    guid: cc1172d83ed6aad4083d9d53525ead2e
-  - enabled: 1
     path: Assets/TD/Scenes/UIScenes/SC_Mainmenu.unity
     guid: 60b302553b5eb714eae1154723bd70ed
   - enabled: 1
-    path: Assets/TD/Scenes/Mockup_GUIScene/Mockup_GUIScene.unity
-    guid: bcccf062d8fa7564abd96ba7d381a778
+    path: Assets/TD/Scenes/GDScenes/SC_Level-EliMax.unity
+    guid: c10d17465fee0b74d8700f3417c047df
   m_configObjects: {}

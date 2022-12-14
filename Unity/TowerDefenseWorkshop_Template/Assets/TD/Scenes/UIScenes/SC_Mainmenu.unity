@@ -3530,7 +3530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee74a90fa8735454fafb04f89866289a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Mockup_GUIScene
+  sceneToLoad: SC_Level-EliMax
 --- !u!1 &1377902533
 GameObject:
   m_ObjectHideFlags: 0
