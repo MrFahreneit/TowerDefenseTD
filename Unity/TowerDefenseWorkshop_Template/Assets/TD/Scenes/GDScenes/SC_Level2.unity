@@ -1349,6 +1349,7 @@ MonoBehaviour:
   _arrow1: {fileID: 0}
   _arrow2: {fileID: 0}
   _arrow3: {fileID: 0}
+  TextFlying: {fileID: 0}
 --- !u!4 &63376896
 Transform:
   m_ObjectHideFlags: 0
@@ -28867,9 +28868,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _statGetter: {fileID: 1024547477}
   _gold: 50000
-  _planteA: 0
-  _planteB: 0
-  _planteC: 0
+  _planteA: 55555
+  _planteB: 55555
+  _planteC: 55555
 --- !u!114 &1203955495
 MonoBehaviour:
   m_ObjectHideFlags: 0
