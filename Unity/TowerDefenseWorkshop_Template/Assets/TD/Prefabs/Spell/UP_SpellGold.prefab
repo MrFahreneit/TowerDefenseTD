@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1115832255281673916}
   - component: {fileID: -5305695376825023225}
   - component: {fileID: 253061474538023641}
+  - component: {fileID: 4168036764086714311}
   m_Layer: 0
   m_Name: UP_SpellGold
   m_TagString: Untagged
@@ -64,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _GoldSpellSound: {fileID: -5305695376825023225}
-  _GoldSpellParticle: {fileID: 0}
+  _GoldSpellParticle: {fileID: 4168036764086714311}
   _capsuleCollider: {fileID: 5466362874623135768}
 --- !u!114 &7454557829515345116
 MonoBehaviour:
@@ -203,3 +204,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4168036764086714311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5014484129279191619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 7486528606808157755, guid: c08ddb8d8f3cb67448cb276cdfeadda1,
+    type: 3}
+  _rotateFromSpawner: 0

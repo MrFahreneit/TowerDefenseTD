@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -3715936240342487370}
   - component: {fileID: -782996423899474818}
   - component: {fileID: 502640861984479002}
+  - component: {fileID: 4420644759580653239}
   m_Layer: 0
   m_Name: UP_BasicBullet
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MonoBehaviour:
   _frag: {fileID: 0}
   _followingTarget: 0
   _ProjectileSpawnSound: {fileID: -3715936240342487370}
-  _ProjectileSpawnParticle: {fileID: 0}
+  _ProjectileSpawnParticle: {fileID: 4420644759580653239}
   _moveSpeed: 35
   _rotateSpeed: 500
 --- !u!54 &1697648429471405642
@@ -103,7 +104,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b5ad0062f1c85404cb517a3039be439d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 91c026ee3363387429ec976e98602214, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.894
   m_Pitch: 1
@@ -202,6 +203,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeAlive: 5
+--- !u!114 &4420644759580653239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697648429471405641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 995523682488361277, guid: fd6810191f5e7384a98f186e39f268f3,
+    type: 3}
+  _rotateFromSpawner: 0
 --- !u!1 &1697648429891245682
 GameObject:
   m_ObjectHideFlags: 0
