@@ -49,6 +49,11 @@ namespace GSGD1
 		[SerializeField]
 		private GameObject _arrow3 = null;
 
+		[SerializeField]
+		private GameObject LightDay = null;
+		[SerializeField]
+		private GameObject LightNight = null;
+
 		private WaveDatabase waveDatabase;
 
 		private WaveSet waveSet;
@@ -73,6 +78,17 @@ namespace GSGD1
 			_currentWaveSetIndex += 1;
 			waveDatabase = DatabaseManager.Instance.WaveDatabase;
 
+			if (waveDatabase.Waves[_currentWaveSetIndex].GetNightWave() == true)
+            {
+				LightDay.SetActive(false);
+				LightNight.SetActive(true);
+
+			}
+            else
+            {
+				LightDay.SetActive(true);
+				LightNight.SetActive(false);
+			}
 
 			_arrow1.SetActive(false);
 			_arrow2.SetActive(false);
