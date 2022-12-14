@@ -46,6 +46,13 @@
 		[SerializeField]
 		private scr_AnimationPlayer animPlayer;
 
+		[SerializeField]
+		private GameObject meshLevel1;
+		[SerializeField]
+		private GameObject meshLevel2;
+		[SerializeField]
+		private GameObject meshLevel3;
+
 		private void Awake()
 		{
 			//_ParticleCreate.SpawnParticle();
@@ -130,10 +137,16 @@
 		{
 			if(_currentLevel == 1)
             {
+				meshLevel1.SetActive(false);
+				meshLevel2.SetActive(true);
+				meshLevel3.SetActive(false);
 				LevelReferences.Instance.Manager_Economic.AddGold(-1 * (_towerStats.GetUpgradePrice1()));
 			}
 			else if(_currentLevel == 2)
 			{
+				meshLevel1.SetActive(false);
+				meshLevel2.SetActive(false);
+				meshLevel3.SetActive(true);
 				LevelReferences.Instance.Manager_Economic.AddGold(-1 * (_towerStats.GetUpgradePrice2()));
 			}
 

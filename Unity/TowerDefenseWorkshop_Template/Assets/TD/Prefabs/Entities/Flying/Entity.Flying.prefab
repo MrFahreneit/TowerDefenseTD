@@ -46,6 +46,7 @@ Transform:
   - {fileID: 2268694976213944789}
   - {fileID: 2419124359863057184}
   - {fileID: 3753533372157185427}
+  - {fileID: 1023373700401319969}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,7 +100,7 @@ MonoBehaviour:
   _SoundDeath: {fileID: 1423005752514355050}
   _health: 80
   _destroyIfKilled: 1
-  _aimPosition: {fileID: 2942146038031326620}
+  _aimPosition: {fileID: 1023373700401319969}
   _enemyType: {fileID: 5815297927120438070}
   _inviciFrame: 0
   DamageTakenUnityEvent:
@@ -725,6 +726,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8472110233804504210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023373700401319969}
+  m_Layer: 0
+  m_Name: target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023373700401319969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8472110233804504210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.90038, z: 0.55820084}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2942146037294568417}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4778182874493721653
 PrefabInstance:
   m_ObjectHideFlags: 0
