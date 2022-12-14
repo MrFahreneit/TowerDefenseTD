@@ -37190,11 +37190,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SpellPrice1: {x: 5, y: 0, z: 0}
-  _SpellPrice2: {x: 5, y: 5, z: 0}
-  _SpellPrice3: {x: 10, y: 5, z: 0}
-  _SpellPrice4: {x: 10, y: 5, z: 3}
-  _SpellPrice5: {x: 20, y: 15, z: 5}
-  _SpellPrice6: {x: 30, y: 20, z: 10}
+  _SpellPrice2: {x: 5, y: 2, z: 0}
+  _SpellPrice3: {x: 7, y: 3, z: 0}
+  _SpellPrice4: {x: 10, y: 5, z: 1}
+  _SpellPrice5: {x: 20, y: 10, z: 3}
+  _SpellPrice6: {x: 30, y: 15, z: 5}
   _SpellMax1: 3
   _SpellMax2: 3
   _SpellMax3: 3

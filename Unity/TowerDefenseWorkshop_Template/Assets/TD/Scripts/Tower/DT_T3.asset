@@ -17,7 +17,7 @@ MonoBehaviour:
   TypeIndex: 0
   _niv: 1
   _damage: 60
-  _attackSpeed: 1.5
+  _attackSpeed: 1.2
   _range: 3
   _bulletLaunch: 1
   _spread: 0
