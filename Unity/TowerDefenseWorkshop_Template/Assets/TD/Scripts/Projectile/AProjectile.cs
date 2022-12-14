@@ -42,6 +42,10 @@
 		[SerializeField]
 		protected scr_ParticleSpawner _ProjectileSpawnParticle = null;
 
+		[SerializeField] protected AudioClip SonDeShoot;
+
+		[SerializeField] protected GameObject SoundSpawner;
+
 		protected virtual void OnTriggerEnter(Collider other)
 		{
 			if (isDot == false)
@@ -112,6 +116,10 @@
 			{
 				_ProjectileSpawnSound.SpawnSound(true);
 			}
+
+			var soundofshoot = Instantiate(SoundSpawner);
+			soundofshoot.GetComponent<AudioSource>().clip = SonDeShoot;
+			soundofshoot.GetComponent<AudioSource>().Play();
 
 			if (_ProjectileSpawnParticle != null)
 			{

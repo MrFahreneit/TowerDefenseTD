@@ -63,6 +63,9 @@ MonoBehaviour:
   _followingTarget: 0
   _ProjectileSpawnSound: {fileID: 1199846514733382696}
   _ProjectileSpawnParticle: {fileID: 0}
+  SonDeShoot: {fileID: 8300000, guid: a5f57c9060f39c444a1286f9ae21cb87, type: 3}
+  SoundSpawner: {fileID: 5550644391187387823, guid: 785e15d2a940a994dadd741402de0c9f,
+    type: 3}
   _moveSpeed: 35
   _rotateSpeed: 500
 --- !u!54 &1697648429471405642
