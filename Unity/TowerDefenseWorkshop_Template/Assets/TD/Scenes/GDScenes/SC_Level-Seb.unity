@@ -34392,7 +34392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statGetter: {fileID: 2031489735}
-  _gold: 250
+  _gold: 350
   _planteA: 0
   _planteB: 0
   _planteC: 0
@@ -38185,6 +38185,7 @@ MonoBehaviour:
   _upgradeMenuMain: {fileID: 1660063635}
   _upgradeMenuBasic: {fileID: 42753163}
   _upgradeMenuSpe: {fileID: 687834221}
+  CellActor: {fileID: 0}
   _priceSpe1: {fileID: 0}
   _priceSpe2: {fileID: 0}
   _priceSpe3: {fileID: 0}

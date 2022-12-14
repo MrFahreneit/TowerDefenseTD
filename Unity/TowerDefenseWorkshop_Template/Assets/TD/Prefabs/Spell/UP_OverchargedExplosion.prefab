@@ -89,6 +89,9 @@ MonoBehaviour:
   _percentDamage: 25
   _followHook: 0
   ParticleExplosion: {fileID: 5285762404030371020}
+  SonExplosion: {fileID: 8300000, guid: a027e3c2aaadeec4795babdfd06e16c7, type: 3}
+  SoundSpawner: {fileID: 5550644391187387823, guid: 785e15d2a940a994dadd741402de0c9f,
+    type: 3}
 --- !u!114 &5285762404030371020
 MonoBehaviour:
   m_ObjectHideFlags: 0

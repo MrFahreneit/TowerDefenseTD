@@ -31,6 +31,10 @@ public class scr_Explosion : MonoBehaviour
     [SerializeField]
     private scr_ParticleSpawner ParticleExplosion = null;
 
+    [SerializeField] private AudioClip SonExplosion;
+
+    [SerializeField] private GameObject SoundSpawner;
+
 
     private float _initialDamage = 1f;
     private float _damage = 1f;
@@ -50,7 +54,11 @@ public class scr_Explosion : MonoBehaviour
         if (_ExplosionSpawnSound != null)
         {
             _ExplosionSpawnSound.SpawnSound(true);
-        }  
+        }
+
+        var soundexplosion = Instantiate(SoundSpawner);
+        soundexplosion.GetComponent<AudioSource>().clip = SonExplosion;
+        soundexplosion.GetComponent<AudioSource>().Play();
 
         if (ParticleExplosion != null)
         {
