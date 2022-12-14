@@ -114,6 +114,9 @@ MonoBehaviour:
   _ParticleDeath: {fileID: -5517461910868795009}
   _SoundDamage: {fileID: 0}
   _SoundDeath: {fileID: 363086080109018127}
+  SonDeDeces: {fileID: 8300000, guid: b5f22a9a9a8b3504483ccc8d4982af2a, type: 3}
+  SoundSpawner: {fileID: 5550644391187387823, guid: 785e15d2a940a994dadd741402de0c9f,
+    type: 3}
   _health: 300
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2183023344376464740}
