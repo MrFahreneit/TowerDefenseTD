@@ -60,11 +60,13 @@
 		{
 			if(_inviciFrame == false)
             {
+
+				Debug.Log(damage);
 				_health -= damage;
 
-				_inviciFrame = false;
+				_inviciFrame = true;
 
-				Invoke("RemoveInviciFrame", 0.12f);
+				Invoke("RemoveInviciFrame", 0.05f);
 
 				if (_health <= 0)
 				{
