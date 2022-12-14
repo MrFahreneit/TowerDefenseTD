@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c6f4148572254458921f9ad44dc7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ExplosionSpawnSound: {fileID: 0}
+  _ExplosionSpawnSound: {fileID: -3489578892618640107}
   _timer:
     _duration: 7
     _timeScale: 1
