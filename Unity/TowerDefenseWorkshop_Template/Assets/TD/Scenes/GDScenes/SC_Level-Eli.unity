@@ -11412,22 +11412,22 @@ PrefabInstance:
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.207
+      value: -11.96
       objectReference: {fileID: 0}
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.897
+      value: -9.11
       objectReference: {fileID: 0}
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}
@@ -16424,7 +16424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Potion de Midas
+  m_text: "Potion M\xE9dusante"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 142c38717e51da249afdb9dd2e528341, type: 2}
   m_sharedMaterial: {fileID: 9131807983681308774, guid: 142c38717e51da249afdb9dd2e528341,
@@ -34186,10 +34186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statGetter: {fileID: 2031489735}
-  _gold: 250
-  _planteA: 0
-  _planteB: 0
-  _planteC: 0
+  _gold: 100000
+  _planteA: 100
+  _planteB: 100
+  _planteC: 100
 --- !u!114 &1203955495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59000,12 +59000,12 @@ PrefabInstance:
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.28
+      value: -11.46
       objectReference: {fileID: 0}
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}
@@ -59015,7 +59015,7 @@ PrefabInstance:
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7
+      value: -4.19
       objectReference: {fileID: 0}
     - target: {fileID: 8860009260928251793, guid: cbcfc98c825d09b4f9e7ee42858f53e9,
         type: 3}

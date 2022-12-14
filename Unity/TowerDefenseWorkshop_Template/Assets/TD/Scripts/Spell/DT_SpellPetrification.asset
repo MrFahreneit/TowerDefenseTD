@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85b1372e88805d43a5fa84561e9fef7, type: 3}
   m_Name: DT_SpellPetrification
   m_EditorClassIdentifier: 
-  _name: Petrification
+  _name: "Potion M\xE9dusante"
   _spellPrefab: {fileID: 5129315356442192989, guid: 0327fa65ac88f7e4086a1e80153cfa05,
     type: 3}
   IndexSpell: 5

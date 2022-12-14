@@ -1349,6 +1349,8 @@ MonoBehaviour:
   _arrow1: {fileID: 0}
   _arrow2: {fileID: 0}
   _arrow3: {fileID: 0}
+  LightDay: {fileID: 0}
+  LightNight: {fileID: 0}
   TextFlying: {fileID: 0}
 --- !u!4 &63376896
 Transform:
@@ -4109,7 +4111,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85b1372e88805d43a5fa84561e9fef7, type: 3}
   m_Name: DT_SpellGold
   m_EditorClassIdentifier: 
-  _name: Gold
+  _name: Potion de Midas
   _spellPrefab: {fileID: 5014484129279191619, guid: 6313b867522f19c4bb822118b4f4fffc,
     type: 3}
+  IndexSpell: 1
