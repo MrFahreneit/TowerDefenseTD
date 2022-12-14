@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5401439968005239302}
   - component: {fileID: 6321202986042171108}
   - component: {fileID: -5021385916097577876}
+  - component: {fileID: 6893598411978790197}
   m_Layer: 0
   m_Name: UP_ExplosionRoquette
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MonoBehaviour:
   _insta: 1
   _percentDamage: 1
   _followHook: 0
-  ParticleExplosion: {fileID: 0}
+  ParticleExplosion: {fileID: 6893598411978790197}
 --- !u!54 &5401439968005239303
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -198,6 +199,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6893598411978790197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401439968005239301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865003a2a536a84f93f87e477dd9803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Particle: {fileID: 4384304716607901189, guid: 296425f0a340ab5488a901670d21c78e,
+    type: 3}
+  _rotateFromSpawner: 0
 --- !u!1 &7622043407362385505
 GameObject:
   m_ObjectHideFlags: 0
