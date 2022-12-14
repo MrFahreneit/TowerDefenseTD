@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _WitchMovementParticle: {fileID: 0}
   _targetMovement: {fileID: 0}
-  _speed: 11
+  _speed: 8
   _rotateSpeed: 8
 --- !u!1001 &31764247874065498
 PrefabInstance:
