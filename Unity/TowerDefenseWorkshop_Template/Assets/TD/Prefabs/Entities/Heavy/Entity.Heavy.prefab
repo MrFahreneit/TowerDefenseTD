@@ -118,6 +118,7 @@ MonoBehaviour:
   _destroyIfKilled: 1
   _aimPosition: {fileID: 2183023344376464740}
   _enemyType: {fileID: 8530449687608211159}
+  _GiveGold: {fileID: 902544328359584159}
   _inviciFrame: 0
   DamageTakenUnityEvent:
     m_PersistentCalls:

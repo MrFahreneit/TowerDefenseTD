@@ -98,10 +98,14 @@ MonoBehaviour:
   _ParticleDeath: {fileID: -5517153426841409193}
   _SoundDamage: {fileID: 0}
   _SoundDeath: {fileID: 2468614713128301797}
+  SonDeDeces: {fileID: 8300000, guid: 9d8c3be1d15072540b975641cea719f1, type: 3}
+  SoundSpawner: {fileID: 5550644391187387823, guid: 785e15d2a940a994dadd741402de0c9f,
+    type: 3}
   _health: 100
   _destroyIfKilled: 1
   _aimPosition: {fileID: 217766700798312431}
   _enemyType: {fileID: 5815297927120438070}
+  _GiveGold: {fileID: 3078949404861870484}
   _inviciFrame: 0
   DamageTakenUnityEvent:
     m_PersistentCalls:
