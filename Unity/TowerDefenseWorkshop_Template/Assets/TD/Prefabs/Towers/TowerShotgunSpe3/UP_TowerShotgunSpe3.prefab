@@ -109,6 +109,9 @@ MonoBehaviour:
   ShootUnityEvent:
     m_PersistentCalls:
       m_Calls: []
+  xRot: 1
+  yRot: 1
+  zRot: 1
 --- !u!1 &302692792940769428
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +207,9 @@ MonoBehaviour:
   _towerStats: {fileID: 11400000, guid: 9a59e6d27256e9c4d93de23b12a15b02, type: 2}
   _colliderRange: {fileID: 302692793403659943}
   animPlayer: {fileID: 7686878358573070037}
+  meshLevel1: {fileID: 0}
+  meshLevel2: {fileID: 0}
+  meshLevel3: {fileID: 0}
 --- !u!114 &7954490793965705602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +639,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0dbf126777bf32147926c11d87d936cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e7550ac87f5693c48930fdf020a464bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -14,6 +14,7 @@ public class scr_TowerRange : MonoBehaviour
 
     public void ShowRangeAnim(bool show)
     {
+        
         if (_rangeObject != null)
         {
             if (show == true)
