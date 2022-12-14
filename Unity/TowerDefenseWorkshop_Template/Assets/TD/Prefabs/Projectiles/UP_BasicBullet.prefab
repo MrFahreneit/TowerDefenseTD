@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyIfGiveDamage: 1
   _dotDelay: 0.25
-  _lifeTime: 5
+  _lifeTime: 3
   _damage: 1
   isDot: 0
   _collider: {fileID: 1697648429891245686}

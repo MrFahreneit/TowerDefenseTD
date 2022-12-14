@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452becaa04992c7489f04e76dc0428a5, type: 3}
   m_Name: DTPlanteTimer
   m_EditorClassIdentifier: 
-  _timeHatchA: 20
-  _timeHatchB: 35
-  _timeHatchC: 50
+  _timeHatchA: 10
+  _timeHatchB: 25
+  _timeHatchC: 40
