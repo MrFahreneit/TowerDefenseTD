@@ -64,7 +64,7 @@
 			{
 				int _currentEnemyTypeID = damageable.GetEntityID();
 
-				if (_currentEnemyTypeID == EntityID || EntityID == 2)
+				if (_currentEnemyTypeID == EntityID || _currentEnemyTypeID == 2)
                 {
 					damageable.DamageTaken -= Damageable_OnDamageTaken;
 					damageable.DamageTaken += Damageable_OnDamageTaken;
@@ -81,7 +81,7 @@
 			{
 				int _currentEnemyTypeID = damageable.GetEntityID();
 
-				if (_currentEnemyTypeID == EntityID || EntityID == 2)
+				if (_currentEnemyTypeID == EntityID || _currentEnemyTypeID == 2)
 				{
 					damageable.DamageTaken -= Damageable_OnDamageTaken;
 					_damageablesInRange.Remove(damageable);
