@@ -13,9 +13,20 @@
 		private Transform _projectileAnchor = null;
 		public UnityEvent ShootUnityEvent;
 
+		[SerializeField]
+		private bool xRot = true;
+		[SerializeField]
+		private bool yRot = true;
+		[SerializeField]
+		private bool zRot = true;
+
+
 		protected override void DoFire()
 		{
 			ShootUnityEvent.Invoke();
+
+
+
 
 			for (int i = 0; i < _bulletNB; i++)
 			{
