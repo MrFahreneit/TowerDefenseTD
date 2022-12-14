@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c6f4148572254458921f9ad44dc7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ExplosionSpawnSound: {fileID: 0}
+  _ExplosionSpawnSound: {fileID: 6321202986042171108}
   _timer:
     _duration: 0
     _timeScale: 1
@@ -114,8 +114,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0f517ecbda9d9dd4f99a534cf6cbda8d, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_PlayOnAwake: 1
+  m_Volume: 0.856
   m_Pitch: 1
   Loop: 0
   Mute: 0
