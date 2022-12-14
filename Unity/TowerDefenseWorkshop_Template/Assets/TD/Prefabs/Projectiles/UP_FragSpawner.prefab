@@ -59,7 +59,7 @@ MonoBehaviour:
   _ActorSpawnOnDeath: {fileID: 0}
   _frag: {fileID: 1336668804318198240}
   _followingTarget: 0
-  _ProjectileSpawnSound: {fileID: 0}
+  _ProjectileSpawnSound: {fileID: 8370176326956477319}
   _ProjectileSpawnParticle: {fileID: 0}
   _moveSpeed: 0
   _rotateSpeed: 1

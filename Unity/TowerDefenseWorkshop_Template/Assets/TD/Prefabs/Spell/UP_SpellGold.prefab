@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e1c077611f1404e92fe630fb817b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _GoldSpellSound: {fileID: 0}
+  _GoldSpellSound: {fileID: -5305695376825023225}
   _GoldSpellParticle: {fileID: 0}
   _capsuleCollider: {fileID: 5466362874623135768}
 --- !u!114 &7454557829515345116

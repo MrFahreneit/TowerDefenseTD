@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SpellOverchargerParticle: {fileID: 0}
-  _SpellOverchargerSound: {fileID: 0}
+  _SpellOverchargerSound: {fileID: -4592221460000812686}
   _capsuleCollider: {fileID: 8092840138962813674}
 --- !u!114 &-4592221460000812686
 MonoBehaviour:
