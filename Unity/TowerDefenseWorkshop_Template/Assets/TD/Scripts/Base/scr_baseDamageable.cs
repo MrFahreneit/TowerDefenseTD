@@ -31,7 +31,7 @@ public class scr_baseDamageable : MonoBehaviour
     public void DamageBase(int _damage)
     {
         _currentBaseLife = Mathf.Clamp((_currentBaseLife - _damage), 0, 100);
-        Debug.Log("DamagedDeal" + _damage);
+        //Debug.Log("DamagedDeal" + _damage);
 
         _baselifUI.OnBasedDamaged();
 

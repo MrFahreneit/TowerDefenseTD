@@ -11,6 +11,7 @@
 
 		// Variables 
 
+		private bool _test = false;
 
 		[SerializeField]
 		private Path _path = null;
@@ -67,7 +68,13 @@
 
 				if(LevelReferences.Instance.BaseDamageable != null)
                 {
-					LevelReferences.Instance.BaseDamageable.DamageBase(enemyDamage);
+
+					if (_test == false)
+                    {
+						_test = true;
+						LevelReferences.Instance.BaseDamageable.DamageBase(enemyDamage);
+					}
+					
 				}
 				
 
