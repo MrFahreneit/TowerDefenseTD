@@ -34456,10 +34456,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statGetter: {fileID: 2031489735}
-  _gold: 100000
-  _planteA: 100
-  _planteB: 100
-  _planteC: 100
+  _gold: 250
+  _planteA: 0
+  _planteB: 0
+  _planteC: 0
 --- !u!114 &1203955495
 MonoBehaviour:
   m_ObjectHideFlags: 0
